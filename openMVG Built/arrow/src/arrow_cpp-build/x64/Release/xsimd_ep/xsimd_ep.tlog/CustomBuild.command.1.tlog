@@ -1,0 +1,132 @@
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/tmp/xsimd_ep-mkdirs.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-DOWNLOAD.RULE
+setlocal
+cd "C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dconfig=Release -P "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/xsimd_ep-download-Release.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-UPDATE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-update"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-CONFIGURE.RULE
+setlocal
+cd "C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\xsimd_ep-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dconfig=Release -P "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/xsimd_ep-configure-Release.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-BUILD.RULE
+setlocal
+cd "C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\xsimd_ep-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dconfig=Release -P "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/xsimd_ep-build-Release.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\1C7E3C421FB3362AD9BE134FD67B1156\XSIMD_EP-INSTALL.RULE
+setlocal
+cd "C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\xsimd_ep-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dconfig=Release -P "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/xsimd_ep-install-Release.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\572D7A5F89F379195DB88B2396361AFE\XSIMD_EP-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/Release"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/Release/xsimd_ep-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/xsimd_ep-stamp/Release/xsimd_ep-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\FE51F44A2C5538CA62654960D6322A05\XSIMD_EP.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP\CPP\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp" "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

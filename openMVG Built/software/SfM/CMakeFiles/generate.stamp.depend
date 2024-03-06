@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/CMakeFiles/cmake.verify_globs
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/software/SfM/CMakeLists.txt
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/software/SfM/SfM_GlobalPipeline.py.in
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/software/SfM/SfM_SequentialPipeline.py.in
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/software/SfM/tutorial_demo.py.in

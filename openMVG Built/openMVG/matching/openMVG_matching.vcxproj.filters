@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\indMatch_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\regions_matcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\svg_matches.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\cascade_hasher.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\indMatch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\indMatchDecoratorXY.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\indMatch_io.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\indMatch_utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matcher_brute_force.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matcher_cascade_hashing.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matcher_hnsw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matcher_kdtree_flann.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matcher_type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matching_filters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\matching_interface.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\metric.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\metric_hamming.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\metric_hnsw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\metric_simd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\pairwiseAdjacencyDisplay.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\regions_matcher.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\svg_matches.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\matching\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{944116DC-00DF-3E37-BC8E-30EC7C02C934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DF0C22B8-62EA-3379-B4EE-2759DDDDE2BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

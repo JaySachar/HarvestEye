@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\7dd5cbc6aa262bfa8d2c37f0ac0cbc0a\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{265CC047-CBFE-3779-8AB1-79CA2A5CF10A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
