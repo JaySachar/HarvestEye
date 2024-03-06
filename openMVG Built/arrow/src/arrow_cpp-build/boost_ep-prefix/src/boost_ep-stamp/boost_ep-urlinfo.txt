@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep-stamp/download-boost_ep.cmake;COMMAND;C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep-stamp/verify-boost_ep.cmake;COMMAND;C:/Program Files/CMake/bin/cmake.exe;-P;C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep-stamp/extract-boost_ep.cmake
+source_dir=C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep
+work_dir=C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src
+url(s)=https://apache.jfrog.io/artifactory/arrow/thirdparty/7.0.0/boost_1_75_0.tar.gz;https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.gz;https://sourceforge.net/projects/boost/files/boost/1.75.0/boost_1_75_0.tar.gz
+hash=SHA256=267e04a7c0bfe85daf796dedc789c3a27a76707e1c968f0a2a87bb96331e2b61
+no_extract=
+

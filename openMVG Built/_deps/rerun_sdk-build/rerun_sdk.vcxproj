@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maintainer|x64">
+      <Configuration>Maintainer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F62CAFDD-4AE2-3DEE-8EBF-E85C775491D7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>rerun_sdk</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">rerun_sdk.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">rerun_sdk</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">rerun_sdk.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">rerun_sdk</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">rerun_sdk.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">rerun_sdk</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">rerun_sdk.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">rerun_sdk</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\Maintainer\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">rerun_sdk.dir\Maintainer\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">rerun_sdk</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR="Maintainer"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;USE_PATENTED_LIGT;ARROW_STATIC;CMAKE_INTDIR=\"Maintainer\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\Config.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\download_and_build_arrow.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\tmp\arrow_cpp-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\Config.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\download_and_build_arrow.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\tmp\arrow_cpp-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\Config.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\download_and_build_arrow.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\tmp\arrow_cpp-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\Config.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\download_and_build_arrow.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\tmp\arrow_cpp-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/_deps/rerun_sdk-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\Config.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\download_and_build_arrow.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\tmp\arrow_cpp-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\annotation_context.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/archetypes/annotation_context.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\annotation_context.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\arrows2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\arrows2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\arrows2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\arrows3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\arrows3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\arrows3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\asset3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\asset3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\asset3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\bar_chart.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\bar_chart.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\bar_chart_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\boxes2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\boxes2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\boxes2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\boxes3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\boxes3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\boxes3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\clear.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\clear.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\clear_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\depth_image.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\depth_image.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\depth_image_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\disconnected_space.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/archetypes/disconnected_space.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\disconnected_space.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\image.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\image.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\image_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\line_strips2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\line_strips2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\line_strips3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\line_strips3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\mesh3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\mesh3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\pinhole.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\pinhole.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\pinhole_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\points2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\points2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\points3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\points3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\scalar.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/archetypes/scalar.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\scalar.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\segmentation_image.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\segmentation_image.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\segmentation_image_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\series_line.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\series_line.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\series_point.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\series_point.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\tensor.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\tensor.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\tensor_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\text_document.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\text_document.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\text_log.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\text_log.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\time_series_scalar.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\time_series_scalar.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\transform3d.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/archetypes/transform3d.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\transform3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\transform3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\view_coordinates.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/archetypes/view_coordinates.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\view_coordinates.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\archetypes\view_coordinates_ext.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/archetypes/view_coordinates_ext.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\as_components.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\container_blueprint.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\container_blueprint.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\plot_legend.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\plot_legend.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\scalar_axis.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\scalar_axis.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\space_view_blueprint.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\space_view_blueprint.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\viewport_blueprint.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\archetypes\viewport_blueprint.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\active_tab.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\active_tab.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\auto_layout.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\auto_layout.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\auto_space_views.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\auto_space_views.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\column_shares.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\column_shares.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\container_kind.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\container_kind.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\corner2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\corner2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\entities_determined_by_user.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\entities_determined_by_user.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\entity_properties_component.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\entity_properties_component.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\grid_columns.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\grid_columns.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\included_contents.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\included_contents.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\included_queries.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\included_queries.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\included_space_views.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\included_space_views.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\lock_range_during_zoom.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\lock_range_during_zoom.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\panel_view.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\panel_view.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\query_expressions.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\query_expressions.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\root_container.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\root_container.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\row_shares.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\row_shares.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\space_view_class.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\space_view_class.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\space_view_maximized.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\space_view_maximized.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\space_view_origin.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\space_view_origin.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\viewport_layout.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\viewport_layout.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\visible.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\components\visible.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\datatypes\legend.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\blueprint\datatypes\legend.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\collection.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\collection_adapter.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\collection_adapter_builtins.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\compiler_utils.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\component_type.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\component_type.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\annotation_context.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/annotation_context.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\annotation_context.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\annotation_context_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\blob.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\blob.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\class_id.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/class_id.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\class_id.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\clear_is_recursive.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\clear_is_recursive.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\color.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\color.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\color_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\depth_meter.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\depth_meter.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\disconnected_space.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/disconnected_space.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\disconnected_space.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\draw_order.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\draw_order.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\half_sizes2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\half_sizes2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\half_sizes2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\half_sizes3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\half_sizes3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\half_sizes3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\instance_key.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\instance_key.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\keypoint_id.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/keypoint_id.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\keypoint_id.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\line_strip2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\line_strip2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\line_strip3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\line_strip3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\marker_shape.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\marker_shape.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\marker_shape_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\marker_size.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\marker_size.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\material.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/material.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\material.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\material_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\media_type.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\media_type.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\media_type_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\mesh_properties.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/mesh_properties.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\mesh_properties.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\mesh_properties_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\name.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\name.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\name_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\out_of_tree_transform3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\out_of_tree_transform3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\pinhole_projection.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\pinhole_projection.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\pinhole_projection_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\position2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\position2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\position2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\position3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\position3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\position3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\radius.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\radius.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\range1d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\range1d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\resolution.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\resolution.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\resolution_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\rotation3d.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/rotation3d.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\rotation3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\rotation3d_ext.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/rotation3d_ext.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\scalar.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/scalar.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\scalar.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\scalar_scattering.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\scalar_scattering.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\stroke_width.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\stroke_width.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\tensor_data.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/tensor_data.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\tensor_data.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\tensor_data_ext.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/tensor_data_ext.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\texcoord2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\texcoord2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\texcoord2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\text.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\text.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\text_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\text_log_level.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\text_log_level.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\text_log_level_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\transform3d.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/transform3d.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\transform3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\vector2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\vector2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\vector2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\vector3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\vector3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\vector3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\view_coordinates.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/view_coordinates.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\view_coordinates.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\view_coordinates_ext.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/components/view_coordinates_ext.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\visualizer_overrides.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\components\visualizer_overrides.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\config.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\config.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\data_cell.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\data_cell.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\angle.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\angle.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\annotation_info.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\annotation_info.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\annotation_info_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_description.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_description.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_description_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_description_map_elem.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_description_map_elem.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_description_map_elem_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_id.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/class_id.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\class_id.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\entity_path.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/entity_path.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\entity_path.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\float32.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\float32.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\keypoint_id.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/keypoint_id.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\keypoint_id.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\keypoint_pair.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\keypoint_pair.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\keypoint_pair_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mat3x3.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mat3x3.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mat3x3_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mat4x4.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mat4x4.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mat4x4_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\material.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/material.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\material.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mesh_properties.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/mesh_properties.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\mesh_properties.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\quaternion.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\quaternion.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\quaternion_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rgba32.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rgba32.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rgba32_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rotation3d.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/rotation3d.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rotation3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rotation3d_ext.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/rotation3d_ext.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rotation_axis_angle.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rotation_axis_angle.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\rotation_axis_angle_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\scale3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\scale3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_buffer.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_buffer.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_buffer_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_data.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/tensor_data.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_data.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_data_ext.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/tensor_data_ext.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_dimension.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_dimension.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\tensor_dimension_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\transform3d.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/datatypes/transform3d.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\transform3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\translation_and_mat3x3.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\translation_and_mat3x3.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\translation_and_mat3x3_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\translation_rotation_scale3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\translation_rotation_scale3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\translation_rotation_scale3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uint32.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uint32.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\utf8.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\utf8.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\utf8_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uuid.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uuid.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uvec2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uvec2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uvec3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uvec3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uvec4d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\uvec4d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec2d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec2d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec2d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec3d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec3d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec3d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec4d.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec4d.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\datatypes\vec4d_ext.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\demo_utils.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\demo_utils.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\entity_path.cpp">
+      <ObjectFileName>$(IntDir)/src/rerun/entity_path.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\entity_path.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\error.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\error.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\half.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\indicator_component.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\indicator_component.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\loggable.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\recording_stream.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\recording_stream.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\result.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\sdk_info.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\sdk_info.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\spawn.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\spawn.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\spawn_options.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\spawn_options.hpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\string_utils.cpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\string_utils.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\third_party\cxxopts.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-src\src\rerun\type_traits.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\ZERO_CHECK.vcxproj">
+      <Project>{2A9EEADA-EAEE-307A-AB4B-2DDC7BC1A254}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\arrow_cpp.vcxproj">
+      <Project>{B1AF7425-65C5-39E7-AD79-87887C796524}</Project>
+      <Name>arrow_cpp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

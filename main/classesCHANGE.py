@@ -54,10 +54,10 @@ class PointCloudGenerator(ImageProcessor):
             global_pipeline_dir = os.path.dirname(global_pipeline_dir)
 
         # Combine the path to the openMVG executable
-        self.openmvg_bin = os.path.join(global_pipeline_dir, 'openMVG', 'Windows-AMD64-', 'Release')
+        self.openmvg_bin = os.path.join(global_pipeline_dir, 'openMVG Built', 'Windows-AMD64-', 'Release')
 
         # sensor_width_database
-        self.cam_params = os.path.join(global_pipeline_dir, 'openMVG', 'openMVG', 'src', 'openMVG', 'exif', 'sensor_width_database', 'sensor_width_camera_database.txt')
+        self.cam_params = os.path.join(global_pipeline_dir, 'openMVG Built', 'openMVG', 'exif', 'sensor_width_database', 'sensor_width_camera_database.txt')
 
         # Point cloud data
         self.point_cloud_data = self.generatePointCloud() # Return the .PLY files
