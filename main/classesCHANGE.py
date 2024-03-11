@@ -3,7 +3,7 @@ import pandas as pd
 import subprocess
 import os
 import tempfile
-import plyfile
+
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
 class ImageProcessor:
@@ -16,6 +16,7 @@ class ImageProcessor:
     def image_preprocessing(self):
         # Define any preprocessing we want. Could break this up to different functions as well, ie a image format changer format 
         # A downsampling function etc. 
+        # A function for turning a .TIF to a .JPG to pass to the PointCloudGenerator 
         pass
     
     def file_extension_grabber(self, img_directory):
@@ -36,7 +37,30 @@ class ImageProcessor:
                     image_ext.append(ext)
                 
         return image_files, ext # Return all the image files in the directory and the extensions of them                
+    def read_ply(self, file_path):
+        with open(file_path, 'r') as f:
+            lines = f.readlines()
 
+        # Find the start of the vertex data
+        start_idx = lines.index('end_header\n') + 1
+
+        # Extract vertex data and RGB values
+        vertices = []
+        colors = []
+        for line in lines[start_idx:]:
+            data = line.strip().split()
+            vertex = [float(data[0]), float(data[1]), float(data[2])]
+            vertices.append(vertex)
+            if len(data) > 3:  # Check if RGB values are present
+                rgb = [int(data[3]), int(data[4]), int(data[5])]
+                colors.append(rgb)
+
+        # Convert to numpy arrays
+        vertices_np = np.array(vertices)
+        colors_np = np.array(colors) if colors else None
+
+        return vertices_np, colors_np
+ 
     
 # Create PointCloudGenerator as a child to ImageProcessor so we can encapsulate
 # All image preprocessing functions
@@ -60,7 +84,8 @@ class PointCloudGenerator(ImageProcessor):
         self.cam_params = os.path.join(global_pipeline_dir, 'openMVG Built', 'openMVG', 'exif', 'sensor_width_database', 'sensor_width_camera_database.txt')
 
         # Point cloud data
-        self.point_cloud_data = self.generatePointCloud() # Return the .PLY files
+        #self.point_cloud_data = self.generatePointCloud() # Return the .PLY files
+        
  
     def generatePointCloud(self):
         # Create a temporary directory for the matches
@@ -104,6 +129,15 @@ class PointCloudGenerator(ImageProcessor):
                 return ply_data
             # In temporary matches folder, we can run stiching from OpenCV, so we don't have to keep such a large file on hand per run. 
     
+    def ground_plane_interpolater(vertices, colours):
+        # Resource used for algorightm: https://ieeexplore.ieee.org/document/6987936
+        # Verticies are the (XYZ) points of the 3D Point Cloud
+        # Colours are the associated RGB values of the 3D Point Cloud
+        # Returns: Points for the Ground Plane for the 3D Point cloud at the same given (XYZ) Coordinates
+
+        
+
+        pass
 # A class dedicated to stitching the images taken on the drone together. This can then be used for NDVI analysis    
 class ImageStitcher(ImageProcessor):
     def __init__(self, img_directory):
