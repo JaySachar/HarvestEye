@@ -3,7 +3,7 @@ import pandas as pd
 import subprocess
 import os
 import tempfile
-
+from sklearn.linear_model import RANSACRegressor
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
 class ImageProcessor:
@@ -129,15 +129,94 @@ class PointCloudGenerator(ImageProcessor):
                 return ply_data
             # In temporary matches folder, we can run stiching from OpenCV, so we don't have to keep such a large file on hand per run. 
     
-    def ground_plane_interpolater(vertices, colours):
-        # Resource used for algorightm: https://ieeexplore.ieee.org/document/6987936
-        # Verticies are the (XYZ) points of the 3D Point Cloud
-        # Colours are the associated RGB values of the 3D Point Cloud
-        # Returns: Points for the Ground Plane for the 3D Point cloud at the same given (XYZ) Coordinates
-
+    def segment_point_cloud(vertices, segment_size):
+        # Determine the number of segments along each dimension
+        x_min, x_max = np.min(vertices[:, 0]), np.max(vertices[:, 0])
+        y_min, y_max = np.min(vertices[:, 1]), np.max(vertices[:, 1])
+        z_min, z_max = np.min(vertices[:, 2]), np.max(vertices[:, 2])
         
+        x_segments = int(np.ceil((x_max - x_min) / segment_size))
+        y_segments = int(np.ceil((y_max - y_min) / segment_size))
+        z_segments = int(np.ceil((z_max - z_min) / segment_size))
 
-        pass
+        # Create an empty list to store segments
+        segments = [[] for _ in range(x_segments * y_segments * z_segments)]
+
+        # Assign each point to its corresponding segment
+        for point in vertices:
+            x_idx = int((point[0] - x_min) // segment_size)
+            y_idx = int((point[1] - y_min) // segment_size)
+            z_idx = int((point[2] - z_min) // segment_size)
+            
+            segment_idx = x_idx + y_idx * x_segments + z_idx * x_segments * y_segments
+            segments[segment_idx].append(point)
+
+        # Remove empty segments
+        segments = [segment for segment in segments if segment]
+
+        return segments
+        
+    def region_growing_multiplane_fitting(self, point_cloud, distance_threshold=0.2, min_cluster_size=50):
+        # Initialize list to store planes
+        planes = []
+
+        # Create a copy of the point cloud
+        unprocessed_points = np.copy(point_cloud)
+
+        while len(unprocessed_points) > 0:
+            # Randomly select a seed point from the unprocessed points
+            seed_point = unprocessed_points[0]
+
+            # Initialize list to store points belonging to the current plane
+            plane_points = [seed_point]
+
+            # Remove seed point from unprocessed points
+            unprocessed_points = np.delete(unprocessed_points, 0, axis=0)
+
+            # Initialize plane coefficients
+            plane_coefficients = None
+            # Region growing
+            while True:
+                # Fit a plane to the current set of plane points
+                X = np.array([p[:-1] for p in plane_points])  # Extract X, Y coordinates
+                y = np.array([p[-1] for p in plane_points])   # Extract Z coordinate
+                print(X, y)
+                # Check if there are enough samples to fit the regressor
+                if len(X) >= 2:
+                    ransac = RANSACRegressor(min_samples=2)  # Adjust min_samples to avoid error
+                    ransac.fit(X, y)
+
+                    # Extract plane coefficients
+                    plane_coefficients = ransac.estimator_.coef_
+
+                    # Find neighboring points within the distance threshold
+                    distances = np.linalg.norm(X - X[0], axis=1)
+                    neighbor_indices = np.where(distances < distance_threshold)[0]
+
+                    # Termination condition: no more neighboring points found
+                    if len(neighbor_indices) == 0:
+                        break
+
+                    # Add neighboring points to the current plane
+                    plane_points.extend([unprocessed_points[idx] for idx in neighbor_indices])
+
+                    # Remove neighboring points from unprocessed points
+                    unprocessed_points = np.delete(unprocessed_points, neighbor_indices, axis=0)
+
+                    # Remove neighboring points from plane points
+                    for idx in sorted(neighbor_indices, reverse=True):
+                        plane_points.pop(idx)
+                else:
+                    # Stop the loop if there are not enough samples
+                    break
+
+            # Add the fitted plane to the list of planes
+            planes.append(plane_coefficients)
+
+        return planes
+
+    
+
 # A class dedicated to stitching the images taken on the drone together. This can then be used for NDVI analysis    
 class ImageStitcher(ImageProcessor):
     def __init__(self, img_directory):
