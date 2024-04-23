@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!\usr\bin\python
 #! -*- encoding: utf-8 -*-
 
 # This file is part of OpenMVG (Open Multiple View Geometry) C++ library.
@@ -16,16 +16,19 @@
 #
 # if output_dir is not present script will create it
 #
-
-# Indicate the openMVG binary directory
-OPENMVG_SFM_BIN = "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/Windows-AMD64-/Release"
-
-# Indicate the openMVG camera sensor width directory
-CAMERA_SENSOR_WIDTH_DIRECTORY = "C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/software/SfM" + "/../../openMVG/exif/sensor_width_database"
-
 import os
 import subprocess
 import sys
+
+CURRENT_WORKING_FOLDER = os.path.abspath(os.getcwd())
+print(CURRENT_WORKING_FOLDER)
+
+# Indicate the openMVG binary directory
+OPENMVG_SFM_BIN = CURRENT_WORKING_FOLDER + "\..\..\Windows-AMD64-\Release"
+print(OPENMVG_SFM_BIN)
+
+# Indicate the openMVG camera sensor width directory
+CAMERA_SENSOR_WIDTH_DIRECTORY = CURRENT_WORKING_FOLDER +  "\..\..\openMVG\exif\sensor_width_database"
 
 if len(sys.argv) < 3:
     print ("Usage %s image_dir output_dir" % sys.argv[0])
@@ -40,7 +43,7 @@ camera_file_params = os.path.join(CAMERA_SENSOR_WIDTH_DIRECTORY, "sensor_width_c
 print ("Using input dir  : ", input_dir)
 print ("      output_dir : ", output_dir)
 
-# Create the ouput/matches folder if not present
+# Create the ouput\matches folder if not present
 if not os.path.exists(output_dir):
   os.mkdir(output_dir)
 if not os.path.exists(matches_dir):
@@ -51,29 +54,29 @@ pIntrisics = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_SfMI
 pIntrisics.wait()
 
 print ("2. Compute features")
-pFeatures = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_ComputeFeatures"),  "-i", matches_dir+"/sfm_data.json", "-o", matches_dir, "-m", "SIFT"] )
+pFeatures = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_ComputeFeatures"),  "-i", matches_dir+"\sfm_data.json", "-o", matches_dir, "-m", "SIFT"] )
 pFeatures.wait()
 
 print ("3. Compute matching pairs")
-pPairs = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_PairGenerator"), "-i", matches_dir+"/sfm_data.json", "-o" , matches_dir + "/pairs.bin" ] )
+pPairs = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_PairGenerator"), "-i", matches_dir+"\sfm_data.json", "-o" , matches_dir + "\pairs.bin" ] )
 pPairs.wait()
 
 print ("4. Compute matches")
-pMatches = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_ComputeMatches"),  "-i", matches_dir+"/sfm_data.json", "-p", matches_dir+ "/pairs.bin", "-o", matches_dir + "/matches.putative.bin" ] )
+pMatches = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_ComputeMatches"),  "-i", matches_dir+"\sfm_data.json", "-p", matches_dir+ "\pairs.bin", "-o", matches_dir + "\matches.putative.bin" ] )
 pMatches.wait()
 
 print ("5. Filter matches" )
-pFiltering = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_GeometricFilter"), "-i", matches_dir+"/sfm_data.json", "-m", matches_dir+"/matches.putative.bin" , "-g" , "f" , "-o" , matches_dir+"/matches.f.bin" ] )
+pFiltering = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_GeometricFilter"), "-i", matches_dir+"\sfm_data.json", "-m", matches_dir+"\matches.putative.bin" , "-g" , "f" , "-o" , matches_dir+"\matches.f.bin" ] )
 pFiltering.wait()
 
 # Create the reconstruction if not present
 if not os.path.exists(reconstruction_dir):
     os.mkdir(reconstruction_dir)
 
-print ("6. Do Sequential/Incremental reconstruction")
-pRecons = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_SfM"), "--sfm_engine", "INCREMENTAL", "--input_file", matches_dir+"/sfm_data.json", "--match_dir", matches_dir, "--output_dir", reconstruction_dir] )
+print ("6. Do Sequential\Incremental reconstruction")
+pRecons = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_SfM"), "--sfm_engine", "INCREMENTAL", "--input_file", matches_dir+"\sfm_data.json", "--match_dir", matches_dir, "--output_dir", reconstruction_dir] )
 pRecons.wait()
 
 print ("7. Colorize Structure")
-pRecons = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_ComputeSfM_DataColor"),  "-i", reconstruction_dir+"/sfm_data.bin", "-o", os.path.join(reconstruction_dir,"colorized.ply")] )
+pRecons = subprocess.Popen( [os.path.join(OPENMVG_SFM_BIN, "openMVG_main_ComputeSfM_DataColor"),  "-i", reconstruction_dir+"\sfm_data.bin", "-o", os.path.join(reconstruction_dir,"colorized.ply")] )
 pRecons.wait()
