@@ -1,9 +1,11 @@
 import numpy as np
 import pandas as pd
+import cv2 
 import subprocess
 import os
 import tempfile
 from sklearn.linear_model import RANSACRegressor
+import matplotlib.pyplot as plt
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
 class ImageProcessor:
@@ -36,31 +38,34 @@ class ImageProcessor:
                     image_files.append(file) 
                     image_ext.append(ext)
                 
-        return image_files, ext # Return all the image files in the directory and the extensions of them                
-    def read_ply(self, file_path):
-        with open(file_path, 'r') as f:
-            lines = f.readlines()
-
-        # Find the start of the vertex data
-        start_idx = lines.index('end_header\n') + 1
-
-        # Extract vertex data and RGB values
+        return image_files, image_ext # Return all the image files in the directory and the extensions of them                
+   
+    def read_ply(self, ply_data_or_file_path):
         vertices = []
         colors = []
-        for line in lines[start_idx:]:
+
+        # Check if the input is a file path or string data
+        if os.path.isfile(ply_data_or_file_path):
+            with open(ply_data_or_file_path, 'r') as f:
+                lines = f.readlines()
+        else:
+            # Split the string data by newline characters
+            lines = ply_data_or_file_path.strip().split('\n')
+
+        # Skip the first line which contains the number of vertices
+        for line in lines[1:]:
             data = line.strip().split()
             vertex = [float(data[0]), float(data[1]), float(data[2])]
             vertices.append(vertex)
+
             if len(data) > 3:  # Check if RGB values are present
                 rgb = [int(data[3]), int(data[4]), int(data[5])]
                 colors.append(rgb)
 
-        # Convert to numpy arrays
         vertices_np = np.array(vertices)
         colors_np = np.array(colors) if colors else None
 
         return vertices_np, colors_np
- 
     
 # Create PointCloudGenerator as a child to ImageProcessor so we can encapsulate
 # All image preprocessing functions
@@ -84,7 +89,7 @@ class PointCloudGenerator(ImageProcessor):
         self.cam_params = os.path.join(global_pipeline_dir, 'openMVG Built', 'openMVG', 'exif', 'sensor_width_database', 'sensor_width_camera_database.txt')
 
         # Point cloud data
-        #self.point_cloud_data = self.generatePointCloud() # Return the .PLY files
+        self.point_cloud_data = np.NaN
         
  
     def generatePointCloud(self):
@@ -117,114 +122,17 @@ class PointCloudGenerator(ImageProcessor):
                 pRecons.wait()
 
                 # Colorize the structure
-                pRecons = subprocess.Popen([os.path.join(self.openmvg_bin, "openMVG_main_ComputeSfM_DataColor"), "-i", os.path.join(reconstruction_dir, "sfm_data.bin"), "-o", os.path.join(reconstruction_dir, "colorized.ply")])
+                pRecons = subprocess.Popen([os.path.join(self.openmvg_bin, "openMVG_main_ComputeSfM_DataColor"), "-i", os.path.join(reconstruction_dir, "sfm_data.bin"), "-o", os.path.join(self.img_directory, "colorized.ply")])
                 pRecons.wait()
 
                 # Return the PLY File's Data
-                ply_dir = os.path.join(reconstruction_dir, 'colorized.ply')
+                ply_dir = os.path.join(self.img_directory, 'colorized.ply')
                 with open(ply_dir, 'r') as f:
                     ply_data = f.read()
 
                 # Return the PLY file's data
-                return ply_data
+                return ply_data, self.point_cloud_data
             # In temporary matches folder, we can run stiching from OpenCV, so we don't have to keep such a large file on hand per run. 
-    
-    def segment_point_cloud(vertices, segment_size):
-        # Determine the number of segments along each dimension
-        x_min, x_max = np.min(vertices[:, 0]), np.max(vertices[:, 0])
-        y_min, y_max = np.min(vertices[:, 1]), np.max(vertices[:, 1])
-        z_min, z_max = np.min(vertices[:, 2]), np.max(vertices[:, 2])
-        
-        x_segments = int(np.ceil((x_max - x_min) / segment_size))
-        y_segments = int(np.ceil((y_max - y_min) / segment_size))
-        z_segments = int(np.ceil((z_max - z_min) / segment_size))
-
-        # Create an empty list to store segments
-        segments = [[] for _ in range(x_segments * y_segments * z_segments)]
-
-        # Assign each point to its corresponding segment
-        for point in vertices:
-            x_idx = int((point[0] - x_min) // segment_size)
-            y_idx = int((point[1] - y_min) // segment_size)
-            z_idx = int((point[2] - z_min) // segment_size)
-            
-            segment_idx = x_idx + y_idx * x_segments + z_idx * x_segments * y_segments
-            segments[segment_idx].append(point)
-
-        # Remove empty segments
-        segments = [segment for segment in segments if segment]
-
-        return segments
-        
-    def region_growing_multiplane_fitting(self, point_cloud, distance_threshold=0.2, min_cluster_size=50):
-        # Initialize list to store planes
-        planes = []
-
-        # Create a copy of the point cloud
-        unprocessed_points = np.copy(point_cloud)
-
-        while len(unprocessed_points) > 0:
-            # Randomly select a seed point from the unprocessed points
-            seed_point = unprocessed_points[0]
-
-            # Initialize list to store points belonging to the current plane
-            plane_points = [seed_point]
-
-            # Remove seed point from unprocessed points
-            unprocessed_points = np.delete(unprocessed_points, 0, axis=0)
-
-            # Initialize plane coefficients
-            plane_coefficients = None
-            # Region growing
-            while True:
-                # Fit a plane to the current set of plane points
-                X = np.array([p[:-1] for p in plane_points])  # Extract X, Y coordinates
-                y = np.array([p[-1] for p in plane_points])   # Extract Z coordinate
-                print(X, y)
-                # Check if there are enough samples to fit the regressor
-                if len(X) >= 2:
-                    ransac = RANSACRegressor(min_samples=2)  # Adjust min_samples to avoid error
-                    ransac.fit(X, y)
-
-                    # Extract plane coefficients
-                    plane_coefficients = ransac.estimator_.coef_
-
-                    # Find neighboring points within the distance threshold
-                    distances = np.linalg.norm(X - X[0], axis=1)
-                    neighbor_indices = np.where(distances < distance_threshold)[0]
-
-                    # Termination condition: no more neighboring points found
-                    if len(neighbor_indices) == 0:
-                        break
-
-                    # Add neighboring points to the current plane
-                    plane_points.extend([unprocessed_points[idx] for idx in neighbor_indices])
-
-                    # Remove neighboring points from unprocessed points
-                    unprocessed_points = np.delete(unprocessed_points, neighbor_indices, axis=0)
-
-                    # Remove neighboring points from plane points
-                    for idx in sorted(neighbor_indices, reverse=True):
-                        plane_points.pop(idx)
-                else:
-                    # Stop the loop if there are not enough samples
-                    break
-
-            # Add the fitted plane to the list of planes
-            planes.append(plane_coefficients)
-
-        return planes
-
-    
-
-# A class dedicated to stitching the images taken on the drone together. This can then be used for NDVI analysis    
-class ImageStitcher(ImageProcessor):
-    def __init__(self, img_directory):
-        super().__init__(img_directory)
-        self.stitched_img = self.stitch(self.imgs) # Pass the list that holds the directories to each image
-
-
-
 
 class SegmentationAlgorithm:
     def __init__(self):
