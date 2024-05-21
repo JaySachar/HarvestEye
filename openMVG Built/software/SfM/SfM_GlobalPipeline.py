@@ -17,15 +17,21 @@
 # if output_dir is not present script will create it
 #
 
-# Indicate the openMVG binary directory
-OPENMVG_SFM_BIN = "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/Windows-AMD64-/Release"
-
-# Indicate the openMVG camera sensor width directory
-CAMERA_SENSOR_WIDTH_DIRECTORY = "C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/software/SfM" + "/../../openMVG/exif/sensor_width_database"
-
 import os
 import subprocess
 import sys
+
+CURRENT_WORKING_FOLDER = os.path.abspath(os.getcwd())
+
+# Indicate the openMVG binary directory
+print(CURRENT_WORKING_FOLDER)
+
+# Indicate the openMVG binary directory
+OPENMVG_SFM_BIN = CURRENT_WORKING_FOLDER + "/../../Windows-AMD64-/Release"
+print(OPENMVG_SFM_BIN)
+
+# Indicate the openMVG camera sensor width directory
+CAMERA_SENSOR_WIDTH_DIRECTORY = CURRENT_WORKING_FOLDER +  "/../../openMVG/exif/sensor_width_database"
 
 if len(sys.argv) < 3:
     print ("Usage %s image_dir output_dir" % sys.argv[0])
