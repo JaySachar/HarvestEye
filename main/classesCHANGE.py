@@ -208,7 +208,7 @@ class PointCloudFiltering(ImageProcessor):
     def __init__(self):
         pass
 
-    def filter_points_by_grid(self, points, grid_resolution, std_limit):
+    def filter_points_by_grid(self, points, grid_resolution, std_limit, avg_z_filter_iteration_times):
         """
         Filters points in a point cloud based on a grid resolution and standard deviation limit.
 
@@ -248,15 +248,16 @@ class PointCloudFiltering(ImageProcessor):
         # Filter out points based on local averages and standard deviations
         thresholds = local_averages + std_limit * local_std_devs
         mask = np.zeros(len(points), dtype=bool)
-
-        for i in range(1, len(x_bins)):
-            for j in range(1, len(y_bins)):
-                cell_mask = (x_indices == i) & (y_indices == j)
-                if np.any(cell_mask):
-                    mask |= (cell_mask) & (points[:, 2] > thresholds[i-1, j-1])
-        filtered_points = points[mask]
+        for _ in range(avg_z_filter_iteration_times):
+            for i in range(1, len(x_bins)):
+                for j in range(1, len(y_bins)):
+                    cell_mask = (x_indices == i) & (y_indices == j)
+                    if np.any(cell_mask):
+                        mask |= (cell_mask) & (points[:, 2] < thresholds[i-1, j-1])
+            filtered_points = points[mask]
 
         return filtered_points
+    
     def filter_ground_points(self, ground_points, avg_z_filter_interation_times, grid_resolution, std_limit):
         """
         Filters ground points based on the average z-value and a grid-based local filtering method.
@@ -270,19 +271,19 @@ class PointCloudFiltering(ImageProcessor):
         Returns:
         - Filtered ground points as a numpy array.
         """
-
-        for _ in range(avg_z_filter_interation_times):
-            z_average = np.mean(ground_points[:, 2])
-            z_std = np.std(ground_points[:, :2])
-            threshold = z_average + std_limit*z_std
-            mask = np.abs(ground_points[:, 2]) < threshold # Remove points that are1 standard deviation or more away from the mean
-            ground_points = ground_points[mask]
+        # for _ in range(avg_z_filter_interation_times):
+        #     z_average = np.mean(ground_points[:, 2])
+        #     z_std = np.std(ground_points[:, 2])
+        #     print("hello wrld 3", z_average, z_std)
+        #     threshold = z_average + std_limit*z_std
+        #     mask = ground_points[:, 2] < threshold # Remove points that are1 standard deviation or more away from the mean
+        #     ground_points = ground_points[mask]
 
         # Use filtering by creating a grid and local averages to filter out ground points more, locally however
-        filtered_ground_points = self.filter_points_by_grid(ground_points, grid_resolution, std_limit)
+        filtered_ground_points = self.filter_points_by_grid(ground_points, grid_resolution, std_limit, avg_z_filter_interation_times)
 
-        return filtered_ground_points
-    
+        return filtered_ground_points   
+   
     def dbscan_cluster_filtering(self, pcd, min_cluster_size, max_cluster_size, labels):
         """
         Filter clusters after running DBSCAN on a point cloud based on cluster size using the DBSCAN labels.
