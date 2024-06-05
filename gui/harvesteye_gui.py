@@ -19,6 +19,16 @@ class MainApp(tk.Tk):
                                       size = 18,
                                       weight = "bold",
                                       slant = "italic")
+
+        # Frameless/No title bar 
+        self.overrideredirect(True)
+
+        # Define the program to be draggable
+        self.bind("<ButtonPress-1>", self.start_move)
+        self.bind("<ButtonRelease-1>", self.stop_move)
+        self.bind("<B1-Motion>", self.do_move)
+ 
+
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
@@ -53,6 +63,22 @@ class MainApp(tk.Tk):
         new_photo = ImageTk.PhotoImage(resized_image)
         background_label.config(image=new_photo)
         background_label.image = new_photo
+
+    def start_move(self, event):
+        self.x = event.x
+        self.y = event.y
+
+    def stop_move(self, event):
+        self.x = None
+        self.y = None
+
+    def do_move(self, event):
+        deltax = event.x - self.x
+        deltay = event.y - self.y
+        x = self.winfo_x() + deltax
+        y = self.winfo_y() + deltay
+        self.geometry(f"+{x}+{y}")
+
 
 if __name__ == "__main__":
     app = MainApp()
