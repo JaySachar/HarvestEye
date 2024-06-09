@@ -70,7 +70,7 @@ class CropSelectionScreen(tk.Frame):
         btn_orange = tk.Label(button_frame, image=photo, borderwidth=0)
         btn_orange.image = photo
         #btn_orange.place(relx=0.5, rely=0.5, anchor="center")
-        btn_orange.bind('<Button-1>', self.chiliButton)
+        btn_orange.bind('<Button-1>', self.orangeButton)
         btn_orange.grid(row=0, column=1, sticky="nsew")
         btn_orange.configure(bg='white')
         # Bind the resize event to the resize_image function
@@ -83,7 +83,7 @@ class CropSelectionScreen(tk.Frame):
         btn_avocado = tk.Label(button_frame, image=photo, borderwidth=0)
         btn_avocado.image = photo
         #btn_avocado.place(relx=0.5, rely=0.5, anchor="center")
-        btn_avocado.bind('<Button-1>', self.chiliButton)
+        btn_avocado.bind('<Button-1>', self.avocadoButton)
         btn_avocado.grid(row=1, column=0,  sticky="nsew")
         btn_avocado.configure(bg='white')
         # Bind the resize event to the resize_image function
@@ -96,7 +96,7 @@ class CropSelectionScreen(tk.Frame):
         btn_more = tk.Label(button_frame, image=photo, borderwidth=0)
         btn_more.image = photo
         #btn_more.place(relx=0.5, rely=0.5, anchor="center")
-        btn_more.bind('<Button-1>', self.chiliButton)
+        btn_more.bind('<Button-1>', self.moreButton)
         btn_more.grid(row=1, column=1, sticky="nsew")
         btn_more.configure(bg='white')
         # Bind the resize event to the resize_image function
@@ -108,16 +108,16 @@ class CropSelectionScreen(tk.Frame):
         btn_exit.image = photo
         #btn_exit.place(x=0, y=0, relwidth=1, relheight=1)
         btn_exit.bind('<Button-1>', self.exitButton)
-        btn_exit.grid(row=0,column=2,padx=50, pady=50, sticky="ne")
+        btn_exit.grid(row=0,column=2,padx=10, pady=10, sticky="ne")
         btn_exit.configure(bg='white')
 
-        # Load the EXIT button
+        # Load the BACK button
         photo = ImageTk.PhotoImage(Image.open(image_path+"btn-back_sm.png"))
         btn_back = tk.Label(foreground_frame, image=photo )
         btn_back.image = photo
         #btn_back.place(x=0, y=0, relwidth=1, relheight=1)
         btn_back.bind('<Button-1>', self.backButton)
-        btn_back.grid(row=0,column=0,padx=50, pady=50, sticky="nw")
+        btn_back.grid(row=0,column=0,padx=10, pady=10, sticky="nw")
         btn_back.configure(bg='white')
  
 
@@ -126,7 +126,7 @@ class CropSelectionScreen(tk.Frame):
                                  text = "Crop Dashboard",
                                  font = ("Montserrat", 22, "bold"),
                                  justify="center")
-        txt_title.grid(row=0,column=1,padx=5, pady=5, sticky="nsew")
+        txt_title.grid(row=0,column=1,padx=5, pady=50, sticky="nsew")
         txt_title.configure(bg='white')
 
 
@@ -161,7 +161,7 @@ class CropSelectionScreen(tk.Frame):
         photo = ImageTk.PhotoImage(Image.open(image_path+"Logo_sm.png"))
         img_logo = tk.Label(foreground_frame, image=photo, borderwidth=0)
         img_logo.image = photo
-        img_logo.grid(row=4,column=2,padx=5, pady=35, sticky="se")
+        img_logo.grid(row=5,column=2,padx=5, pady=35, sticky="se")
         img_logo.configure(bg='white')
         # Bind the resize event to the resize_image function
         #self.bind("<Configure>", resize_image)
@@ -192,7 +192,19 @@ class CropSelectionScreen(tk.Frame):
                            command = lambda: controller.show_frame("SplashScreen"))
 
     def chiliButton(self, event):
-        self.controller.show_frame("SplashScreen")
+        self.controller.show_frame("AppSelectionScreen")
+
+    def orangeButton(self, event):
+        self.controller.show_frame("AppSelectScreen")
+    
+    def avocadoButton(self, event):
+        self.controller.show_frame("AppSelectScreen")
+
+    def moreButton(self, event):
+        self.controller.show_frame("AppSelectScreen")
+
+    
+    
     
     def backButton(self, event):
         self.controller.show_frame("SplashScreen")

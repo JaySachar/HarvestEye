@@ -9,6 +9,7 @@ from PIL import Image, ImageTk
 
 from splash_screen import SplashScreen
 from cropselection_screen import CropSelectionScreen
+from appselection_screen import AppSelectionScreen
 
 class MainApp(tk.Tk):
     
@@ -21,7 +22,7 @@ class MainApp(tk.Tk):
                                       slant = "italic")
 
         # Frameless/No title bar 
-        self.overrideredirect(True)
+        #self.overrideredirect(True)
 
         # Define the program to be draggable
         self.bind("<ButtonPress-1>", self.start_move)
@@ -38,7 +39,7 @@ class MainApp(tk.Tk):
 
         # Pre-load every frame
         #for F in (SplashScreen, PageOne, PageTwo):
-        for F in (SplashScreen, CropSelectionScreen):
+        for F in (SplashScreen, CropSelectionScreen, AppSelectionScreen):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -46,7 +47,7 @@ class MainApp(tk.Tk):
             frame.grid(row=0, column=0, sticky="nsew")
 
         # Start with the StartPage
-        self.show_frame("SplashScreen")
+        self.show_frame("AppSelectionScreen")
 
     # Because we RootWindow=controller has all the other classes as objects saved
     # we can reference and call any of those frames to show on top of the others
