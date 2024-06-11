@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
+from widgets.datatype_selection_buttons_frame import DataTypeSelectionButtonsFrame
 
-class AppSelectionScreen(tk.Frame):
+class DataTypeSelectionScreen(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -36,7 +37,7 @@ class AppSelectionScreen(tk.Frame):
         gradient_frame.grid(row=0, column=0,columnspan=1, rowspan=4, sticky="nsew")
 
         ## Green Background
-        image_path = "./assets/app-select/"
+        image_path = "./assets/datatype-select/"
         #photo = ImageTk.PhotoImage(Image.open(image_path+"img_gradient_sm.png"))
         #img_greengradient = tk.Label(foreground_frame, image=photo, borderwidth=0)
         #img_greengradient.image = photo
@@ -75,6 +76,7 @@ class AppSelectionScreen(tk.Frame):
         txt_chilititle.image = photo
         txt_chilititle.pack(side="top", fill="x", expand=False, pady=50)
         txt_chilititle.configure(bg=color_of_the_gradient)
+        image_path = "./assets/datatype-select/"
 
         # Load CHILI image for the side gradient_frame
         photo = ImageTk.PhotoImage(Image.open(image_path+"img_chili_sm.png"))
@@ -102,55 +104,43 @@ class AppSelectionScreen(tk.Frame):
         btn_exit.configure(bg='white')
 
 
+        buttons_frame = DataTypeSelectionButtonsFrame(foreground_frame, self.controller)
+        buttons_frame.grid(row = 1, column = 1, columnspan = 2, rowspan = 2, sticky="nsew")
         ######################## Right Side with buttons ##################
         # Step 2 ... Label
-        txt_version = tk.Label(foreground_frame, text = "STEP 2. select the HarvestEye application")
-        txt_version.grid(row=0,column=1,columnspan=2,  padx=50, sticky="sw")
+        txt_version = tk.Label(foreground_frame, text = "STEP 3. select the type of data entry")
+        txt_version.grid(row=0,column=1,columnspan=2,  padx=50, pady=25, sticky="sw")
         txt_version.configure(bg='white')
-
-        # NEW DATA - GRAY background
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_background_sm.png"))
-        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
-        img_graybtnbackground.image = photo
-        img_graybtnbackground.grid(row=1,column=1, padx=25, sticky="se")
-        img_graybtnbackground.configure(bg='white')
-        # NEW DATA - button
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_newdata_sm.png"))
-        btn_newdata= tk.Label(foreground_frame, image=photo )
-        btn_newdata.image = photo
-        btn_newdata.grid(row=1,column=1, padx=80, pady=20, sticky="se")
-        btn_newdata.configure(bg='#D9D9D9')
-        btn_newdata.bind('<Button-1>', self.dataTypeButton)
-
-
-        # HEIGHT ANALYSIS - GRAY background
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_background_sm.png"))
-        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
-        img_graybtnbackground.image = photo
-        img_graybtnbackground.grid(row=1,column=2, padx=25, sticky="sw")
-        img_graybtnbackground.configure(bg='white')
-        # HEIGHT ANALYSIS - button
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_heightanal_sm.png"))
-        btn_heightanalysis= tk.Label(foreground_frame, image=photo )
-        btn_heightanalysis.image = photo
-        btn_heightanalysis.grid(row=1,column=2, padx=70, pady=20, sticky="sw")
-        btn_heightanalysis.configure(bg='#D9D9D9')
-        btn_heightanalysis.bind('<Button-1>', self.chiliButton)
-
-        # DRONE NAVIGATION GUIDE - GRAY background
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_backgroundlong_sm.png"))
-        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
-        img_graybtnbackground.image = photo
-        img_graybtnbackground.grid(row=2,column=1, columnspan=2,  pady=20,  sticky="n")
-        img_graybtnbackground.configure(bg='white')
-        # DRONE NAVIGATION GUIDE - button
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_droneflight_sm.png"))
-        btn_dronenavguide= tk.Label(foreground_frame, image=photo )
-        btn_dronenavguide.image = photo
-        btn_dronenavguide.grid(row=2,column=1, columnspan=2, padx=70, pady=40, sticky="n")
-        btn_dronenavguide.configure(bg='#D9D9D9')
-        btn_dronenavguide.bind('<Button-1>', self.chiliButton)
-        ###################################################################
+#
+#        # NEW DATA - GRAY background
+#        photo = ImageTk.PhotoImage(Image.open(image_path+"img_background_sm.png"))
+#        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
+#        img_graybtnbackground.image = photo
+#        img_graybtnbackground.grid(row=1,column=1, padx=25, sticky="se")
+#        img_graybtnbackground.configure(bg='white')
+#        # NEW DATA - button
+#        photo = ImageTk.PhotoImage(Image.open(image_path+"img_imageentry_sm.png"))
+#        btn_newdata= tk.Label(foreground_frame, image=photo )
+#        btn_newdata.image = photo
+#        btn_newdata.grid(row=1,column=1, padx=80, pady=20, sticky="ne")
+#        btn_newdata.configure(bg='#D9D9D9')
+#        btn_newdata.bind('<Button-1>', self.chiliButton)
+#
+#
+#        # HEIGHT ANALYSIS - GRAY background
+#        photo = ImageTk.PhotoImage(Image.open(image_path+"img_background_sm.png"))
+#        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
+#        img_graybtnbackground.image = photo
+#        img_graybtnbackground.grid(row=1,column=2, padx=25, sticky="sw")
+#        img_graybtnbackground.configure(bg='white')
+#        # HEIGHT ANALYSIS - button
+#        photo = ImageTk.PhotoImage(Image.open(image_path+"img_videoentry_sm.png"))
+#        btn_heightanalysis= tk.Label(foreground_frame, image=photo )
+#        btn_heightanalysis.image = photo
+#        btn_heightanalysis.grid(row=1,column=2, padx=70, pady=20, sticky="nw")
+#        btn_heightanalysis.configure(bg='#D9D9D9')
+#        btn_heightanalysis.bind('<Button-1>', self.chiliButton)
+#       ###################################################################
 
         # Image of Drone Progress Bar
         photo = ImageTk.PhotoImage(Image.open(image_path+"img_bottomdrone_sm.png"))
@@ -182,7 +172,7 @@ class AppSelectionScreen(tk.Frame):
 
         # Write text for Version number
         txt_version = tk.Label(foreground_frame, text = "Version 1.00")
-        txt_version.grid(row=3,column=1,columnspan=2,padx=5, pady=5, sticky="s")
+        txt_version.grid(row=3,column=1,columnspan=2, padx=5, pady=5, sticky="s")
         txt_version.configure(bg='white')
 
 
@@ -199,10 +189,8 @@ class AppSelectionScreen(tk.Frame):
         self.controller.show_frame("SplashScreen")
     
     def backButton(self, event):
-        self.controller.show_frame("CropSelectionScreen")
+        self.controller.show_frame("AppSelectionScreen")
 
     def exitButton(self, event):
         self.controller.destroy()
 
-    def dataTypeButton(self, event):
-        self.controller.show_frame("DataTypeSelectionScreen")
