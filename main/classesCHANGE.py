@@ -8,7 +8,8 @@ from sklearn.linear_model import RANSACRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans, DBSCAN
 import open3d as o3d
-
+from matplotlib.colors import Normalize
+import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
@@ -152,6 +153,8 @@ class PointCloudGenerator(ImageProcessor):
         xyzrgb_normalized = scaler.fit_transform(xyzrgb)
         return xyzrgb_normalized
     
+    def densify_point_cloud(self, pcd):
+        pass
 # The UnsupervisedSegmentationAlgorithm is responsible for housing unsupervised segmentation algorithms, namely KMeans clustering and DBSCAN
 # To separate the ground and the plant. 
 class UnsupervisedSegmentationAlgorithm:
@@ -277,9 +280,9 @@ class PointCloudFiltering(ImageProcessor):
         #     print("hello wrld 3", z_average, z_std)
         #     threshold = z_average + std_limit*z_std
         #     mask = ground_points[:, 2] < threshold # Remove points that are1 standard deviation or more away from the mean
-        #     ground_points = ground_points[mask]
+        #     ground_points = groucreatingnd_points[mask]
 
-        # Use filtering by creating a grid and local averages to filter out ground points more, locally however
+        # Use filtering by  a grid and local averages to filter out ground points more, locally however
         filtered_ground_points = self.filter_points_by_grid(ground_points, grid_resolution, std_limit, avg_z_filter_interation_times)
 
         return filtered_ground_points   
@@ -310,8 +313,8 @@ class PointCloudFiltering(ImageProcessor):
         dbscan_clusters_pcd_filtered.points = o3d.utility.Vector3dVector(np.asarray(pcd.points)[idx])
         if pcd.colors:  # Ensure that colors exist before attempting to filter them
             dbscan_clusters_pcd_filtered.colors = o3d.utility.Vector3dVector(np.asarray(pcd.colors)[idx])
-
-        return dbscan_clusters_pcd_filtered
+        print(labels[idx])
+        return dbscan_clusters_pcd_filtered, labels[idx]
 
 class CropAnalyzer:
     def __init__(self):
@@ -378,7 +381,7 @@ class CropAnalyzer:
             cluster_centers[label] = center
         return cluster_centers
     
-    def calculate_heights_and_labels(self, filtered_labels, clustered_points, filtered_ground_points):
+    def calculate_heights_and_labels(self, filtered_labels, clustered_points, filtered_ground_pcd):
         """
         Calculate height and labels for filtered DBSCAN clusters.
 
@@ -391,7 +394,8 @@ class CropAnalyzer:
         - heights: List of height differences for each cluster.
         - labels: List of cluster labels.
         """
-        heights = []
+        filtered_ground_points = np.asarray(filtered_ground_pcd.points)
+        heights_dict = {}
         labels = []
         for label in np.unique(filtered_labels):
             if label == -1:  # Skip noise points
@@ -400,7 +404,7 @@ class CropAnalyzer:
             # Get points belonging to the current cluster
             cluster_indices = np.where(filtered_labels == label)[0]
             cluster_points = np.asarray(clustered_points.points)[cluster_indices]
-            
+
             # Calculate the highest point in the cluster
             highest_point = self.calculate_highest_point(cluster_points)
             
@@ -410,17 +414,17 @@ class CropAnalyzer:
             # Calculate height difference
             height_difference = self.calculate_height_difference(highest_point, closest_ground_point)
             
-            heights.append(height_difference)
+            heights_dict[label] = (height_difference)
             labels.append(label)
         
-        return heights, labels
+        return heights_dict, labels
 
-    def visualize_the_heights_and_pcd(self, cluster_heights, dbscan_filtered_pcd, cluster_centers):
+    def visualize_the_heights_and_pcd(self, cluster_heights_dict, dbscan_filtered_pcd, cluster_centers):
         """
         Visualize the heights and point cloud data.
 
         Parameters:
-        - cluster_heights: List of heights for each cluster.
+        - cluster_heights_dict: Dictionary of heights for each cluster.
         - dbscan_filtered_pcd: Filtered point cloud.
         - cluster_centers: Dictionary of cluster centers.
         """
@@ -435,7 +439,7 @@ class CropAnalyzer:
         # Add label annotations for cluster centers
         for label, center in cluster_centers.items():
             try:
-                height = cluster_heights[label]  # Get height for the current cluster
+                height = cluster_heights_dict[label]  # Get height for the current cluster
                 ax.text(center[0], center[1], center[2], f'Cluster {label}\nHeight: {height:.2f}', color='red')
             except IndexError:
                 print(f"IndexError occurred for label: {label}")
@@ -449,7 +453,61 @@ class CropAnalyzer:
 
         # Show the plot
         plt.show()
+    def calculate_heights(self, points, ground_points):
+        """
+        Calculate the height of each point relative to the closest ground point.
+
+        Parameters:
+        - points: numpy array of points in the clusters.
+        - ground_points: numpy array of ground points.
+
+        Returns:
+        - heights: numpy array of height differences.
+        """
+        heights = np.zeros(points.shape[0])
+        for i, point in enumerate(points):
+            closest_ground_point = self.find_closest_ground_point(point, ground_points)
+            heights[i] = point[2] - closest_ground_point[2]
+        return heights
+
+    def visualize_height_gradient(self, dbscan_clusters_filtered_points, filtered_ground_pcd):
+        """
+        Visualize the height of each point with a gradient color from blue to red using Open3D,
+        including visualization of the ground points.
+
+        Parameters:
+        - dbscan_clusters_filtered_points: Filtered point cloud.
+        - filtered_ground_pcd: Ground points.
+        """
+        points = np.asarray(dbscan_clusters_filtered_points.points)
+        ground_points = np.asarray(filtered_ground_pcd.points)
         
+        # Calculate heights
+        heights = self.calculate_heights(points, ground_points)
+
+        # Normalize heights to range [0, 1]
+        norm = Normalize(vmin=np.min(heights), vmax=np.max(heights))
+        normalized_heights = norm(heights)
+        
+        # Apply color gradient (viridis colormap)
+        colormap = cm.get_cmap('viridis')
+        colors = colormap(normalized_heights)[:, :3]  # Get RGB values
+        
+        # Create Open3D point cloud for clustered points
+        pcd = o3d.geometry.PointCloud()
+        pcd.points = o3d.utility.Vector3dVector(points)
+        pcd.colors = o3d.utility.Vector3dVector(colors)
+        
+        # Create Open3D point cloud for ground points
+        ground_pcd = o3d.geometry.PointCloud()
+        ground_pcd.points = o3d.utility.Vector3dVector(ground_points)
+        ground_pcd.paint_uniform_color([0.8, 0.8, 0.8])  # Set color for ground points
+        
+        # Combine clustered points and ground points
+        combined_pcd = pcd + ground_pcd
+        
+        # Visualize the combined point cloud
+        o3d.visualization.draw_geometries([combined_pcd])
 class GUI:
     def __init__(self):
         pass
