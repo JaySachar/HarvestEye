@@ -103,10 +103,10 @@ class DataTypeSelectionButtonsFrame(tk.Frame):
 
 
     def chiliButton(self, event):
-        self.controller.show_frame("AppSelectionScreen")
+        self.controller.show_frame("DataEntryScreen")
     
     def backButton(self, event):
-        self.controller.show_frame("AppSelectionScreen")
+        self.controller.show_frame("DataEntryScreen")
 
     def exitButton(self, event):
         self.controller.destroy()
