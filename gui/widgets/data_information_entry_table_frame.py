@@ -155,7 +155,7 @@ class DataInformationEntryTableFrame(tk.Frame):
             if self.date_flight_entry.get("1.0", 'end-1c') == "":
                 messagebox.showerror("Select a Date", "Please select a Date of Flight to proceed.")
             elif self.file_path == "":
-                messagebox.showerror("Select a File", "Please select a file to proceed.")
+                messagebox.showerror("Select a File", "Please select a correct folder with drone images to proceed.")
             else:
                 with open(filename, 'w') as file:
                     file.write(self.date_flight_entry.get("1.0", 'end-1c') + "\n")

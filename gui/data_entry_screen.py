@@ -164,7 +164,7 @@ class DataEntryScreen(tk.Frame):
 
         # Write text for under the LOGO
         txt_underlogo= tk.Label(foreground_frame,
-                                 text = "Product of SkyHarvest Insights",
+                                 text = u"\N{COPYRIGHT SIGN}" + " All rights reserved",
                                  font = ("Montserrat", 10),
                                  wraplength=140,
                                  justify="right")
