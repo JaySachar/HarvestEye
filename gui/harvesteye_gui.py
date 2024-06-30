@@ -13,6 +13,7 @@ from appselection_screen import AppSelectionScreen
 from datatypeselection_screen import DataTypeSelectionScreen
 from data_entry_screen import DataEntryScreen
 from review_list_screen import ReviewListScreen
+from final_review_screen import FinalReviewScreen
 
 class MainApp(tk.Tk):
     
@@ -47,7 +48,8 @@ class MainApp(tk.Tk):
                   AppSelectionScreen,
                   DataTypeSelectionScreen,
                   DataEntryScreen,
-                  ReviewListScreen):
+                  ReviewListScreen,
+                  FinalReviewScreen):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -56,7 +58,7 @@ class MainApp(tk.Tk):
 
         # Start with the StartPage
         #self.show_frame("DataEntryScreen")
-        self.show_frame("ReviewListScreen")
+        self.show_frame("FinalReviewScreen")
 
     # Because we RootWindow=controller has all the other classes as objects saved
     # we can reference and call any of those frames to show on top of the others
@@ -94,34 +96,3 @@ if __name__ == "__main__":
     app = MainApp()
     app.mainloop()
 
-## Create the main window
-#root = tk.Tk()
-#root.title("Responsive Background Image")
-#root.minsize(940, 480)
-#
-## Load the original image using Pillow
-#image_path = "./assets/splash/splash2.png"
-## original_image = tk.PhotoImage(image_path)
-#original_image = Image.open(image_path)
-#photo = ImageTk.PhotoImage(original_image)
-#
-## Create a frame
-#frame = tk.Frame(root)
-#frame.pack(fill=tk.BOTH, expand=True)
-#
-## Create a Label widget to display the image
-#background_label = tk.Label(frame, image=photo)
-#background_label.place(x=0, y=0, relwidth=1, relheight=1)
-#
-## Bind the resize event to the resize_image function
-#frame.bind("<Configure>", resize_image)
-#
-## Add other widgets on top of the background image
-#label = tk.Label(frame, text="Hello, World!", bg="white")
-#label.pack(pady=20)
-#
-#
-## Start the Tkinter event loop
-#root.mainloop()
-## suck my dick - Kate
-## i suck yours, you suck mine - Me
