@@ -31,7 +31,7 @@ class FinalReviewScreen(tk.Frame):
         ###################################################################
 
 
-        self.pageStep()
+        self.topPage()
         self.center_frame()
         self.bottomPage()
 
@@ -41,7 +41,7 @@ class FinalReviewScreen(tk.Frame):
         button = tk.Button(self,
                            text = "Go to SplashScreen",
                            command = lambda: controller.show_frame("SplashScreen"))
-    def pageStep(self):
+    def topPage(self):
         # Load the EXIT button
         photo = ImageTk.PhotoImage(Image.open(self.image_path+"btn-exit_sm.png"))
         btn_exit = tk.Label(self, image=photo )
@@ -101,9 +101,9 @@ class FinalReviewScreen(tk.Frame):
         txt_version.configure(bg='white')
 
         # Drone progress bar
-        #image_path = "./assets/final-review/"
+        image_path = "./assets/final-review/"
         # Image of Drone Progress Bar
-        photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_bottomdrone_sm.png"))
+        photo = ImageTk.PhotoImage(Image.open(image_path+"img_bottomdrone_sm.png"))
         img_graybtnbackground= tk.Label(bottom_bar_frame, image=photo )
         img_graybtnbackground.image = photo
         img_graybtnbackground.pack(side="bottom", fill='x')
@@ -117,7 +117,7 @@ class FinalReviewScreen(tk.Frame):
 #        # Right side table
         buttons_frame = FinalReviewTableFrame(self, self.controller)
         #buttons_frame.grid(row = 1, column = 1, columnspan = 2, rowspan = 2, sticky="nsew")
-        buttons_frame.pack(side="top", fill="both", expand=True, anchor='center')
+        buttons_frame.pack(side="top", expand=True, anchor='center')
         ######################## Right Side with buttons ##################
 
 
