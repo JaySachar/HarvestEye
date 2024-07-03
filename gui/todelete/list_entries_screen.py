@@ -164,9 +164,9 @@ class ListEntriesScreen(tk.Frame):
 
         # Write text for under the LOGO
         txt_underlogo= tk.Label(foreground_frame,
-                                 text = "Product of SkyHarvest Insights",
+                                 text = "Product of SkyHarvest Insights\n" + u"\N{COPYRIGHT SIGN}" + " All rights reserved",
                                  font = ("Montserrat", 10),
-                                 wraplength=140,
+                                 #wraplength=140,
                                  justify="right")
         txt_underlogo.grid(row=3,column=2,padx=5, pady=5, sticky="se")
         txt_underlogo.configure(bg='white')

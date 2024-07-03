@@ -23,16 +23,22 @@ class SidebarCrop(tk.Frame):
         btn_back.configure(bg=color_of_the_gradient)
 
 
+
+        # Passing a name of the crop as part of the path where assets have same name
+        image_path = "./assets/crops/" + self.controller.crop + "/"
+        print(f"self.controller.crop (again) = {self.controller.crop}")
+        print(f"Once again, image_path: {image_path}")
+
         # Load CHILI TEXT for the side sidebar 
-        photo = ImageTk.PhotoImage(Image.open(image_path+"txt_chili_sm.png"))
+        photo = ImageTk.PhotoImage(Image.open(image_path+"txt_crop_sm.png"))
         txt_chilititle = tk.Label(self, image=photo )
         txt_chilititle.image = photo
         txt_chilititle.pack(side="top", fill="x", expand=True, pady=50)
         txt_chilititle.configure(bg=color_of_the_gradient)
-        image_path = "./assets/datatype-select/"
+        #image_path = "./assets/datatype-select/"
 
         # Load CHILI image for the side sidebar
-        photo = ImageTk.PhotoImage(Image.open(image_path+"img_chili_sm.png"))
+        photo = ImageTk.PhotoImage(Image.open(image_path+"img_crop_sm.png"))
         img_chili = tk.Label(self, image=photo )
         img_chili.image = photo
         img_chili.pack(side="top", fill="both", expand=True, pady=50)

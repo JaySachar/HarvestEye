@@ -35,12 +35,6 @@ class FinalReviewScreen(tk.Frame):
         self.center_frame()
         self.bottomPage()
 
-        label = tk.Label(self, 
-                         text = "This is crop selection screen",
-                         font = controller.title_font)
-        button = tk.Button(self,
-                           text = "Go to SplashScreen",
-                           command = lambda: controller.show_frame("SplashScreen"))
     def topPage(self):
         # Load the EXIT button
         photo = ImageTk.PhotoImage(Image.open(self.image_path+"btn-exit_sm.png"))
@@ -116,7 +110,6 @@ class FinalReviewScreen(tk.Frame):
     def center_frame(self):
 #        # Right side table
         buttons_frame = FinalReviewTableFrame(self, self.controller)
-        #buttons_frame.grid(row = 1, column = 1, columnspan = 2, rowspan = 2, sticky="nsew")
         buttons_frame.pack(side="top", expand=True, anchor='center')
         ######################## Right Side with buttons ##################
 

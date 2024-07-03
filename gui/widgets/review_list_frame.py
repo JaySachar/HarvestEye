@@ -14,7 +14,7 @@ class ReviewListFrame(tk.Frame):
         self.frame.pack(fill=tk.BOTH, expand=True)
 
         self.canvas = tk.Canvas(self.frame)
-        self.canvas.configure(bg="blue")
+        self.canvas.configure(bg="white")
         self.scrollbar = ttk.Scrollbar(self.frame, orient="vertical", command=self.canvas.yview)
         self.scrollable_frame = tk.Frame(self.canvas)
         self.scrollable_frame.configure(bg="#D9D9D9")

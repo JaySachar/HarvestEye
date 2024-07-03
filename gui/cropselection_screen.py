@@ -8,7 +8,7 @@ class CropSelectionScreen(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
 
-        # ========================================/
+         # ========================================/
         #### Load all the images in ####
 
         # Configure grid for the entire SplashScreen frame
@@ -192,16 +192,21 @@ class CropSelectionScreen(tk.Frame):
                            command = lambda: controller.show_frame("SplashScreen"))
 
     def chiliButton(self, event):
+        self.controller.crop = "chili"
         self.controller.show_frame("AppSelectionScreen")
 
     def orangeButton(self, event):
-        self.controller.show_frame("AppSelectScreen")
+        self.controller.crop = "orange"
+        print(f"self.controller.crop = {self.controller.crop}")
+        self.controller.show_frame("AppSelectionScreen")
     
     def avocadoButton(self, event):
-        self.controller.show_frame("AppSelectScreen")
+        self.controller.crop = "avocado"
+        self.controller.show_frame("AppSelectionScreen")
 
     def moreButton(self, event):
-        self.controller.show_frame("AppSelectScreen")
+        print("MoreButtonPressed")
+        #self.controller.show_frame("AppSelectionScreen")
 
     
     
