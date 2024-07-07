@@ -6883,3 +6883,5 @@ Zuk Z2 Pro;4.61
 Zuk Z2 Rio Edition;4.54
 Zuk Z2;4.61
 senseFly senseFly Aeria X; 22.2
+Blender Blender; 50
+DJI M3M; 12
