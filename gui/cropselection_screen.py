@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
+from widgets.logo_frame import LogoFrame
 
 class CropSelectionScreen(tk.Frame):
 
@@ -157,24 +158,27 @@ class CropSelectionScreen(tk.Frame):
         # Bind the resize event to the resize_image function
         #self.bind("<Configure>", resize_image)
 
-        # Load the LOGO img
-        photo = ImageTk.PhotoImage(Image.open(image_path+"Logo_sm.png"))
-        img_logo = tk.Label(foreground_frame, image=photo, borderwidth=0)
-        img_logo.image = photo
-        img_logo.grid(row=5,column=2,padx=5, pady=35, sticky="se")
-        img_logo.configure(bg='white')
-        # Bind the resize event to the resize_image function
-        #self.bind("<Configure>", resize_image)
-
-
-        # Write text for under the LOGO
-        txt_underlogo= tk.Label(foreground_frame,
-                                 text = "Product of SkyHarvest Insights",
-                                 font = ("Montserrat", 10),
-                                 wraplength=140,
-                                 justify="right")
-        txt_underlogo.grid(row=5,column=2,padx=5, pady=5, sticky="se")
-        txt_underlogo.configure(bg='white')
+        logo_frame = LogoFrame(foreground_frame)
+        logo_frame.grid(row=5,column=2,sticky="se")
+        #.pack(side="right", anchor="s")
+#        # Load the LOGO img
+#        photo = ImageTk.PhotoImage(Image.open(image_path+"Logo_sm.png"))
+#        img_logo = tk.Label(foreground_frame, image=photo, borderwidth=0)
+#        img_logo.image = photo
+#        img_logo.grid(row=5,column=2,padx=5, pady=35, sticky="se")
+#        img_logo.configure(bg='white')
+#        # Bind the resize event to the resize_image function
+#        #self.bind("<Configure>", resize_image)
+#
+#
+#        # Write text for under the LOGO
+#        txt_underlogo= tk.Label(foreground_frame,
+#                                 text = "Product of SkyHarvest Insights",
+#                                 font = ("Montserrat", 10),
+#                                 wraplength=140,
+#                                 justify="right")
+#        txt_underlogo.grid(row=5,column=2,padx=5, pady=5, sticky="se")
+#        txt_underlogo.configure(bg='white')
 
         # Write text for Version number
         txt_version = tk.Label(foreground_frame, text = "Version 1.00")

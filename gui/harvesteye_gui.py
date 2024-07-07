@@ -26,7 +26,7 @@ class MainApp(tk.Tk):
                                       slant = "italic")
 
         # Default value is chili
-        self.crop = 'orange'
+        self.crop = 'chili'
 
         # Frameless/No title bar 
         #self.overrideredirect(True)
@@ -61,7 +61,7 @@ class MainApp(tk.Tk):
 
         # Start with the StartPage
         #self.show_frame("DataEntryScreen")
-        self.show_frame("CropSelectionScreen")
+        self.show_frame("ReviewListScreen")
 
     # Because we RootWindow=controller has all the other classes as objects saved
     # we can reference and call any of those frames to show on top of the others

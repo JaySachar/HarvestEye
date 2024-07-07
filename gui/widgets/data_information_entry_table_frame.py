@@ -12,28 +12,7 @@ class DataInformationEntryTableFrame(tk.Frame):
 
         self.file_path = ""
 
-        #self.grid_columnconfigure(0, weight=1)
-        #self.grid_columnconfigure(1, weight=1)
-        #self.grid_rowconfigure(0, weight=1)
-        #self.grid_rowconfigure(1, weight=8)
-        #self.grid_rowconfigure(2, weight=8)
-        #self.grid_rowconfigure(3, weight=1)
         self.configure(bg="#D9D9D9")
-
-
-        # ========================================/
-        #### Load all the images in ####
-        # Create a foreground frame on top of the background
-        #foreground_frame = tk.Frame(self)
-        #foreground_frame.configure(bg='white')
-        #foreground_frame.grid(row=0, column=0, sticky="nsew")
-
-        ## Configure grid for the foreground frame
-        #foreground_frame.grid_columnconfigure(0, weight=2)
-        #foreground_frame.grid_columnconfigure(1, weight=2)
-        #foreground_frame.grid_columnconfigure(2, weight=2)
-        #foreground_frame.grid_rowconfigure(0, weight=5)
-        #foreground_frame.grid_rowconfigure(1, weight=1)
 
        # Table frame 
         color_of_the_gradient = '#8C953C'
@@ -151,7 +130,8 @@ class DataInformationEntryTableFrame(tk.Frame):
         self.notes_entry.get("1.0", 'end-1c')
         
         try:
-            filename = "./review_saved_data/" + self.date_flight_entry.get("1.0", 'end-1c') + ".txt"
+            filename = "./review_saved_data/" + self.controller.crop + "/"  \
+                        + self.date_flight_entry.get("1.0", 'end-1c') + ".txt"
             if self.date_flight_entry.get("1.0", 'end-1c') == "":
                 messagebox.showerror("Select a Date", "Please select a Date of Flight to proceed.")
             elif self.file_path == "":

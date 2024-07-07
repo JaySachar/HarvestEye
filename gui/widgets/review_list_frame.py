@@ -15,49 +15,59 @@ class ReviewListFrame(tk.Frame):
 
         self.canvas = tk.Canvas(self.frame)
         self.canvas.configure(bg="white")
-        self.scrollbar = ttk.Scrollbar(self.frame, orient="vertical", command=self.canvas.yview)
-        self.scrollable_frame = tk.Frame(self.canvas)
-        self.scrollable_frame.configure(bg="#D9D9D9")
-
-        self.scrollable_frame.bind(
-            "<Configure>",
-            lambda e: self.canvas.configure(
-                scrollregion=self.canvas.bbox("all")
-            )
-        )
-        print(self.canvas.winfo_width())
-        self.canvas_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame,
-                                  anchor="nw")
-
-        self.canvas.configure(yscrollcommand=self.scrollbar.set)
-
         self.canvas.pack(side="left", fill="both", expand=True)
-        ###########
+
+        self.scrollbar = ttk.Scrollbar(self.frame, orient="vertical", command=self.canvas.yview)
         self.scrollbar.pack(side="right", fill="y")
 
+        self.scrollable_frame = tk.Frame(self.canvas)
+        self.scrollable_frame.configure(bg="#FFFFFF")
+        self.scrollable_frame.bind(
+                "<Configure>",
+                self.on_frame_configure
+        )
+ 
+ 
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
         self.canvas.bind("<Configure>", self.on_canvas_resized)
         self.update_list()
-        #self.add_labels()
-
-    def add_labels(self):
-        # Add some content to the scrollable frame for demonstration
-        for i in range(50):
-            tk.Label(self.scrollable_frame, text=f"Label {i}", bg="lightgrey").pack(fill="x")
-
+        self.canvas_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame,
+                                  anchor="nw")
+ 
 
     def on_canvas_resized(self, event):
         canvas_width = event.width
         self.canvas.itemconfig(self.canvas_frame, width=canvas_width)
         self.scrollable_frame.config(width=canvas_width)
 
+        
+    def on_frame_configure(self, event):
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+        # Run the update scroll after all the elements loaded in
+        self.after(100, self.update_scroll_region)
+
+
+    def update_scroll_region(self):
+        # Adjust the scrollregion dynamically
+        content_height = self.scrollable_frame.winfo_height() 
+        canvas_height = self.canvas.winfo_height()
+        if content_height < canvas_height:
+            print(f" self.scrollable_frame.winfo_height()  + self.canvas.winfo_height() ")
+            print(f"{self.scrollable_frame.winfo_height()}  + {self.canvas.winfo_height()} ")
+            print("Adjusting scrollable_frame dynamically")
+            self.canvas.configure(scrollregion=(0, 0, self.canvas.winfo_width(), canvas_height))
+            print(f"0, 0, {self.canvas.winfo_width()}, {canvas_height}")
+        else:
+            self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+
+
+
     def update_list(self):
         # Clear previous contents
-        print(self.scrollable_frame.winfo_children())
         for widget in self.scrollable_frame.winfo_children():
             widget.destroy()
 
         # Get list of files
-        print(os.listdir(self.folder_path))
         files = os.listdir(self.folder_path)
         if not files:
             no_data_label = ttk.Label(self.scrollable_frame, text="No Data Found")
@@ -67,13 +77,10 @@ class ReviewListFrame(tk.Frame):
                 file_path = os.path.join(self.folder_path, file)
                 if os.path.isfile(file_path):
                     file_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
-                    #tk.Label(self.scrollable_frame, text=f"Label {file_date}", bg="lightgrey").pack(fill="x")
                     self.add_file_row(file_date)
 
     def add_file_row(self, file_date):
-        #tk.Label(self.scrollable_frame, text=f"Label {file_date}", bg="lightgrey").pack(fill="x")
         frame = tk.Frame(self.scrollable_frame, bg="#EFEFEF")
-        #frame = tk.Frame(self.scrollable_frame, bg="purple").pack(fill="x")
 
         date_label = ttk.Label(frame, text=file_date)
         date_label.pack(side=tk.LEFT, padx=10)

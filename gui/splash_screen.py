@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
+from widgets.logo_frame import LogoFrame
 
 class SplashScreen(tk.Frame):
 
@@ -36,8 +37,6 @@ class SplashScreen(tk.Frame):
         background_label = tk.Label(foreground_frame, image=photo, borderwidth=0)
         background_label.image = photo
         background_label.place(relx=0.5, rely=0.5, anchor="center")
-        #background_label.grid(row=1, column=1, sticky="nsew")
-        #background_label.configure(bg='white')
         # Bind the resize event to the resize_image function
         #self.bind("<Configure>", resize_image)
 
@@ -71,14 +70,9 @@ class SplashScreen(tk.Frame):
         # Bind the resize event to the resize_image function
         #self.bind("<Configure>", resize_image)
 
-        # Load the LOGO img
-        photo = ImageTk.PhotoImage(Image.open(image_path+"Logo_sm.png"))
-        img_logo = tk.Label(foreground_frame, image=photo, borderwidth=0)
-        img_logo.image = photo
-        img_logo.grid(row=2,column=2,padx=5, pady=35, sticky="se")
-        img_logo.configure(bg='white')
-        # Bind the resize event to the resize_image function
-        #self.bind("<Configure>", resize_image)
+        logo_frame = LogoFrame(foreground_frame)
+        logo_frame.grid(row=2,column=2, sticky="se")
+
 
         # Load the EXIT button
         photo = ImageTk.PhotoImage(Image.open(image_path+"btn-exit_sm.png"))
@@ -89,32 +83,11 @@ class SplashScreen(tk.Frame):
         btn_exit.grid(row=0,column=2,padx=10, pady=10, sticky="ne")
         btn_exit.configure(bg='white')
  
-
-        # Write text for under the LOGO
-        txt_underlogo= tk.Label(foreground_frame,
-                                 text = "Product of SkyHarvest Insights",
-                                 font = ("Montserrat", 10),
-                                 wraplength=140,
-                                 justify="right")
-        txt_underlogo.grid(row=2,column=2,padx=5, pady=5, sticky="se")
-        txt_underlogo.configure(bg='white')
-
         # Write text for Version number
         txt_version = tk.Label(foreground_frame, text = "Version 1.00")
         txt_version.grid(row=2,column=1,padx=5, pady=5, sticky="s")
         txt_version.configure(bg='white')
 
-
-
-        # ========================================/
-        #### Define a grid for all the elements ####
-
-
-#        btn_open = tk.Button(self,
-#                           text = "Open",
-#                           command = lambda: controller.show_frame("CropSelectionScreen"))
-#        btn_open.pack()
-        # ========================================/
 
     def openButton(self, event):
         self.controller.show_frame("CropSelectionScreen")
