@@ -132,6 +132,7 @@ class DataInformationEntryTableFrame(tk.Frame):
         try:
             filename = "./review_saved_data/" + self.controller.crop + "/"  \
                         + self.date_flight_entry.get("1.0", 'end-1c') + ".txt"
+
             if self.date_flight_entry.get("1.0", 'end-1c') == "":
                 messagebox.showerror("Select a Date", "Please select a Date of Flight to proceed.")
             elif self.file_path == "":
@@ -144,23 +145,36 @@ class DataInformationEntryTableFrame(tk.Frame):
                     file.write(self.file_path + "\n")
                     file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
      
+                    # Clear current table upon submission
+                    self.date_flight_entry.delete('1.0', 'end-1c')
+                    self.weather_entry.delete('1.0', 'end-1c')
+                    self.dronetype_entry.delete('1.0', 'end-1c')
+                    self.file_path = ""
+                    self.notes_entry.delete('1.0', 'end-1c')
+
+
+
+                    # Add current page into back button history and show another frame
+                    self.controller.back_history.append("DataEntryScreen")
+                    self.controller.show_frame("ReviewListScreen")
+                    print("Successfuly added a file!")
+             
         except NameError:
             messagebox.showerror("Select a File", "Please select a file to proceed.")
 
+        print(self.controller.back_history)
+#
+#        filename = "./review_saved_data/" + self.date_flight_entry.get("1.0", 'end-1c')
+#        with open(filename, 'w') as file:
+#            file.write(self.date_flight_entry.get("1.0", 'end-1c') + "\n")
+#            file.write(self.weather_entry.get("1.0", 'end-1c') + "\n")
+#            file.write(self.dronetype_entry.get("1.0", 'end-1c') + "\n")
+#            file.write(self.file_path + "\n")
+#            file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
 
-        filename = "./review_saved_data/" + self.date_flight_entry.get("1.0", 'end-1c')
-        with open(filename, 'w') as file:
-            file.write(self.date_flight_entry.get("1.0", 'end-1c') + "\n")
-            file.write(self.weather_entry.get("1.0", 'end-1c') + "\n")
-            file.write(self.dronetype_entry.get("1.0", 'end-1c') + "\n")
-            file.write(self.file_path + "\n")
-            file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
 
-        print("Successfuly added a file!")
 
-        self.controller.back_history.append("DataEntryScreen")
-        self.controller.show_frame("ReviewListScreen")
-    
+   
     def backButton(self, event):
         self.controller.show_frame("DataTypeSelectionScreen")
 

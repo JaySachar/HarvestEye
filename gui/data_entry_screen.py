@@ -93,8 +93,8 @@ class DataEntryScreen(tk.Frame):
     def chiliButton(self, event):
         self.controller.show_frame("SplashScreen")
     
-    def backButton(self, event):
-        self.controller.show_frame("DataTypeSelectionScreen")
+#    def backButton(self, event):
+#        self.controller.show_frame("DataTypeSelectionScreen")
 
     def exitButton(self, event):
         self.controller.destroy()
