@@ -4,10 +4,11 @@ from tkinter import ttk
 from datetime import datetime
 
 class ReviewListFrame(tk.Frame):
-    def __init__(self, parent, controller, folder_path):
+    def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
 
+        folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
         self.folder_path = folder_path
 
         self.frame = ttk.Frame(self)
@@ -64,6 +65,7 @@ class ReviewListFrame(tk.Frame):
 
     def update_list(self, *args):
         # Clear previous contents
+        self.folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
         for widget in self.scrollable_frame.winfo_children():
             widget.destroy()
 

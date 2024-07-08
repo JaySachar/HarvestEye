@@ -21,11 +21,15 @@ class AppSelectionScreen(tk.Frame):
         sidebar_frame = tk.Frame(self)
         sidebar_frame.configure(bg="white")
         sidebar_frame.pack(side="left", fill='y')
-        sidebar = SidebarCrop(sidebar_frame, self.controller).pack(side="left", fill="y" )
+
+        self.sidebar = SidebarCrop(sidebar_frame, self.controller)
+        self.sidebar.pack(side="left", fill="y" )
 
         self.topPage()
         self.center_frame()
         self.bottomPage()
+
+        self.bind("<<ShowFrame>>", self.onShowFrame)
 
     def topPage(self):
         # Load the EXIT button
@@ -121,15 +125,12 @@ class AppSelectionScreen(tk.Frame):
         btn_dronenavguide.bind('<Button-1>', self.chiliButton)
         ###################################################################
 
-
-
+    def onShowFrame(self, event):
+        self.sidebar.renderSidebarContent()
 
     def chiliButton(self, event):
         self.controller.show_frame("SplashScreen")
     
-    def backButton(self, event):
-        self.controller.show_frame("CropSelectionScreen")
-
     def exitButton(self, event):
         self.controller.destroy()
 

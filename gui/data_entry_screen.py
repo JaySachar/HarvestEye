@@ -25,15 +25,17 @@ class DataEntryScreen(tk.Frame):
 
         ########################### Side bar ##############################
 
-        sidebar = SidebarCrop(sidebar_frame, self.controller).pack(side="left", fill="y" )
+        self.sidebar = SidebarCrop(sidebar_frame, self.controller)
+        self.sidebar.pack(side="left", fill="y" )
         #.grid(col=0, row=0, sticky="nsew")
         #img_chili.pack(side="top", fill="both", expand=True, pady=50)
-
 
         #### Load all the images in ####
         self.topPage()
         self.center_frame()
         self.bottomPage()
+
+        self.bind("<<ShowFrame>>", self.onShowFrame)
 
     def topPage(self):
         # Load the EXIT button
@@ -80,15 +82,13 @@ class DataEntryScreen(tk.Frame):
         img_graybtnbackground.configure(bg='white')
 
 
-
-
+    def onShowFrame(self, event):
+        self.sidebar.renderSidebarContent()
 
     def center_frame(self):
         ###### ENTER THE CUSTOM FRAME HERE!!!!!!!!!!!!
         buttons_frame = DataInformationEntryTableFrame(self, self.controller)
         buttons_frame.pack(side="top", expand=True, anchor='center')
-
-
 
     def chiliButton(self, event):
         self.controller.show_frame("SplashScreen")

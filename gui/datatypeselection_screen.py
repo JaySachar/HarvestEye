@@ -19,15 +19,12 @@ class DataTypeSelectionScreen(tk.Frame):
         # Load button images
         color_of_the_gradient = '#8C953C'
         sidebar_frame = tk.Frame(self)
-        #sidebar_frame.configure(bg='red')
         sidebar_frame.pack(side="left", fill='y')
-        #.grid(row=0, column=0,columnspan=1, rowspan=4, sticky="nsew")
 
         ########################### Side bar ##############################
 
-        sidebar = SidebarCrop(sidebar_frame, self.controller).pack(side="left", fill="y" )
-        #.grid(col=0, row=0, sticky="nsew")
-        #img_chili.pack(side="top", fill="both", expand=True, pady=50)
+        self.sidebar = SidebarCrop(sidebar_frame, self.controller)
+        self.sidebar.pack(side="left", fill="y" )
 
         ###################################################################
 
@@ -35,6 +32,8 @@ class DataTypeSelectionScreen(tk.Frame):
         self.topPage()
         self.center_frame()
         self.bottomPage()
+
+        self.bind("<<ShowFrame>>", self.onShowFrame)
 
     def topPage(self):
         # Load the EXIT button
@@ -91,7 +90,8 @@ class DataTypeSelectionScreen(tk.Frame):
         # ========================================/
         self.image_path = "./assets/datatype-select/"
 
-
+    def onShowFrame(self, event):
+        self.sidebar.renderSidebarContent()
 
     def center_frame(self):
         buttons_frame = DataTypeSelectionButtonsFrame(self, self.controller)

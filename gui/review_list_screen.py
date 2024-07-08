@@ -20,7 +20,9 @@ class ReviewListScreen(tk.Frame):
         sidebar_frame = tk.Frame(self)
         sidebar_frame.pack(side="left", fill='y')
 
-        sidebar = SidebarCrop(sidebar_frame, self.controller).pack(side="left", fill="y" )
+        self.sidebar = SidebarCrop(sidebar_frame, self.controller)
+        self.sidebar.pack(side="left", fill="y" )
+        #self.bind("<<ShowFrame>>", sidebar.renderSidebarContent)
 
         ###################################################################
 
@@ -28,6 +30,8 @@ class ReviewListScreen(tk.Frame):
         self.topPage()
         self.center_frame()
         self.bottomPage()
+
+        self.bind("<<ShowFrame>>", self.onShowFrame)
 
     def topPage(self):
         # Load the EXIT button
@@ -76,16 +80,18 @@ class ReviewListScreen(tk.Frame):
 
 
     def center_frame(self):
-        folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
+        #folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
         # REMEMBER TO IMPLEMENT A CHECK IF THE FOLDER EXISTS
         ## -> CREATE A NEW ONE IF IT DOESN'T!!!
-        review_list_frame = ReviewListFrame(self, self.controller, folder_path)
-        review_list_frame.pack(side="top", fill="both", expand=True, anchor='center')
-        self.bind("<<ShowFrame>>", review_list_frame.update_list)
+        self.review_list_frame = ReviewListFrame(self, self.controller)
+        self.review_list_frame.pack(side="top", fill="both", expand=True, anchor='center')
         #review_list_frame.update_list()
 
 #    def testPrintShowFrameEvent(self, event):
 #        print("FRAME IS SHOWN!!!!")
+    def onShowFrame(self, event):
+        self.review_list_frame.update_list()
+        self.sidebar.renderSidebarContent()
 
     def chiliButton(self, event):
         self.controller.show_frame("SplashScreen")
