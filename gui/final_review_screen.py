@@ -111,9 +111,12 @@ class FinalReviewScreen(tk.Frame):
 ###### Custom instructions per this frame  !!!!!!!!!!!!
         
     def center_frame(self):
-#        # Right side table
+        # Right side table
         buttons_frame = FinalReviewTableFrame(self, self.controller)
         buttons_frame.pack(side="top", expand=True, anchor='center')
+
+
+
         ######################## Right Side with buttons ##################
 
 

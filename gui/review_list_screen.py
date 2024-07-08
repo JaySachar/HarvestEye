@@ -81,7 +81,11 @@ class ReviewListScreen(tk.Frame):
         ## -> CREATE A NEW ONE IF IT DOESN'T!!!
         review_list_frame = ReviewListFrame(self, self.controller, folder_path)
         review_list_frame.pack(side="top", fill="both", expand=True, anchor='center')
+        self.bind("<<ShowFrame>>", review_list_frame.update_list)
+        #review_list_frame.update_list()
 
+#    def testPrintShowFrameEvent(self, event):
+#        print("FRAME IS SHOWN!!!!")
 
     def chiliButton(self, event):
         self.controller.show_frame("SplashScreen")

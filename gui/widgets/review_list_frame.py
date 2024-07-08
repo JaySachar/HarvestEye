@@ -52,17 +52,17 @@ class ReviewListFrame(tk.Frame):
         content_height = self.scrollable_frame.winfo_height() 
         canvas_height = self.canvas.winfo_height()
         if content_height < canvas_height:
-            print(f" self.scrollable_frame.winfo_height()  + self.canvas.winfo_height() ")
-            print(f"{self.scrollable_frame.winfo_height()}  + {self.canvas.winfo_height()} ")
-            print("Adjusting scrollable_frame dynamically")
+            #print(f" self.scrollable_frame.winfo_height()  + self.canvas.winfo_height() ")
+            #print(f"{self.scrollable_frame.winfo_height()}  + {self.canvas.winfo_height()} ")
+            #print("Adjusting scrollable_frame dynamically")
             self.canvas.configure(scrollregion=(0, 0, self.canvas.winfo_width(), canvas_height))
-            print(f"0, 0, {self.canvas.winfo_width()}, {canvas_height}")
+            #print(f"0, 0, {self.canvas.winfo_width()}, {canvas_height}")
         else:
             self.canvas.configure(scrollregion=self.canvas.bbox("all"))
 
 
 
-    def update_list(self):
+    def update_list(self, *args):
         # Clear previous contents
         for widget in self.scrollable_frame.winfo_children():
             widget.destroy()
@@ -92,5 +92,6 @@ class ReviewListFrame(tk.Frame):
 
     def review_file(self, file_date):
         print(f"Reviewing file from date: {file_date}")
+        #self.update_list()
 
 

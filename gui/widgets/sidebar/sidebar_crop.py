@@ -14,7 +14,7 @@ class SidebarCrop(tk.Frame):
 
         # Load the BACK button
         image_path = "./assets/datatype-select/"
-        print(image_path)
+        #print(image_path)
         photo = ImageTk.PhotoImage(Image.open(image_path+"btn-back_sm.png"))
         btn_back = tk.Label(self, image=photo )
         btn_back.image = photo
@@ -26,8 +26,8 @@ class SidebarCrop(tk.Frame):
 
         # Passing a name of the crop as part of the path where assets have same name
         image_path = "./assets/crops/" + self.controller.crop + "/"
-        print(f"self.controller.crop (again) = {self.controller.crop}")
-        print(f"Once again, image_path: {image_path}")
+        #print(f"self.controller.crop (again) = {self.controller.crop}")
+        #print(f"Once again, image_path: {image_path}")
 
         # Load CHILI TEXT for the side sidebar 
         photo = ImageTk.PhotoImage(Image.open(image_path+"txt_crop_sm.png"))

@@ -66,7 +66,9 @@ class MainApp(tk.Tk):
     # Because we RootWindow=controller has all the other classes as objects saved
     # we can reference and call any of those frames to show on top of the others
     def show_frame(self, page_name):
+        #self.frames['ReviewListScreen'].event_generate("<<ShowFrame>>")
         frame = self.frames[page_name]
+        frame.event_generate("<<ShowFrame>>")
         frame.tkraise()
 
 

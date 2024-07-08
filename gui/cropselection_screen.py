@@ -187,7 +187,6 @@ class CropSelectionScreen(tk.Frame):
 
 
 
-
         label = tk.Label(self, 
                          text = "This is crop selection screen",
                          font = controller.title_font)
