@@ -92,6 +92,8 @@ class ReviewListFrame(tk.Frame):
 
     def review_file(self, file_date):
         print(f"Reviewing file from date: {file_date}")
+        # UPDATE WHEN I KNOW IT WILL LEAD TO THE FINAL REVIEW SCREEN
+        #self.controller.back_history.append("DataEntryScreen")
         #self.update_list()
 
 

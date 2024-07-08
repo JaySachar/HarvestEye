@@ -89,7 +89,9 @@ class SplashScreen(tk.Frame):
         txt_version.configure(bg='white')
 
 
+
     def openButton(self, event):
+        self.controller.back_history.append("SplashScreen")
         self.controller.show_frame("CropSelectionScreen")
 
     def exitButton(self, event):

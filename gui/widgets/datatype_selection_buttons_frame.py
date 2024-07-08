@@ -103,6 +103,7 @@ class DataTypeSelectionButtonsFrame(tk.Frame):
 
 
     def chiliButton(self, event):
+        self.controller.back_history.append("DataTypeSelectionButtonsFrame")
         self.controller.show_frame("DataEntryScreen")
     
     def backButton(self, event):

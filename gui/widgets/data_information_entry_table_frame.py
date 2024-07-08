@@ -157,7 +157,9 @@ class DataInformationEntryTableFrame(tk.Frame):
             file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
 
         print("Successfuly added a file!")
-        #self.controller.show_frame("DataTypeSelectionScreen")
+
+        self.controller.back_history.append("DataEntryScreen")
+        self.controller.show_frame("ReviewListScreen")
     
     def backButton(self, event):
         self.controller.show_frame("DataTypeSelectionScreen")

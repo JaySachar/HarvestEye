@@ -196,15 +196,18 @@ class CropSelectionScreen(tk.Frame):
 
     def chiliButton(self, event):
         self.controller.crop = "chili"
+        self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
 
     def orangeButton(self, event):
         self.controller.crop = "orange"
         print(f"self.controller.crop = {self.controller.crop}")
+        self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
     
     def avocadoButton(self, event):
         self.controller.crop = "avocado"
+        self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
 
     def moreButton(self, event):

@@ -134,7 +134,9 @@ class AppSelectionScreen(tk.Frame):
         self.controller.destroy()
 
     def dataTypeButton(self, event):
+        self.controller.back_history.append("AppSelectionScreen")
         self.controller.show_frame("DataTypeSelectionScreen")
 
     def heightAnalysisButton(self, event):
+        self.controller.back_history.append("AppSelectionScreen")
         self.controller.show_frame("ReviewListScreen")

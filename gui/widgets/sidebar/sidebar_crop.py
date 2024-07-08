@@ -55,6 +55,11 @@ class SidebarCrop(tk.Frame):
 
 
     def backButton(self, event):
-        self.controller.show_frame("SplashScreen")
+        try:
+            self.controller.show_frame(self.controller.back_history.pop())
+        except:
+            print("Nowhere to go. Back button stack is empty")
+            self.controller.show_frame("SplashScreen")
+
         #self.controller.show_frame("DataTypeSelectionScreen")
 
