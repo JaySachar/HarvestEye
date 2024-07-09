@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import cv2 
 import subprocess
 import os
 import tempfile
@@ -11,6 +10,7 @@ import open3d as o3d
 from matplotlib.colors import Normalize
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
+from scipy.spatial import ConvexHull
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
 class ImageProcessor:
@@ -154,7 +154,7 @@ class PointCloudGenerator(ImageProcessor):
         return xyzrgb_normalized
     
     def densify_point_cloud(self, pcd):
-        pass
+        pass 
 # The UnsupervisedSegmentationAlgorithm is responsible for housing unsupervised segmentation algorithms, namely KMeans clustering and DBSCAN
 # To separate the ground and the plant. 
 class UnsupervisedSegmentationAlgorithm:
@@ -508,6 +508,64 @@ class CropAnalyzer:
         
         # Visualize the combined point cloud
         o3d.visualization.draw_geometries([combined_pcd])
+    def calculate_oval_volume(self, cluster_points, ground_points):
+        # Step 1: Find furthest XY points in the cluster
+        furthest_points = self.find_furthest_xy_points(cluster_points)
+
+        # Step 2: Calculate maximum height of the cluster
+        highest_point = self.calculate_highest_point(cluster_points)
+        closest_ground_point = self.find_closest_ground_point(highest_point, ground_points)
+        max_height = self.calculate_height_difference(highest_point, closest_ground_point)
+
+        # Step 3: Calculate semi-major and semi-minor axes lengths (a and b)
+        a = np.linalg.norm(furthest_points[0] - furthest_points[1]) / 2.0
+        b = np.linalg.norm(furthest_points[0] - furthest_points[2]) / 2.0
+
+        # Step 4: Calculate volume of an ellipsoid (since oval is an extension in Z-direction)
+        volume = (4/3) * np.pi * a * b * max_height
+        
+        return volume
+
+    def find_furthest_xy_points(self, cluster_points):
+        # Compute convex hull of the cluster points
+        hull = ConvexHull(cluster_points[:, :2])
+
+        # Initialize variables to store furthest points and maximum distance
+        furthest_points = None
+        max_distance = 0
+
+        # Iterate through convex hull vertices to find maximum distance pair
+        for i in range(len(hull.vertices)):
+            for j in range(i + 1, len(hull.vertices)):
+                # Calculate squared Euclidean distance between points
+                distance = np.linalg.norm(cluster_points[hull.vertices[i], :2] - cluster_points[hull.vertices[j], :2]) ** 2
+                if distance > max_distance:
+                    max_distance = distance
+                    furthest_points = (cluster_points[hull.vertices[i]], cluster_points[hull.vertices[j]])
+
+        return furthest_points
+
+
+    def calculate_volumes_for_clusters(self, dbscan_filtered_pcd, dbscan_filtered_labels, filtered_ground_pcd):
+        volumes_dict = {}
+        filtered_ground_points = np.asarray(filtered_ground_pcd.points)
+        
+        for label in np.unique(dbscan_filtered_labels):
+            if label == -1:  # Skip noise points
+                continue
+            
+            # Get points belonging to the current cluster
+            cluster_indices = np.where(dbscan_filtered_labels == label)[0]
+            cluster_points = np.asarray(dbscan_filtered_pcd.points)[cluster_indices]
+
+            # Calculate volume for the current cluster
+            volume = self.calculate_oval_volume(cluster_points, filtered_ground_points)
+            
+            # Store volume in dictionary with label as key
+            volumes_dict[label] = volume
+        
+        return volumes_dict
+    
 class GUI:
     def __init__(self):
         pass
