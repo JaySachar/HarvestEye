@@ -3,6 +3,23 @@ from tkinter import ttk
 from tkinter import filedialog
 from tkinter import messagebox
 from PIL import Image, ImageTk
+import os
+import sys
+import threading
+# Get the current working directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Navigate one folder up
+parent_dir = os.path.abspath(os.path.join(current_dir, '..', '..'))
+
+# Navigate to the 'main' folder
+target_dir = os.path.join(parent_dir, 'main')
+
+# Add the 'main' folder to the Python path
+sys.path.append(target_dir)
+
+# Now you can import the target file
+from classesCHANGE import PointCloudGenerator
 
 class DataInformationEntryTableFrame(tk.Frame):
 
@@ -144,20 +161,25 @@ class DataInformationEntryTableFrame(tk.Frame):
                     file.write(self.dronetype_entry.get("1.0", 'end-1c') + "\n")
                     file.write(self.file_path + "\n")
                     file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
-     
-                    # Clear current table upon submission
-                    self.date_flight_entry.delete('1.0', 'end-1c')
-                    self.weather_entry.delete('1.0', 'end-1c')
-                    self.dronetype_entry.delete('1.0', 'end-1c')
-                    self.file_path = ""
-                    self.notes_entry.delete('1.0', 'end-1c')
+                
+                print(self.file_path)
+                generated_pcd = PointCloudGenerator(self.file_path)
+                print("Point Cloud Generation in progress!")
+                thread = threading.Thread(target=generated_pcd.generatePointCloud)
+                thread.start()
+                print("Point Cloud Generation complete!!!!!!!!!!!")
 
+                # Clear current table upon submission
+                self.date_flight_entry.delete('1.0', 'end-1c')
+                self.weather_entry.delete('1.0', 'end-1c')
+                self.dronetype_entry.delete('1.0', 'end-1c')
+                self.file_path = ""
+                self.notes_entry.delete('1.0', 'end-1c')
 
-
-                    # Add current page into back button history and show another frame
-                    self.controller.back_history.append("DataEntryScreen")
-                    self.controller.show_frame("ReviewListScreen")
-                    print("Successfuly added a file!")
+                # Add current page into back button history and show another frame
+                self.controller.back_history.append("DataEntryScreen")
+                self.controller.show_frame("ReviewListScreen")
+                print("Successfuly added a file!")
              
         except NameError:
             messagebox.showerror("Select a File", "Please select a file to proceed.")
