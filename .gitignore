@@ -1,2 +1,5 @@
 gui/test*
 __pycache__/
+.vscode/
+venv/
+openMVG Built/
