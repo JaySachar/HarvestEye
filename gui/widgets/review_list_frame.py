@@ -2,6 +2,127 @@ import os
 import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
+import os
+import sys
+import open3d as o3d
+from sklearn.cluster import KMeans, DBSCAN
+from sklearn.preprocessing import StandardScaler
+import numpy as np
+import matplotlib as plt
+from matplotlib.colors import Normalize
+import matplotlib.cm as cm
+from scipy.spatial import ConvexHull
+import threading
+
+# Get the current working directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Navigate one folder up
+parent_dir = os.path.abspath(os.path.join(current_dir, '..', '..'))
+
+# Navigate to the 'main' folder
+target_dir = os.path.join(parent_dir, 'main')
+
+# Add the 'main' folder to the Python path
+sys.path.append(target_dir)
+
+# Now you can import the target file
+from classesCHANGE import PointCloudGenerator, UnsupervisedSegmentationAlgorithm, PointCloudFiltering, CropAnalyzer
+def height_and_analysis_script(pcd_file_path, voxel_size = 0.25):
+        pcd = o3d.io.read_point_cloud(pcd_file_path)
+        
+        pcd_functions = PointCloudGenerator(os.path.dirname(__file__))
+        unsup_segmentation = UnsupervisedSegmentationAlgorithm()
+        pcd_filtering = PointCloudFiltering()
+        analyzer = CropAnalyzer()
+
+        # Downsample the point cloud
+        # Voxel size was normally 0.25 for meters
+        
+        downsampled_pcd = pcd_functions.downsamples_pointcloud(pcd, voxel_size)
+
+        # Normalize the point cloud
+        xyzrgb_normalized = pcd_functions.pcd_array_normalized(downsampled_pcd)
+
+        # Define weights and number of clusters for KMeans
+        weights = [5, 5, 500, 1, 550, 1]
+        num_clusters = 2
+        kmeans_labels, kmeans = unsup_segmentation.normalized_and_weighted_kmeans(weights, xyzrgb_normalized, num_clusters)
+
+        # Prepare cluster colors array
+        cluster_colors = np.zeros_like(xyzrgb_normalized[:, :3])  # Use only the XYZ part for colors
+
+        # Define colors for clusters
+        colors = {
+            "green": [0, 150/255, 0],  # Green color
+            "brown": [0.647, 0.165, 0.165]  # Brown color
+        }
+
+        # Identify the larger cluster
+        larger_cluster_label = np.argmax(np.bincount(kmeans_labels))
+
+        # Assign colors based on cluster sizes
+        for i in range(num_clusters):
+            color = colors["brown"] if i == larger_cluster_label else colors["green"]
+            cluster_colors[kmeans_labels == i] = color
+
+        seg_pcd = downsampled_pcd
+        seg_pcd.colors = o3d.utility.Vector3dVector(cluster_colors)
+        ground_points = np.asarray(seg_pcd.points)[kmeans_labels == larger_cluster_label]
+        crop_points = np.asarray(seg_pcd.points)[kmeans_labels != larger_cluster_label]
+        x_min, x_max = np.min(ground_points[:, 0]), np.max(ground_points[:, 0])
+        x_range = x_max - x_min
+        grid_resolution = x_range / 2
+
+        # Filter the Ground Points list
+        #filtered_ground_points = pcd_filtering.filter_ground_points(ground_points, 3, grid_resolution, 0.15)
+        filtered_ground_points = pcd_filtering.filter_ground_points(ground_points, 1, 7, 0.001)
+        filtered_ground_pcd = o3d.geometry.PointCloud()
+        filtered_ground_pcd.points = o3d.utility.Vector3dVector(filtered_ground_points)
+        filtered_crop_points = pcd_filtering.filter_points_by_grid(crop_points, 0.75, 0.5, 5)
+        filtered_crop_pcd = o3d.geometry.PointCloud()
+        filtered_crop_pcd.points = o3d.utility.Vector3dVector(filtered_crop_points)
+        # Filter points based on DBSCAN clustering
+        eps = 0.28  # epsilon value for DBSCAN
+        dbscan_labels, clustered_points_xyz = unsup_segmentation.crop_clustering_dbscan(eps, filtered_crop_points)
+
+
+        import random
+        #Convert clustered_tree_points to an Open3D point cloud
+        dbscan_clusters_pcd = o3d.geometry.PointCloud()
+        dbscan_clusters_pcd.points = o3d.utility.Vector3dVector(clustered_points_xyz)
+
+        dbscan_clusters_filtered_points, filtered_labels = pcd_filtering.dbscan_cluster_filtering(dbscan_clusters_pcd, 20, 10000, dbscan_labels)
+        # Ensure dbscan_clusters_filtered_points is a PointCloud object
+        if isinstance(dbscan_clusters_filtered_points, o3d.geometry.PointCloud):
+            # Assign random colors to each cluster
+            cluster_colors = {}
+            for label in np.unique(filtered_labels):
+                if label == -1:  # Skip noise points
+                    continue
+                color = [random.uniform(0, 1), random.uniform(0, 1), random.uniform(0, 1)]  # Generate a random RGB color
+                cluster_colors[label] = color
+
+            # Assign colors to each point based on its cluster
+            point_colors = []
+            for label in filtered_labels:
+                if label == -1:  # Noise points
+                    point_colors.append([0.5, 0.5, 0.5])  # Gray color
+                else:
+                    point_colors.append(cluster_colors[label])
+
+            # Set colors for the clustered tree points
+            dbscan_clusters_filtered_points.colors = o3d.utility.Vector3dVector(point_colors)
+            heights, labels = analyzer.calculate_heights_and_labels(filtered_labels, dbscan_clusters_filtered_points, filtered_ground_pcd)
+
+        # Calculate cluster centers
+        cluster_centers = analyzer.calculate_cluster_centers(filtered_labels, np.asarray(dbscan_clusters_filtered_points.points))
+
+        # Visualize the heights and point cloud data
+        analyzer.visualize_the_metrics_and_pcd(heights, dbscan_clusters_filtered_points, cluster_centers, metric = "Height", units = "m")
+        analyzer.visualize_height_gradient(dbscan_clusters_filtered_points, filtered_ground_pcd)
+        volume_dicts = analyzer.calculate_volumes_for_clusters(dbscan_clusters_filtered_points, filtered_labels, filtered_ground_pcd)
+        analyzer.visualize_the_metrics_and_pcd(volume_dicts, dbscan_clusters_filtered_points, cluster_centers, metric = "Volume", units = "m^3")
 
 class ReviewListFrame(tk.Frame):
     def __init__(self, parent, controller):
@@ -93,9 +214,40 @@ class ReviewListFrame(tk.Frame):
         frame.pack(fill='x', expand=True, pady=5)
 
     def review_file(self, file_date):
-        print(f"Reviewing file from date: {file_date}")
-        # UPDATE WHEN I KNOW IT WILL LEAD TO THE FINAL REVIEW SCREEN
-        #self.controller.back_history.append("DataEntryScreen")
-        #self.update_list()
+            print(f"Reviewing file from date: {file_date}")
+            files = os.listdir(self.folder_path)
+            
+            for file in files:
+                file_path = os.path.join(self.folder_path, file)
+                if os.path.isfile(file_path):
+                    file_modification_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
+                    
+                    if file_modification_date == file_date:
+                        try:
+                            with open(file_path, 'r') as file:
+                                lines = file.readlines()
+                                if len(lines) >= 4:
+                                    fourth_line = lines[3].strip()  # Assuming the fourth line index is 3 (0-based index)
+                                    print("Fourth line:", fourth_line)
+                                    
+                                    # Find the .ply file in the directory specified in fourth_line
+                                    ply_files = [f for f in os.listdir(fourth_line) if f.endswith('.ply')]
+                                    if len(ply_files) == 1:
+                                        ply_file_path = os.path.join(fourth_line, ply_files[0])
+                                        ply_file_path = ply_file_path.replace("\\", "/")
+                                        print("Found .ply file:", ply_file_path)
+                                        
+                                        # Run height and analysis script in a separate thread
+                                        threading.Thread(target=self.run_analysis_script, args=(ply_file_path,)).start()
+                                    else:
+                                        print("Error: No .ply file found in directory.")
+                                else:
+                                    print("File does not have at least 4 lines.")
+                        except FileNotFoundError:
+                            print(f"File {file_path} not found.")
 
-
+    def run_analysis_script(self, ply_file_path):
+        try:
+            height_and_analysis_script(ply_file_path, voxel_size=0.25)
+        except Exception as e:
+            print(f"Error running analysis script: {e}")
