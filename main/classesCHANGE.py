@@ -17,6 +17,7 @@ class ImageProcessor:
     
     def __init__(self, img_directory):
         # directory [STRING]: "C:/Users/.../XXX"
+        
         self.img_directory = img_directory
         self.imgs, self.img_type = self.file_extension_grabber(img_directory)
 
@@ -78,22 +79,21 @@ class PointCloudGenerator(ImageProcessor):
                                         # Takes the img_directory, and initializes the imgs and img_type attributes
                                         # The imgs attribute is a list of file names in the img_directory that are image files (based on the specified image_extensions)
                                         # The img_type attribute is the file extension of the first image file found in the img_directory (or None if no image files are found)
-        
         global_pipeline_dir = os.path.dirname(os.path.realpath(__file__))
-
         # Navigate up the directory structure until you reach the HarvestEye directory
         while not os.path.basename(global_pipeline_dir) == 'HarvestEye':
             global_pipeline_dir = os.path.dirname(global_pipeline_dir)
-
+        print(global_pipeline_dir)
         # Combine the path to the openMVG executable
         self.openmvg_bin = os.path.join(global_pipeline_dir, 'openMVG Built', 'Windows-AMD64-', 'Release')
+        print(self.openmvg_bin)
 
         # sensor_width_database
         self.cam_params = os.path.join(global_pipeline_dir, 'openMVG Built', 'openMVG', 'exif', 'sensor_width_database', 'sensor_width_camera_database.txt')
+        print(self.cam_params)
 
         # Point cloud data
         self.point_cloud_data = np.NaN
-        
  
     def generatePointCloud(self):
         # Create a temporary directory for the matches
@@ -419,7 +419,7 @@ class CropAnalyzer:
         
         return heights_dict, labels
 
-    def visualize_the_heights_and_pcd(self, cluster_heights_dict, dbscan_filtered_pcd, cluster_centers):
+    def visualize_the_metrics_and_pcd(self, cluster_heights_dict, dbscan_filtered_pcd, cluster_centers, metric, units):
         """
         Visualize the heights and point cloud data.
 
@@ -440,7 +440,7 @@ class CropAnalyzer:
         for label, center in cluster_centers.items():
             try:
                 height = cluster_heights_dict[label]  # Get height for the current cluster
-                ax.text(center[0], center[1], center[2], f'Cluster {label}\nHeight: {height:.2f}', color='red')
+                ax.text(center[0], center[1], center[2], f'Cluster {label}\n{metric}: {height:.2f} {units}', color='red')
             except IndexError:
                 print(f"IndexError occurred for label: {label}")
         # Set labels for axes
@@ -508,6 +508,7 @@ class CropAnalyzer:
         
         # Visualize the combined point cloud
         o3d.visualization.draw_geometries([combined_pcd])
+
     def calculate_oval_volume(self, cluster_points, ground_points):
         # Step 1: Find furthest XY points in the cluster
         furthest_points = self.find_furthest_xy_points(cluster_points)
@@ -519,7 +520,7 @@ class CropAnalyzer:
 
         # Step 3: Calculate semi-major and semi-minor axes lengths (a and b)
         a = np.linalg.norm(furthest_points[0] - furthest_points[1]) / 2.0
-        b = np.linalg.norm(furthest_points[0] - furthest_points[2]) / 2.0
+        b = np.linalg.norm(furthest_points[2] - furthest_points[3]) / 2.0
 
         # Step 4: Calculate volume of an ellipsoid (since oval is an extension in Z-direction)
         volume = (4/3) * np.pi * a * b * max_height
@@ -527,24 +528,49 @@ class CropAnalyzer:
         return volume
 
     def find_furthest_xy_points(self, cluster_points):
+        # Handle cases with fewer than 4 points
+        if len(cluster_points) < 4:
+            if len(cluster_points) == 3:
+                return (cluster_points[0], cluster_points[1], cluster_points[1], cluster_points[2])
+            elif len(cluster_points) == 2:
+                return (cluster_points[0], cluster_points[1], cluster_points[0], cluster_points[1])
+            elif len(cluster_points) == 1:
+                return (cluster_points[0], cluster_points[0], cluster_points[0], cluster_points[0])
+            else:
+                raise ValueError("Cluster does not contain enough points")
+
         # Compute convex hull of the cluster points
         hull = ConvexHull(cluster_points[:, :2])
 
-        # Initialize variables to store furthest points and maximum distance
-        furthest_points = None
-        max_distance = 0
+        # Initialize variables for furthest points and distances
+        furthest_points_major = [None, None]
+        furthest_points_minor = [None, None]
+        max_major_distance = 0
+        max_minor_distance = 0
 
-        # Iterate through convex hull vertices to find maximum distance pair
+        # Iterate through convex hull vertices to find the maximum distance pair (semi-major axis)
         for i in range(len(hull.vertices)):
             for j in range(i + 1, len(hull.vertices)):
-                # Calculate squared Euclidean distance between points
-                distance = np.linalg.norm(cluster_points[hull.vertices[i], :2] - cluster_points[hull.vertices[j], :2]) ** 2
-                if distance > max_distance:
-                    max_distance = distance
-                    furthest_points = (cluster_points[hull.vertices[i]], cluster_points[hull.vertices[j]])
+                distance = np.linalg.norm(cluster_points[hull.vertices[i], :2] - cluster_points[hull.vertices[j], :2])
+                if distance > max_major_distance:
+                    max_major_distance = distance
+                    furthest_points_major = (cluster_points[hull.vertices[i]], cluster_points[hull.vertices[j]])
 
-        return furthest_points
+        # Compute the direction vector for the semi-major axis
+        major_axis_vector = furthest_points_major[1][:2] - furthest_points_major[0][:2]
+        major_axis_vector /= np.linalg.norm(major_axis_vector)
 
+        # Iterate through convex hull vertices to find the maximum distance perpendicular to the major axis (semi-minor axis)
+        for i in range(len(hull.vertices)):
+            point = cluster_points[hull.vertices[i], :2]
+            # Project the point onto the major axis to get the perpendicular distance
+            projection = np.dot(point - furthest_points_major[0][:2], major_axis_vector) * major_axis_vector
+            perpendicular_distance = np.linalg.norm(point - furthest_points_major[0][:2] - projection)
+            if perpendicular_distance > max_minor_distance:
+                max_minor_distance = perpendicular_distance
+                furthest_points_minor = (furthest_points_major[0], cluster_points[hull.vertices[i]])
+
+        return (*furthest_points_major, furthest_points_minor[1], furthest_points_minor[0])
 
     def calculate_volumes_for_clusters(self, dbscan_filtered_pcd, dbscan_filtered_labels, filtered_ground_pcd):
         volumes_dict = {}
@@ -565,7 +591,6 @@ class CropAnalyzer:
             volumes_dict[label] = volume
         
         return volumes_dict
-    
 class GUI:
     def __init__(self):
         pass
