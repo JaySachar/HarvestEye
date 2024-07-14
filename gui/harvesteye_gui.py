@@ -62,7 +62,7 @@ class MainApp(tk.Tk):
 
         # Start with the StartPage
         #self.show_frame("DataEntryScreen")
-        self.show_frame("ReviewListScreen")
+        self.show_frame("SplashScreen")
 
     # Because we RootWindow=controller has all the other classes as objects saved
     # we can reference and call any of those frames to show on top of the others
