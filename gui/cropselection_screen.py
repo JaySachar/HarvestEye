@@ -67,13 +67,13 @@ class CropSelectionScreen(tk.Frame):
         # Load button images
         # Orange button
         image_path = "./assets/crop-select/"
-        photo = ImageTk.PhotoImage(Image.open(image_path+"btn-orange-text_sm.png"))
-        btn_orange = tk.Label(button_frame, image=photo, borderwidth=0)
-        btn_orange.image = photo
-        #btn_orange.place(relx=0.5, rely=0.5, anchor="center")
-        btn_orange.bind('<Button-1>', self.orangeButton)
-        btn_orange.grid(row=0, column=1, sticky="nsew")
-        btn_orange.configure(bg='white')
+        photo = ImageTk.PhotoImage(Image.open(image_path+"btn-hazelnut-text_sm.png"))
+        btn_hazelnut = tk.Label(button_frame, image=photo, borderwidth=0)
+        btn_hazelnut.image = photo
+        #btn_hazelnut.place(relx=0.5, rely=0.5, anchor="center")
+        btn_hazelnut.bind('<Button-1>', self.hazelnutButton)
+        btn_hazelnut.grid(row=0, column=1, sticky="nsew")
+        btn_hazelnut.configure(bg='white')
         # Bind the resize event to the resize_image function
         #self.bind("<Configure>", resize_image)
 
@@ -199,8 +199,8 @@ class CropSelectionScreen(tk.Frame):
         self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
 
-    def orangeButton(self, event):
-        self.controller.crop = "orange"
+    def hazelnutButton(self, event):
+        self.controller.crop = "hazelnut"
         print(f"self.controller.crop = {self.controller.crop}")
         self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
