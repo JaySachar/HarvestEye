@@ -241,6 +241,7 @@ class ReviewListFrame(tk.Frame):
                                         threading.Thread(target=self.run_analysis_script, args=(ply_file_path,)).start()
                                     else:
                                         print("Error: No .ply file found in directory.")
+
                                 else:
                                     print("File does not have at least 4 lines.")
                         except FileNotFoundError:
@@ -251,3 +252,7 @@ class ReviewListFrame(tk.Frame):
             height_and_analysis_script(ply_file_path, voxel_size=0.25)
         except Exception as e:
             print(f"Error running analysis script: {e}")
+
+
+
+#self.controller.show_frame("FinalReviewScreen")

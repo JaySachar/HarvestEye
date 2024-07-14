@@ -81,47 +81,47 @@ class AppSelectionScreen(tk.Frame):
         foreground_frame.pack(side="top", expand=True, anchor='center')
         foreground_frame.configure(bg="white")
 
-        # NEW DATA - GRAY background
-        photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_background_sm.png"))
-        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
-        img_graybtnbackground.image = photo
-        img_graybtnbackground.grid(row=1,column=1, padx=25, sticky="se")
-        img_graybtnbackground.configure(bg='white')
-        # NEW DATA - button
+        top_buttons_frame = tk.Frame(foreground_frame)
+        top_buttons_frame.pack(side="top", fill="both", expand=True, pady=20)
+        top_buttons_frame.configure(bg="white")
+       # NEW DATA - button
         photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_newdata_sm.png"))
-        btn_newdata= tk.Label(foreground_frame, image=photo )
+        btn_newdata= tk.Label(top_buttons_frame, image=photo )
         btn_newdata.image = photo
-        btn_newdata.grid(row=1,column=1, padx=80, pady=20, sticky="se")
-        btn_newdata.configure(bg='#D9D9D9')
+        btn_newdata.pack(side="left", fill="x", expand=True)
+        #btn_newdata.grid(row=1,column=1, padx=80, pady=20, sticky="se")
+        btn_newdata.configure(bg='white')
         btn_newdata.bind('<Button-1>', self.dataTypeButton)
 
-
-        # HEIGHT ANALYSIS - GRAY background
-        photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_background_sm.png"))
-        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
-        img_graybtnbackground.image = photo
-        img_graybtnbackground.grid(row=1,column=2, padx=25, sticky="sw")
-        img_graybtnbackground.configure(bg='white')
-        # HEIGHT ANALYSIS - button
+       # HEIGHT ANALYSIS - button
         photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_heightanal_sm.png"))
-        btn_heightanalysis= tk.Label(foreground_frame, image=photo )
+        btn_heightanalysis= tk.Label(top_buttons_frame, image=photo )
         btn_heightanalysis.image = photo
-        btn_heightanalysis.grid(row=1,column=2, padx=70, pady=20, sticky="sw")
-        btn_heightanalysis.configure(bg='#D9D9D9')
+        btn_heightanalysis.pack(side="left", fill="x", expand=True)
+        #btn_heightanalysis.pack(side="left", expand=True, anchor='n')
+        #btn_heightanalysis.grid(row=1,column=2, padx=70, pady=20, sticky="sw")
+        btn_heightanalysis.configure(bg='white')
         btn_heightanalysis.bind('<Button-1>', self.heightAnalysisButton)
 
-        # DRONE NAVIGATION GUIDE - GRAY background
-        photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_backgroundlong_sm.png"))
-        img_graybtnbackground= tk.Label(foreground_frame, image=photo )
-        img_graybtnbackground.image = photo
-        img_graybtnbackground.grid(row=2,column=1, columnspan=2,  pady=20,  sticky="n")
-        img_graybtnbackground.configure(bg='white')
-        # DRONE NAVIGATION GUIDE - button
+       # VOLUME ANALYSIS - button
+        photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_volumeanal_sm.png"))
+        btn_volumeanalysis= tk.Label(top_buttons_frame, image=photo )
+        btn_volumeanalysis.image = photo
+        btn_volumeanalysis.pack(side="left", fill="x", expand=True)
+        #btn_volumeanalysis.pack(side="left", expand=True, anchor='ne')
+        #btn_volumeanalysis.grid(row=1,column=2, padx=70, pady=20, sticky="sw")
+        btn_volumeanalysis.configure(bg='white')
+        btn_volumeanalysis.bind('<Button-1>', self.volumeAnalysisButton)
+
+
+
+       # DRONE NAVIGATION GUIDE - button
         photo = ImageTk.PhotoImage(Image.open(self.image_path+"img_droneflight_sm.png"))
         btn_dronenavguide= tk.Label(foreground_frame, image=photo )
         btn_dronenavguide.image = photo
-        btn_dronenavguide.grid(row=2,column=1, columnspan=2, padx=70, pady=40, sticky="n")
-        btn_dronenavguide.configure(bg='#D9D9D9')
+        btn_dronenavguide.pack(side="bottom", expand=True, anchor='center')
+        #btn_dronenavguide.grid(row=2,column=1, columnspan=2, padx=70, pady=40, sticky="n")
+        btn_dronenavguide.configure(bg='white')
         btn_dronenavguide.bind('<Button-1>', self.chiliButton)
         ###################################################################
 
@@ -139,5 +139,9 @@ class AppSelectionScreen(tk.Frame):
         self.controller.show_frame("DataTypeSelectionScreen")
 
     def heightAnalysisButton(self, event):
+        self.controller.back_history.append("AppSelectionScreen")
+        self.controller.show_frame("ReviewListScreen")
+
+    def volumeAnalysisButton(self, event):
         self.controller.back_history.append("AppSelectionScreen")
         self.controller.show_frame("ReviewListScreen")
