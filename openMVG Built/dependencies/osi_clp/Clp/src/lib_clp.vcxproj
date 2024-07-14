@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maintainer|x64">
+      <Configuration>Maintainer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EF90DB62-A9F7-3E77-8CC7-BC1917E182CE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>lib_clp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lib_clp.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lib_clp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lib_clp.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lib_clp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lib_clp.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lib_clp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lib_clp.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lib_clp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\Windows-AMD64-\Maintainer\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">lib_clp.dir\Maintainer\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">lib_clp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Maintainer"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE2__;__SSE3__;__SSSE3__;__SSE4_1__;__SSE4_2__;__SSE4A__;__AVX__;__FMA__;__BMI2__;__AVX2__;OPENMVG_USE_OPENMP;EIGEN_MPL2_ONLY;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Maintainer\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\CoinUtils\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Osi\src\Osi;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\.\Clp\src\OsiClp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/dependencies/osi_clp/Clp/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/dependencies/osi_clp/Clp/src/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/dependencies/osi_clp/Clp/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/dependencies/osi_clp/Clp/src/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/dependencies/osi_clp/Clp/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/dependencies/osi_clp/Clp/src/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/dependencies/osi_clp/Clp/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/dependencies/osi_clp/Clp/src/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/dependencies/osi_clp/Clp/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/dependencies/osi_clp/Clp/src/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\CbcOrClpParam.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyBase.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyDense.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyTaucs.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConfig.h" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraint.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintLinear.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintQuadratic.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowDantzig.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowPivot.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowSteepest.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDummyMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicExampleMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpEventHandler.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpFactorization.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubDynamicMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpHelperFunctions.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpInterior.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLinearObjective.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLsqr.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMatrixBase.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMessage.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpModel.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkBasis.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNode.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNonLinearCost.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpObjective.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPackedMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpParameters.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdco.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdcoBase.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPlusMinusOneMatrix.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPredictorCorrector.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPresolve.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnDantzig.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnPivot.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnSteepest.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalQuadraticDantzig.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpQuadraticObjective.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplex.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexDual.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexNonlinear.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexOther.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexPrimal.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSolve.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Clp_C_Interface.h" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Idiot.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyEventHandler.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyMessageHandler.hpp" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\config_clp_default.h" />
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\config_default.h" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\CbcOrClpParam.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyBase.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyDense.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyTaucs.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraint.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintLinear.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintQuadratic.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowDantzig.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowPivot.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowSteepest.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDummyMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicExampleMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpEventHandler.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpFactorization.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubDynamicMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpHelperFunctions.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpInterior.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLinearObjective.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLsqr.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMatrixBase.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMessage.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpModel.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkBasis.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNode.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNonLinearCost.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpObjective.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPackedMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdco.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdcoBase.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPlusMinusOneMatrix.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPredictorCorrector.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPresolve.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnDantzig.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnPivot.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnSteepest.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpQuadraticObjective.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplex.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexDual.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexNonlinear.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexOther.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexPrimal.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSolve.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Clp_C_Interface.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\IdiSolve.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Idiot.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyEventHandler.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyMessageHandler.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\unitTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\ZERO_CHECK.vcxproj">
+      <Project>{2A9EEADA-EAEE-307A-AB4B-2DDC7BC1A254}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maintainer|x64">
+      <Configuration>Maintainer</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BDE8B700-54CF-35ED-8D78-AA85D7064BEB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindTIFF.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\docs\sphinx\rst\conf.py;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\AddCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CXX11.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCXXCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindClp.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindCoinUtils.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindEigen.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindFlann.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindLemon.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindOsi.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindSphinx.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OpenMVGConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OptimizeForArchitecture.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmake_uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindTIFF.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\docs\sphinx\rst\conf.py;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\AddCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CXX11.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCXXCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindClp.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindCoinUtils.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindEigen.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindFlann.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindLemon.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindOsi.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindSphinx.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OpenMVGConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OptimizeForArchitecture.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmake_uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindTIFF.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\docs\sphinx\rst\conf.py;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\AddCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CXX11.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCXXCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindClp.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindCoinUtils.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindEigen.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindFlann.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindLemon.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindOsi.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindSphinx.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OpenMVGConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OptimizeForArchitecture.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmake_uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindTIFF.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\docs\sphinx\rst\conf.py;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\AddCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CXX11.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCXXCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindClp.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindCoinUtils.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindEigen.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindFlann.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindLemon.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindOsi.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindSphinx.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OpenMVGConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OptimizeForArchitecture.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmake_uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindTIFF.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\cmake.verify_globs;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\docs\sphinx\rst\conf.py;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\AddCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CXX11.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\CheckCXXCompilerFlag.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindClp.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindCoinUtils.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindEigen.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindFlann.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindLemon.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindOsi.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\FindSphinx.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OpenMVGConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmakeFindModules\OptimizeForArchitecture.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\cmake_uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Maintainer|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\ZERO_CHECK.vcxproj">
+      <Project>{2A9EEADA-EAEE-307A-AB4B-2DDC7BC1A254}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\arrow_cpp.vcxproj">
+      <Project>{B1AF7425-65C5-39E7-AD79-87887C796524}</Project>
+      <Name>arrow_cpp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\doc.vcxproj">
+      <Project>{ED36C8A4-6E62-3B68-9D74-2637F736C716}</Project>
+      <Name>doc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\clustering\domSetLibrary\domset.vcxproj">
+      <Project>{CA6A0883-19D0-3D17-BEFE-9D2B982951C5}</Project>
+      <Name>domset</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\CoinUtils\src\lib_CoinUtils.vcxproj">
+      <Project>{D3BD5DF0-A816-342C-990F-54549594FCAB}</Project>
+      <Name>lib_CoinUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Osi\src\Osi\lib_Osi.vcxproj">
+      <Project>{F10D180C-4D3A-3876-9AAB-602DF1192A52}</Project>
+      <Name>lib_Osi</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\OsiClp\lib_OsiClpSolver.vcxproj">
+      <Project>{A9109533-B394-398C-AAA0-A3CDE0D13466}</Project>
+      <Name>lib_OsiClpSolver</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\dependencies\osi_clp\Clp\src\lib_clp.vcxproj">
+      <Project>{EF90DB62-A9F7-3E77-8CC7-BC1917E182CE}</Project>
+      <Name>lib_clp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\vector_graphics\main_svgSample.vcxproj">
+      <Project>{70BEDEC3-4AA8-3BC0-924F-1905B5AAB29D}</Project>
+      <Name>main_svgSample</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\ceres-solver\internal\ceres\openMVG_ceres.vcxproj">
+      <Project>{338FD8C6-0A9B-3FD7-BB36-F75BB92E0094}</Project>
+      <Name>openMVG_ceres</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\easyexif\openMVG_easyexif.vcxproj">
+      <Project>{1F6303DB-98B8-3FB9-82CC-86509AF6DC42}</Project>
+      <Name>openMVG_easyexif</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\exif\openMVG_exif.vcxproj">
+      <Project>{31DF5344-C129-3BD3-BCB3-173EEB536CF5}</Project>
+      <Name>openMVG_exif</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\fast\openMVG_fast.vcxproj">
+      <Project>{78631EEC-87D2-3A60-987C-4C38A7EE7E6F}</Project>
+      <Name>openMVG_fast</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\features\openMVG_features.vcxproj">
+      <Project>{99D5D2FD-544D-386A-AD72-F2CB09F1C4F8}</Project>
+      <Name>openMVG_features</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\geometry\openMVG_geometry.vcxproj">
+      <Project>{19BA5638-2E6F-3592-B6FF-BA12AF1C094C}</Project>
+      <Name>openMVG_geometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\image\openMVG_image.vcxproj">
+      <Project>{AA40B39D-DC3C-3188-A1A5-BA05A4A54CA0}</Project>
+      <Name>openMVG_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\jpeg\openMVG_jpeg.vcxproj">
+      <Project>{27CB357A-FF42-3928-A060-6CF287C20E3F}</Project>
+      <Name>openMVG_jpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\matching\kvld\openMVG_kvld.vcxproj">
+      <Project>{DC3137F4-D2FB-3821-9439-3859A7A3E031}</Project>
+      <Name>openMVG_kvld</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\linearProgramming\lInfinityCV\openMVG_lInftyComputerVision.vcxproj">
+      <Project>{929CDD0B-BC1C-314B-A2A8-6472D1B5EC54}</Project>
+      <Name>openMVG_lInftyComputerVision</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\linearProgramming\openMVG_linearProgramming.vcxproj">
+      <Project>{0CEDC347-A255-342A-92E3-527B71161452}</Project>
+      <Name>openMVG_linearProgramming</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ChangeLocalOrigin.vcxproj">
+      <Project>{F1581422-C5C3-3DDD-AB7A-CD9142A7A3BD}</Project>
+      <Name>openMVG_main_ChangeLocalOrigin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\colorHarmonize\openMVG_main_ColHarmonize.vcxproj">
+      <Project>{DD2F962A-C9B5-3546-8AA7-485221766E60}</Project>
+      <Name>openMVG_main_ColHarmonize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\clustering\openMVG_main_ComputeClusters.vcxproj">
+      <Project>{E010BECC-63E5-34EE-91CA-267961619B53}</Project>
+      <Name>openMVG_main_ComputeClusters</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ComputeFeatures.vcxproj">
+      <Project>{B061EE7B-67B6-3615-8CB6-17E8BEBC2BB9}</Project>
+      <Name>openMVG_main_ComputeFeatures</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ComputeMatches.vcxproj">
+      <Project>{64343DA9-D91E-3905-BC01-222AD790E9DE}</Project>
+      <Name>openMVG_main_ComputeMatches</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ComputeSfM_DataColor.vcxproj">
+      <Project>{94F0328F-CABA-31CB-982D-49C94A6B4DBB}</Project>
+      <Name>openMVG_main_ComputeSfM_DataColor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ComputeStructureFromKnownPoses.vcxproj">
+      <Project>{D0D289FB-7854-3668-9172-4A451E53E427}</Project>
+      <Name>openMVG_main_ComputeStructureFromKnownPoses</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ComputeVLAD.vcxproj">
+      <Project>{906A0BCB-B462-3279-B3A7-5A2AA7D34D5B}</Project>
+      <Name>openMVG_main_ComputeVLAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ConvertList.vcxproj">
+      <Project>{36F2E274-28D6-350B-8028-522B526843B3}</Project>
+      <Name>openMVG_main_ConvertList</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ConvertMatches.vcxproj">
+      <Project>{C752945B-DD2B-3AB8-BD7E-258B4D3BD2DB}</Project>
+      <Name>openMVG_main_ConvertMatches</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ConvertSfM_DataFormat.vcxproj">
+      <Project>{AED495C5-E6B9-3310-83F2-ADFAB1695105}</Project>
+      <Name>openMVG_main_ConvertSfM_DataFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_ExportCameraFrustums.vcxproj">
+      <Project>{5BAD6F77-E745-3691-9585-4408D0E2F5AE}</Project>
+      <Name>openMVG_main_ExportCameraFrustums</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_ExportUndistortedImages.vcxproj">
+      <Project>{93E948DF-D125-3BF7-9824-F04A94AF1431}</Project>
+      <Name>openMVG_main_ExportUndistortedImages</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_FrustumFiltering.vcxproj">
+      <Project>{52499403-69CC-3315-8211-6708C25E0B23}</Project>
+      <Name>openMVG_main_FrustumFiltering</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_GeometricFilter.vcxproj">
+      <Project>{F1EA9CF6-C3CC-319E-8168-7FCC72DC9587}</Project>
+      <Name>openMVG_main_GeometricFilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_ListMatchingPairs.vcxproj">
+      <Project>{681B593A-5D13-3CE9-89A4-484D57B18C0F}</Project>
+      <Name>openMVG_main_ListMatchingPairs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_MatchesToTracks.vcxproj">
+      <Project>{80476A8D-22D8-31AA-9A60-99E63548CF63}</Project>
+      <Name>openMVG_main_MatchesToTracks</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_MatchingRetrievalQuality.vcxproj">
+      <Project>{3FF6B591-73AE-3B28-BFC4-C0C8EA8E15D3}</Project>
+      <Name>openMVG_main_MatchingRetrievalQuality</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_PairGenerator.vcxproj">
+      <Project>{3043748E-C66E-3639-8E9B-3AB0CE3AEFF9}</Project>
+      <Name>openMVG_main_PairGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_PointsFiltering.vcxproj">
+      <Project>{199641DD-47A0-3D92-9ED1-79AB9AD78F74}</Project>
+      <Name>openMVG_main_PointsFiltering</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_SfM.vcxproj">
+      <Project>{2A1B9798-EF62-3868-91D2-B2C08CAD4053}</Project>
+      <Name>openMVG_main_SfM</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_SfMInit_ImageListing.vcxproj">
+      <Project>{5C4FABC3-D420-3B26-B4A0-6D742C98792C}</Project>
+      <Name>openMVG_main_SfMInit_ImageListing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\import\openMVG_main_SfMInit_ImageListingFromKnownPoses.vcxproj">
+      <Project>{1916BBBE-6E86-386C-BF78-8EB40AD7FC2E}</Project>
+      <Name>openMVG_main_SfMInit_ImageListingFromKnownPoses</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\Localization\openMVG_main_SfM_Localization.vcxproj">
+      <Project>{A3BC893E-4A62-367D-B81D-8F138BE0D69D}</Project>
+      <Name>openMVG_main_SfM_Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_SplitMatchFileIntoMatchFiles.vcxproj">
+      <Project>{CACC294C-7CD8-3FEE-8090-435437A142A4}</Project>
+      <Name>openMVG_main_SplitMatchFileIntoMatchFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\VO\openMVG_main_VO.vcxproj">
+      <Project>{497D602A-DDA2-3BB7-987E-B7DDA55139AB}</Project>
+      <Name>openMVG_main_VO</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_benchANN.vcxproj">
+      <Project>{3806B59A-DDB3-36CB-8626-3CE7E3C3ACA2}</Project>
+      <Name>openMVG_main_benchANN</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\openMVG_main_evalQuality.vcxproj">
+      <Project>{7045B149-FB40-3B19-8298-CEB058381DF5}</Project>
+      <Name>openMVG_main_evalQuality</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\exif_Parsing\openMVG_main_exif_Parsing.vcxproj">
+      <Project>{18B28264-1A0C-3CCF-B676-E9AAC97B1029}</Project>
+      <Name>openMVG_main_exif_Parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_exportKeypoints.vcxproj">
+      <Project>{7A399B19-905B-322C-89D7-6FE80AAF6512}</Project>
+      <Name>openMVG_main_exportKeypoints</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_exportMatches.vcxproj">
+      <Project>{B9E07FC6-7602-31A7-A59A-B440B95EF7A4}</Project>
+      <Name>openMVG_main_exportMatches</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_exportTracks.vcxproj">
+      <Project>{9FADE5D4-04CC-36A2-8F6B-3B4FF7C2A2A1}</Project>
+      <Name>openMVG_main_exportTracks</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\Geodesy\openMVG_main_geodesy_registration_to_gps_position.vcxproj">
+      <Project>{68296EE2-67C6-32D7-A1BD-C344D5CC3C62}</Project>
+      <Name>openMVG_main_geodesy_registration_to_gps_position</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2Agisoft.vcxproj">
+      <Project>{32F67678-6DE5-385E-ADF3-4000ADBADC57}</Project>
+      <Name>openMVG_main_openMVG2Agisoft</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2CMPMVS.vcxproj">
+      <Project>{9226D44A-96A5-3B7A-BAA2-7E4D587B3974}</Project>
+      <Name>openMVG_main_openMVG2CMPMVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2Colmap.vcxproj">
+      <Project>{A0401B21-C211-3448-B010-C60C2A0A865B}</Project>
+      <Name>openMVG_main_openMVG2Colmap</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2MESHLAB.vcxproj">
+      <Project>{56E37F15-1DED-33C7-BD49-063F758153F8}</Project>
+      <Name>openMVG_main_openMVG2MESHLAB</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2MVE2.vcxproj">
+      <Project>{A4B6E28E-D148-309F-BA6E-4B66C70CDDC3}</Project>
+      <Name>openMVG_main_openMVG2MVE2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2MVSTEXTURING.vcxproj">
+      <Project>{F87BF165-A777-3193-AC44-48A576891E7A}</Project>
+      <Name>openMVG_main_openMVG2MVSTEXTURING</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2NVM.vcxproj">
+      <Project>{87CCD0C1-52FB-3C4A-848E-27C624247519}</Project>
+      <Name>openMVG_main_openMVG2NVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2PMVS.vcxproj">
+      <Project>{0408D13C-7049-3873-BB19-36838A2DE137}</Project>
+      <Name>openMVG_main_openMVG2PMVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfMWebGLViewer\openMVG_main_openMVG2WebGL.vcxproj">
+      <Project>{B5945D01-F035-3D15-B3FD-6D46AAF67A55}</Project>
+      <Name>openMVG_main_openMVG2WebGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVG2openMVS.vcxproj">
+      <Project>{E4A89A1E-8039-32CE-858A-005B15FBB33A}</Project>
+      <Name>openMVG_main_openMVG2openMVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\software\SfM\export\openMVG_main_openMVGSpherical2Cubic.vcxproj">
+      <Project>{718965A3-802F-31C7-89A6-439103AE190A}</Project>
+      <Name>openMVG_main_openMVGSpherical2Cubic</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\matching\openMVG_matching.vcxproj">
+      <Project>{66614D23-D197-3D0C-8F6C-1E5614EDD312}</Project>
+      <Name>openMVG_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\matching_image_collection\openMVG_matching_image_collection.vcxproj">
+      <Project>{488A376F-117A-3993-90E6-A77D7138062E}</Project>
+      <Name>openMVG_matching_image_collection</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\multiview\openMVG_multiview.vcxproj">
+      <Project>{6EE56290-55E2-3B2C-89FE-1A340DB5EAD6}</Project>
+      <Name>openMVG_multiview</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\multiview\openMVG_multiview_test_data.vcxproj">
+      <Project>{3DBBB95E-B251-3F83-B3CC-8048716B508B}</Project>
+      <Name>openMVG_multiview_test_data</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\numeric\openMVG_numeric.vcxproj">
+      <Project>{62BF1310-14E7-38A8-9295-C5FAD01DCF7B}</Project>
+      <Name>openMVG_numeric</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\png\openMVG_png.vcxproj">
+      <Project>{D6DCC06E-2B82-3CB4-995A-0D8D6955D401}</Project>
+      <Name>openMVG_png</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\robust_estimation\openMVG_robust_estimation.vcxproj">
+      <Project>{DD98DC05-4356-3D74-B5CA-9ECFF05DE821}</Project>
+      <Name>openMVG_robust_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\cameras_undisto_Brown\openMVG_sample_cameras_undistoBrown.vcxproj">
+      <Project>{5FB0B8B7-8F26-3367-BD3D-FBD1AF156E11}</Project>
+      <Name>openMVG_sample_cameras_undistoBrown</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\features_affine_demo\openMVG_sample_features_affine.vcxproj">
+      <Project>{2E25E231-B675-33AD-A064-F8D34E8A15B8}</Project>
+      <Name>openMVG_sample_features_affine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\features_kvld_filter\openMVG_sample_features_kvld.vcxproj">
+      <Project>{C55248BC-6257-38F0-91EA-B0FFA471B021}</Project>
+      <Name>openMVG_sample_features_kvld</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\features_siftPutativeMatches\openMVG_sample_features_siftPutative.vcxproj">
+      <Project>{A8FDAA37-E7F0-3802-AB8A-3694FA5E5A86}</Project>
+      <Name>openMVG_sample_features_siftPutative</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\geodesy_show_exif_gps_position\openMVG_sample_geodesy_show_exif_gps_position.vcxproj">
+      <Project>{5958F05C-8BB5-3203-AFB0-1C83DC52CE50}</Project>
+      <Name>openMVG_sample_geodesy_show_exif_gps_position</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\features_image_matching\openMVG_sample_image_matching.vcxproj">
+      <Project>{BD309503-1A23-3ADC-BA86-442912B47565}</Project>
+      <Name>openMVG_sample_image_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\features_image_matching_gmsfilter\openMVG_sample_image_matching_gmsfilter.vcxproj">
+      <Project>{513E65AB-602F-3D08-89DB-E1B698298D60}</Project>
+      <Name>openMVG_sample_image_matching_gmsfilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\features_repeatability\openMVG_sample_main_features_repeatability_dataset.vcxproj">
+      <Project>{168E7921-E29E-3F41-BA17-F680286F9144}</Project>
+      <Name>openMVG_sample_main_features_repeatability_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_essential\openMVG_sample_multiview_robustEssential.vcxproj">
+      <Project>{930490CD-8788-31AA-9771-62CBF0203E69}</Project>
+      <Name>openMVG_sample_multiview_robustEssential</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_essential_ba\openMVG_sample_multiview_robustEssential_ba.vcxproj">
+      <Project>{3404F776-78A0-399B-A6C1-7C8E649C5E54}</Project>
+      <Name>openMVG_sample_multiview_robustEssential_ba</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_essential_spherical\openMVG_sample_multiview_robustEssential_spherical.vcxproj">
+      <Project>{6555F35E-CFE6-3B8D-AA51-5E942CB97806}</Project>
+      <Name>openMVG_sample_multiview_robustEssential_spherical</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_fundamental\openMVG_sample_multiview_robustFundamental.vcxproj">
+      <Project>{02C58307-AF44-3665-B5E5-C1856F5D75AD}</Project>
+      <Name>openMVG_sample_multiview_robustFundamental</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_fundamental_guided\openMVG_sample_multiview_robustFundamental_guided.vcxproj">
+      <Project>{E3CC3DB7-3946-3229-B181-F3CC6DAFBB9C}</Project>
+      <Name>openMVG_sample_multiview_robustFundamental_guided</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_homography\openMVG_sample_multiview_robustHomography.vcxproj">
+      <Project>{0BDC7A96-C9EE-32BD-BB96-4E0789C31CEB}</Project>
+      <Name>openMVG_sample_multiview_robustHomography</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_homography_guided\openMVG_sample_multiview_robustHomography_guided.vcxproj">
+      <Project>{58B041B8-5834-3636-BC16-3A0924D02FB3}</Project>
+      <Name>openMVG_sample_multiview_robustHomography_guided</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\image_spherical_to_pinholes\openMVG_sample_pano_converter.vcxproj">
+      <Project>{42C98C4A-0556-3CAE-9E75-1592C6D0E33E}</Project>
+      <Name>openMVG_sample_pano_converter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\image_spherical_to_cubic\openMVG_sample_pano_spherical_to_cubic.vcxproj">
+      <Project>{0D98E525-0D5B-39DB-988F-44E7AC751BEB}</Project>
+      <Name>openMVG_sample_pano_spherical_to_cubic</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\multiview_robust_estimation_tutorial\openMVG_sample_robust_estimation_Homography.vcxproj">
+      <Project>{81FECD28-D24F-30E3-BDCF-D151F15BF036}</Project>
+      <Name>openMVG_sample_robust_estimation_Homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG_Samples\visualize_sfm_data\openMVG_sample_visualize_sfm_data.vcxproj">
+      <Project>{8BB1A15E-4DF4-3388-847D-6BF65584DD9F}</Project>
+      <Name>openMVG_sample_visualize_sfm_data</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\sfm\openMVG_sfm.vcxproj">
+      <Project>{EE2366A3-CBFD-3417-9744-12465E791335}</Project>
+      <Name>openMVG_sfm</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\stlplus3\openMVG_stlplus.vcxproj">
+      <Project>{BDF93FE9-2D70-3083-8220-E7A2CEF07270}</Project>
+      <Name>openMVG_stlplus</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\openMVG\system\openMVG_system.vcxproj">
+      <Project>{052CCEE7-89A1-3DD8-B430-E2B0A3DEB566}</Project>
+      <Name>openMVG_system</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\tiff\openMVG_tiff.vcxproj">
+      <Project>{4D2B0E18-5AB1-3230-B030-06F9F7B8A9E9}</Project>
+      <Name>openMVG_tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\zlib\openMVG_zlib.vcxproj">
+      <Project>{9E8EE2BA-71AB-32C8-8A1C-1DB88E6B210B}</Project>
+      <Name>openMVG_zlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\_deps\rerun_sdk-build\rerun_sdk.vcxproj">
+      <Project>{F62CAFDD-4AE2-3DEE-8EBF-E85C775491D7}</Project>
+      <Name>rerun_sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\nonFree\sift\vlsift.vcxproj">
+      <Project>{100BA2F1-6A88-30D9-8533-EBEF6C793BD7}</Project>
+      <Name>vlsift</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

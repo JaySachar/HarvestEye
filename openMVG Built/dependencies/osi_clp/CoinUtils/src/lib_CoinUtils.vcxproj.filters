@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinAlloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinBuild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinDenseFactorization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinDenseVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFactorization1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFactorization2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFactorization3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFactorization4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFileIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFinite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinIndexedVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinLpIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinMessageHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinModelUseful.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinModelUseful2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinMpsIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinOslFactorization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinOslFactorization2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinOslFactorization3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPackedMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPackedVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPackedVectorBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinParamUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPostsolveMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPrePostsolveMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveDoubleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveDual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveDupcol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveEmpty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveFixed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveForcing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveHelperFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveImpliedFree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveIsolated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolvePsdebug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveSingleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveSubst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveTighten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveTripleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveUseless.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveZeros.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinRational.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSearchTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinShallowPackedVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSimpFactorization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSnapshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinStructuredModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartBasis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartDual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartPrimalDual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinAlloc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinBuild.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinDenseFactorization.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinDenseVector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinDistance.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinError.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFactorization.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFileIO.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFinite.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinFloatEqual.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinHelperFunctions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinIndexedVector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinLpIO.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinMessage.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinMessageHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinModel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinModelUseful.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinMpsIO.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinOslC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinOslFactorization.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPackedMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPackedVector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPackedVectorBase.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinParam.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPragma.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveDoubleton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveDual.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveDupcol.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveEmpty.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveFixed.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveForcing.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveImpliedFree.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveIsolated.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveMonitor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolvePsdebug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveSingleton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveSubst.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveTighten.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveTripleton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveUseless.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinPresolveZeros.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinRational.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSearchTree.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinShallowPackedVector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSignal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSimpFactorization.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSmartPtr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSnapshot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinSort.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinStructuredModel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinTime.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinTypes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinUtility.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinUtilsConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStart.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartBasis.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartDual.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartPrimalDual.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CoinWarmStartVector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\Coin_C_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\config_coinutils_default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\config_default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\CoinUtils\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{944116DC-00DF-3E37-BC8E-30EC7C02C934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DF0C22B8-62EA-3379-B4EE-2759DDDDE2BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

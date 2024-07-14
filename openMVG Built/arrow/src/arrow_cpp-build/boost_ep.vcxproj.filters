@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\0aa3ae44983cf8440cdf45e916ce1c7c\boost_ep-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\572d7a5f89f379195db88b2396361afe\boost_ep-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\fe51f44a2c5538ca62654960d6322a05\boost_ep.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\CMakeFiles\boost_ep" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{265CC047-CBFE-3779-8AB1-79CA2A5CF10A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

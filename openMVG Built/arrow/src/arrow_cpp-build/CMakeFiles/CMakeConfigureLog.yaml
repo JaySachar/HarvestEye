@@ -1,0 +1,757 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:71 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:71 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.8.5+b5265ef37 for .NET Framework
+      Build started 2024-03-05 11:13:31 PM.
+      
+      Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.08
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/3.28.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:71 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.8.5+b5265ef37 for .NET Framework
+      Build started 2024-03-05 11:13:32 PM.
+      
+      Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.25
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/3.28.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:71 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-y1chd0"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-y1chd0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-y1chd0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ec8dc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:34 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-y1chd0\\cmTC_ec8dc.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ec8dc.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-y1chd0\\Debug\\".
+          Creating directory "cmTC_ec8dc.dir\\Debug\\cmTC_ec8dc.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ec8dc.dir\\Debug\\cmTC_ec8dc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ec8dc.dir\\Debug\\cmTC_ec8dc.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ec8dc.dir\\Debug\\\\" /Fd"cmTC_ec8dc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ec8dc.dir\\Debug\\\\" /Fd"cmTC_ec8dc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-y1chd0\\Debug\\cmTC_ec8dc.exe" /INCREMENTAL /ILK:"cmTC_ec8dc.dir\\Debug\\cmTC_ec8dc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-y1chd0/Debug/cmTC_ec8dc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-y1chd0/Debug/cmTC_ec8dc.lib" /MACHINE:X64  /machine:x64 cmTC_ec8dc.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ec8dc.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-y1chd0\\Debug\\cmTC_ec8dc.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ec8dc.dir\\Debug\\cmTC_ec8dc.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ec8dc.dir\\Debug\\cmTC_ec8dc.tlog\\cmTC_ec8dc.lastbuildstate".
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-y1chd0\\cmTC_ec8dc.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.22
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:71 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ananaf"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ananaf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ananaf'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_625de.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:36 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ananaf\\cmTC_625de.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_625de.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ananaf\\Debug\\".
+          Creating directory "cmTC_625de.dir\\Debug\\cmTC_625de.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_625de.dir\\Debug\\cmTC_625de.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_625de.dir\\Debug\\cmTC_625de.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_625de.dir\\Debug\\\\" /Fd"cmTC_625de.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_625de.dir\\Debug\\\\" /Fd"cmTC_625de.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ananaf\\Debug\\cmTC_625de.exe" /INCREMENTAL /ILK:"cmTC_625de.dir\\Debug\\cmTC_625de.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ananaf/Debug/cmTC_625de.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ananaf/Debug/cmTC_625de.lib" /MACHINE:X64  /machine:x64 cmTC_625de.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_625de.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ananaf\\Debug\\cmTC_625de.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_625de.dir\\Debug\\cmTC_625de.tlog\\unsuccessfulbuild".
+          Touching "cmTC_625de.dir\\Debug\\cmTC_625de.tlog\\cmTC_625de.lastbuildstate".
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ananaf\\cmTC_625de.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.91
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "cmake_modules/SetupCxxFlags.cmake:63 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:415 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_AVX2"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-enmqxc"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-enmqxc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_AVX2"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-enmqxc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d4d84.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:51 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\cmTC_d4d84.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_d4d84.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\Debug\\".
+          Creating directory "cmTC_d4d84.dir\\Debug\\cmTC_d4d84.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_d4d84.dir\\Debug\\cmTC_d4d84.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d4d84.dir\\Debug\\cmTC_d4d84.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_SUPPORTS_AVX2 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d4d84.dir\\Debug\\\\" /Fd"cmTC_d4d84.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_SUPPORTS_AVX2 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d4d84.dir\\Debug\\\\" /Fd"cmTC_d4d84.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\Debug\\cmTC_d4d84.exe" /INCREMENTAL /ILK:"cmTC_d4d84.dir\\Debug\\cmTC_d4d84.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-enmqxc/Debug/cmTC_d4d84.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-enmqxc/Debug/cmTC_d4d84.lib" /MACHINE:X64  /machine:x64 cmTC_d4d84.dir\\Debug\\src.obj
+          cmTC_d4d84.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\Debug\\cmTC_d4d84.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_d4d84.dir\\Debug\\cmTC_d4d84.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d4d84.dir\\Debug\\cmTC_d4d84.tlog\\cmTC_d4d84.lastbuildstate".
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-enmqxc\\cmTC_d4d84.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.74
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake_modules/SetupCxxFlags.cmake:71 (check_cxx_source_compiles)"
+      - "CMakeLists.txt:415 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_AVX512"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-wrsvm3"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-wrsvm3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_AVX512"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-wrsvm3'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_58344.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:52 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\cmTC_58344.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_58344.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\Debug\\".
+          Creating directory "cmTC_58344.dir\\Debug\\cmTC_58344.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_58344.dir\\Debug\\cmTC_58344.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_58344.dir\\Debug\\cmTC_58344.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_SUPPORTS_AVX512 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /arch:AVX512 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_58344.dir\\Debug\\\\" /Fd"cmTC_58344.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_SUPPORTS_AVX512 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /arch:AVX512 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_58344.dir\\Debug\\\\" /Fd"cmTC_58344.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\Debug\\cmTC_58344.exe" /INCREMENTAL /ILK:"cmTC_58344.dir\\Debug\\cmTC_58344.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-wrsvm3/Debug/cmTC_58344.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-wrsvm3/Debug/cmTC_58344.lib" /MACHINE:X64  /machine:x64 cmTC_58344.dir\\Debug\\src.obj
+          cmTC_58344.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\Debug\\cmTC_58344.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_58344.dir\\Debug\\cmTC_58344.tlog\\unsuccessfulbuild".
+          Touching "cmTC_58344.dir\\Debug\\cmTC_58344.tlog\\cmTC_58344.lastbuildstate".
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-wrsvm3\\cmTC_58344.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.80
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckLinkerFlag.cmake:37 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLinkerFlag.cmake:44 (cmake_check_linker_flag)"
+      - "CMakeLists.txt:432 (check_linker_flag)"
+    checks:
+      - "Performing Test CXX_LINKER_SUPPORTS_VERSION_SCRIPT"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-5bmtyq"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-5bmtyq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS  /GR /EHsc /D_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CXX_LINKER_SUPPORTS_VERSION_SCRIPT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-5bmtyq'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1452e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:53 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\cmTC_1452e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_1452e.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\Debug\\".
+          Creating directory "cmTC_1452e.dir\\Debug\\cmTC_1452e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_1452e.dir\\Debug\\cmTC_1452e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_1452e.dir\\Debug\\cmTC_1452e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING /D CXX_LINKER_SUPPORTS_VERSION_SCRIPT /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1452e.dir\\Debug\\\\" /Fd"cmTC_1452e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING /D CXX_LINKER_SUPPORTS_VERSION_SCRIPT /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1452e.dir\\Debug\\\\" /Fd"cmTC_1452e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\Debug\\cmTC_1452e.exe" /INCREMENTAL /ILK:"cmTC_1452e.dir\\Debug\\cmTC_1452e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-5bmtyq/Debug/cmTC_1452e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-5bmtyq/Debug/cmTC_1452e.lib" /MACHINE:X64  /machine:x64 "-Wl,--version-script=C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/symbols.map" cmTC_1452e.dir\\Debug\\src.obj
+        LINK : warning LNK4044: unrecognized option '/Wl,--version-script=C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/symbols.map'; ignored [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\cmTC_1452e.vcxproj]
+          cmTC_1452e.vcxproj -> C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\Debug\\cmTC_1452e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_1452e.dir\\Debug\\cmTC_1452e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_1452e.dir\\Debug\\cmTC_1452e.tlog\\cmTC_1452e.lastbuildstate".
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\cmTC_1452e.vcxproj" (default targets).
+        
+        Build succeeded.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\cmTC_1452e.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : warning LNK4044: unrecognized option '/Wl,--version-script=C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/symbols.map'; ignored [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-5bmtyq\\cmTC_1452e.vcxproj]
+        
+            1 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.76
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "cmake_modules/ThirdpartyToolchain.cmake:820 (find_package)"
+      - "CMakeLists.txt:496 (include)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-kl7n6k"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-kl7n6k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-kl7n6k'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d057d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:54 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\cmTC_d057d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_d057d.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\Debug\\".
+          Creating directory "cmTC_d057d.dir\\Debug\\cmTC_d057d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_d057d.dir\\Debug\\cmTC_d057d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d057d.dir\\Debug\\cmTC_d057d.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d057d.dir\\Debug\\\\" /Fd"cmTC_d057d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d057d.dir\\Debug\\\\" /Fd"cmTC_d057d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\src.c"
+          src.c
+        C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\cmTC_d057d.vcxproj]
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\cmTC_d057d.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\cmTC_d057d.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-kl7n6k\\cmTC_d057d.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.56
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "cmake_modules/ThirdpartyToolchain.cmake:820 (find_package)"
+      - "CMakeLists.txt:496 (include)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-63cuhy"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-63cuhy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-63cuhy'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_624d8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:55 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\cmTC_624d8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_624d8.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\Debug\\".
+          Creating directory "cmTC_624d8.dir\\Debug\\cmTC_624d8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_624d8.dir\\Debug\\cmTC_624d8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_624d8.dir\\Debug\\cmTC_624d8.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_624d8.dir\\Debug\\\\" /Fd"cmTC_624d8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_624d8.dir\\Debug\\\\" /Fd"cmTC_624d8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\Debug\\cmTC_624d8.exe" /INCREMENTAL /ILK:"cmTC_624d8.dir\\Debug\\cmTC_624d8.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-63cuhy/Debug/cmTC_624d8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-63cuhy/Debug/cmTC_624d8.lib" /MACHINE:X64  /machine:x64 cmTC_624d8.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\cmTC_624d8.vcxproj]
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\cmTC_624d8.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\cmTC_624d8.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-63cuhy\\cmTC_624d8.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.77
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "cmake_modules/ThirdpartyToolchain.cmake:820 (find_package)"
+      - "CMakeLists.txt:496 (include)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-pdlv3f"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-pdlv3f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-pdlv3f'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8ac16.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:56 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\cmTC_8ac16.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_8ac16.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\Debug\\".
+          Creating directory "cmTC_8ac16.dir\\Debug\\cmTC_8ac16.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8ac16.dir\\Debug\\cmTC_8ac16.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8ac16.dir\\Debug\\cmTC_8ac16.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8ac16.dir\\Debug\\\\" /Fd"cmTC_8ac16.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8ac16.dir\\Debug\\\\" /Fd"cmTC_8ac16.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\Debug\\cmTC_8ac16.exe" /INCREMENTAL /ILK:"cmTC_8ac16.dir\\Debug\\cmTC_8ac16.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-pdlv3f/Debug/cmTC_8ac16.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-pdlv3f/Debug/cmTC_8ac16.lib" /MACHINE:X64  /machine:x64 cmTC_8ac16.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\cmTC_8ac16.vcxproj]
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\cmTC_8ac16.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\cmTC_8ac16.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-pdlv3f\\cmTC_8ac16.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.67
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake_modules/ThirdpartyToolchain.cmake:996 (check_cxx_symbol_exists)"
+      - "CMakeLists.txt:496 (include)"
+    checks:
+      - "Looking for _M_ARM64"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-760vx1"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-760vx1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS  /GR /EHsc /D_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "WIN32_ARM64_TARGET"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-760vx1'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ffaec.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:57 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\cmTC_ffaec.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ffaec.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\Debug\\".
+          Creating directory "cmTC_ffaec.dir\\Debug\\cmTC_ffaec.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ffaec.dir\\Debug\\cmTC_ffaec.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ffaec.dir\\Debug\\cmTC_ffaec.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ffaec.dir\\Debug\\\\" /Fd"cmTC_ffaec.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ffaec.dir\\Debug\\\\" /Fd"cmTC_ffaec.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+        C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\CheckSymbolExists.cxx(7,19): error C2065: '_M_ARM64': undeclared identifier [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\cmTC_ffaec.vcxproj]
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\cmTC_ffaec.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\cmTC_ffaec.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\CheckSymbolExists.cxx(7,19): error C2065: '_M_ARM64': undeclared identifier [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-760vx1\\cmTC_ffaec.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.49
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake_modules/ThirdpartyToolchain.cmake:1001 (check_cxx_symbol_exists)"
+      - "CMakeLists.txt:496 (include)"
+    checks:
+      - "Looking for __SIZEOF_INT128__"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-lfqon4"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-lfqon4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS  /GR /EHsc /D_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "ARROW_USE_NATIVE_INT128"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-lfqon4'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0c4db.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:58 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\cmTC_0c4db.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_0c4db.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\Debug\\".
+          Creating directory "cmTC_0c4db.dir\\Debug\\cmTC_0c4db.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_0c4db.dir\\Debug\\cmTC_0c4db.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_0c4db.dir\\Debug\\cmTC_0c4db.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0c4db.dir\\Debug\\\\" /Fd"cmTC_0c4db.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\CheckSymbolExists.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0c4db.dir\\Debug\\\\" /Fd"cmTC_0c4db.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+        C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\CheckSymbolExists.cxx(7,19): error C2065: '__SIZEOF_INT128__': undeclared identifier [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\cmTC_0c4db.vcxproj]
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\cmTC_0c4db.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\cmTC_0c4db.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\CheckSymbolExists.cxx(7,19): error C2065: '__SIZEOF_INT128__': undeclared identifier [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-lfqon4\\cmTC_0c4db.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.57
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindBacktrace.cmake:62 (check_symbol_exists)"
+      - "src/arrow/CMakeLists.txt:646 (find_package)"
+    checks:
+      - "Looking for backtrace"
+    directories:
+      source: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ae932f"
+      binary: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ae932f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3   /EHsc /wd5105 /bigobj /utf-8 /W3 /wd4800 /wd4996 /wd4065  /MP"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:LIBCMT"
+      CMAKE_MODULE_PATH: "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/cmake_modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "_Backtrace_SYM_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/CMakeScratch/TryCompile-ae932f'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_bfbd2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.5+b5265ef37 for .NET Framework
+        Build started 2024-03-05 11:13:59 PM.
+        
+        Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\cmTC_bfbd2.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_bfbd2.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\Debug\\".
+          Creating directory "cmTC_bfbd2.dir\\Debug\\cmTC_bfbd2.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_bfbd2.dir\\Debug\\cmTC_bfbd2.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_bfbd2.dir\\Debug\\cmTC_bfbd2.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bfbd2.dir\\Debug\\\\" /Fd"cmTC_bfbd2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /wd5105 /wd4800 /wd4996 /wd4065 /errorReport:queue  /bigobj /utf-8 "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\CheckSymbolExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bfbd2.dir\\Debug\\\\" /Fd"cmTC_bfbd2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /wd5105 /wd4800 /wd4996 /wd4065 /errorReport:queue  /bigobj /utf-8 "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\CheckSymbolExists.c"
+          CheckSymbolExists.c
+        C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\CheckSymbolExists.c(2,10): error C1083: Cannot open include file: 'execinfo.h': No such file or directory [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\cmTC_bfbd2.vcxproj]
+        Done Building Project "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\cmTC_bfbd2.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\cmTC_bfbd2.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\CheckSymbolExists.c(2,10): error C1083: Cannot open include file: 'execinfo.h': No such file or directory [C:\\Users\\Jay\\Documents\\Github\\HarvestEye\\openMVG Built\\arrow\\src\\arrow_cpp-build\\CMakeFiles\\CMakeScratch\\TryCompile-ae932f\\cmTC_bfbd2.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.51
+        
+      exitCode: 1
+...

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\GlobalSfM_rotation_averaging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\GlobalSfM_translation_averaging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\sfm_global_engine_relative_motions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\localization\SfM_Localizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\localization\SfM_Localizer_Single_3DTrackObservation_Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\relative_pose_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\SfmSceneInitializerMaxPair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\SfmSceneInitializerStellar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\sequential_SfM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\sequential_SfM2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_robust_model_estimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\stellar\sfm_stellar_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\stellar\stellar_solver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\structure_from_known_poses\structure_estimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_BA_ceres.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_colorization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_filters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_filters_frustum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_graph_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_io_cereal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_triangulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_report.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\GlobalSfM_rotation_averaging.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\GlobalSfM_translation_averaging.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\mutexSet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\sfm_global_engine_relative_motions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\sfm_global_reindex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\global\triplet_t_ACRansac_kernelAdaptator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\localization\SfM_Localizer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\localization\SfM_Localizer_Single_3DTrackObservation_Database.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\relative_pose_engine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\SfmSceneInitializer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\SfmSceneInitializerMaxPair.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\SfmSceneInitializerStellar.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\sequential_SfM.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sequential\sequential_SfM2.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_engine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_features_provider.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_matches_provider.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_preemptive_regions_provider.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_regions_provider.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_regions_provider_cache.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\sfm_robust_model_estimation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\stellar\relative_scale.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\stellar\sfm_stellar_engine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\stellar\stellar_definitions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\stellar\stellar_solver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\pipelines\structure_from_known_poses\structure_estimator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_BA.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_BA_ceres.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_BA_ceres_camera_functor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_colorization.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_filters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_filters_frustum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_graph_utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_io.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_io_baf.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_io_cereal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_io_ply.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_transform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_triangulation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_data_utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_filters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_landmark.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_landmark_io.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_report.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_view.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_view_io.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_view_priors.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\sfm_view_priors_io.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\openMVG\sfm\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{944116DC-00DF-3E37-BC8E-30EC7C02C934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DF0C22B8-62EA-3379-B4EE-2759DDDDE2BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

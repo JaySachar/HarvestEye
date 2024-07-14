@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{361D1D10-2F11-32F4-9088-2AA0A4167B46}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>arrow_static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\release\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">arrow_static.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">arrow_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\release\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">arrow_static.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">arrow_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\release\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">arrow_static.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">arrow_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\release\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">arrow_static.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">arrow_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/flatbuffers/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/hadoop/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/xsimd_ep/src/xsimd_ep-install/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep/src/mimalloc_ep/include/mimalloc-2.0" /bigobj /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>5105;4800;4996;4065</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/flatbuffers/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/hadoop/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/xsimd_ep/src/xsimd_ep-install/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep/src/mimalloc_ep/include/mimalloc-2.0" /bigobj /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>5105;4800;4996;4065</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/flatbuffers/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/hadoop/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/xsimd_ep/src/xsimd_ep-install/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep/src/mimalloc_ep/include/mimalloc-2.0" /bigobj /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>5105;4800;4996;4065</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/flatbuffers/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/thirdparty/hadoop/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/boost_ep-prefix/src/boost_ep" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/xsimd_ep/src/xsimd_ep-install/include" /external:I "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep/src/mimalloc_ep/include/mimalloc-2.0" /bigobj /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>5105;4800;4996;4065</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_EXPORTING;ARROW_WITH_TIMING_TESTS;ARROW_HAVE_RUNTIME_SSE4_2;ARROW_HAVE_RUNTIME_AVX2;ARROW_HAVE_RUNTIME_BMI2;ARROW_HAVE_RUNTIME_AVX512;_CRT_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;ARROW_HAVE_SSE4_2;ARROW_MIMALLOC;URI_STATIC_BUILD;BOOST_ALL_NO_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\generated;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\flatbuffers\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\thirdparty\hadoop\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep-prefix\src\boost_ep;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\xsimd_ep\src\xsimd_ep-install\include;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep\src\mimalloc_ep\include\mimalloc-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp" "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/arrow/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindBacktrace.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\ArrowConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\arrow.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\arrow\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp" "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/arrow/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindBacktrace.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\ArrowConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\arrow.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\arrow\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp" "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/arrow/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindBacktrace.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\ArrowConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\arrow.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\arrow\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp/src/arrow/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp" "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/arrow/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindBacktrace.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\ArrowConfig.cmake.in;C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\arrow.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\src\arrow\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_base.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_binary.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_decimal.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_dict.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_nested.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_primitive.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_adaptive.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_base.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_binary.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_decimal.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_dict.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_nested.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_primitive.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_union.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\concatenate.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\data.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\diff.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\util.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\validate.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\builder.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\buffer.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\chunked_array.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\chunk_resolver.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\compare.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\config.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\datum.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\device.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\extension_type.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\memory_pool.cc">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\pretty_print.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\record_batch.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\result.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\scalar.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\sparse_tensor.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\status.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\table.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\table_builder.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor\coo_converter.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor\csf_converter.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor\csx_converter.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\type.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\visitor.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\c\bridge.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\buffered.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\caching.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\compressed.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\file.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\hdfs.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\hdfs_internal.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\interfaces.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\memory.cc">
+      <ObjectFileName>$(IntDir)/io/memory.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\slow.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\stdio.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\transform.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\async_util.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\basic_decimal.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bit_block_counter.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bit_run_reader.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bit_util.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bitmap.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bitmap_builders.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bitmap_ops.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bpacking.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\byte_size.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\cancel.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\compression.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\counting_semaphore.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\cpu_info.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\debug.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\decimal.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\delimiting.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\formatting.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\future.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\int_util.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\io_util.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\logging.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\key_value_metadata.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\memory.cc">
+      <ObjectFileName>$(IntDir)/util/memory.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\mutex.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\string.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\string_builder.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\task_group.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\tdigest.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\thread_pool.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\time.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\tracing.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\trie.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\unreachable.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\uri.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\utf8.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\value_parsing.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\base64.cpp" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\datetime\tz.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\bignum.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\double-conversion.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\bignum-dtoa.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\fast-dtoa.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\cached-powers.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\fixed-dtoa.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\diy-fp.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\strtod.cc" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bpacking_avx2.cc">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bpacking_avx512.cc">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions512</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions512</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">AdvancedVectorExtensions512</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">AdvancedVectorExtensions512</EnableEnhancedInstructionSet>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\musl\strptime.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriCommon.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriCompare.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriEscape.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriFile.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriIp4Base.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriIp4.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriMemory.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriNormalizeBase.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriNormalize.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriParseBase.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriParse.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriQuery.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriRecompose.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriResolve.c" />
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriShorten.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\ZERO_CHECK.vcxproj">
+      <Project>{A12B839D-967C-3272-81CA-87101E9DEFE2}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\arrow_dependencies.vcxproj">
+      <Project>{92DBB49D-EB35-317D-BF12-EEF49216EAB2}</Project>
+      <Name>arrow_dependencies</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\boost_ep.vcxproj">
+      <Project>{DBED18FF-5326-3B50-9078-4A4B67C80C45}</Project>
+      <Name>boost_ep</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp-build\mimalloc_ep.vcxproj">
+      <Project>{1BEC94AC-42F7-3DFA-9FB0-EF44E11E6BA2}</Project>
+      <Name>mimalloc_ep</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
