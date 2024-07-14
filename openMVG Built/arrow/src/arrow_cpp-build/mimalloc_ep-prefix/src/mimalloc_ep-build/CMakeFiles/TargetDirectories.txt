@@ -1,4 +1,0 @@
-C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep-prefix/src/mimalloc_ep-build/CMakeFiles/mimalloc-static.dir
-C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep-prefix/src/mimalloc_ep-build/CMakeFiles/INSTALL.dir
-C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep-prefix/src/mimalloc_ep-build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep-prefix/src/mimalloc_ep-build/CMakeFiles/ZERO_CHECK.dir
