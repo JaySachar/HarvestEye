@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jmemnobs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jaricom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jccoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jccolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcdctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jchuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcomapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcparam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcprepct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jcsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jctrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdatadst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdatasrc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdcoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdcolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jddctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdhuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdinput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdmerge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdpostct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jfdctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jfdctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jfdctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jidctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jidctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jidctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jquant1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jquant2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jmemmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jdct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jinclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jmemsys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jpegint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jerror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jmorecfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\jpeglib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\third_party\jpeg\config\jconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\third_party\jpeg\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{944116DC-00DF-3E37-BC8E-30EC7C02C934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DF0C22B8-62EA-3379-B4EE-2759DDDDE2BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

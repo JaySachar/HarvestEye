@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\CbcOrClpParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyDense.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyTaucs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintLinear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintQuadratic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowDantzig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowPivot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowSteepest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDummyMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicExampleMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpEventHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpFactorization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubDynamicMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpHelperFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpInterior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLinearObjective.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLsqr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMatrixBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkBasis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNonLinearCost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpObjective.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPackedMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdco.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdcoBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPlusMinusOneMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPredictorCorrector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPresolve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnDantzig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnPivot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnSteepest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpQuadraticObjective.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexDual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexNonlinear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexOther.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexPrimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSolve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Clp_C_Interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\IdiSolve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Idiot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyEventHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyMessageHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\unitTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\CbcOrClpParam.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyBase.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyDense.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpCholeskyTaucs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintLinear.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpConstraintQuadratic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowDantzig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowPivot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDualRowSteepest.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDummyMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicExampleMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpDynamicMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpEventHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpFactorization.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubDynamicMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpGubMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpHelperFunctions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpInterior.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLinearObjective.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpLsqr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMatrixBase.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpMessage.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpModel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkBasis.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNetworkMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpNonLinearCost.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpObjective.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPackedMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpParameters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdco.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPdcoBase.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPlusMinusOneMatrix.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPredictorCorrector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPresolve.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnDantzig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnPivot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalColumnSteepest.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpPrimalQuadraticDantzig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpQuadraticObjective.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexDual.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexNonlinear.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexOther.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSimplexPrimal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\ClpSolve.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Clp_C_Interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\Idiot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyEventHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\MyMessageHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\config_clp_default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\config_default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG\src\dependencies\osi_clp\Clp\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{944116DC-00DF-3E37-BC8E-30EC7C02C934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DF0C22B8-62EA-3379-B4EE-2759DDDDE2BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

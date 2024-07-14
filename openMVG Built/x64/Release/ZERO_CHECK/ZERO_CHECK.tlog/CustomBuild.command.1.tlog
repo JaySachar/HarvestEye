@@ -1,0 +1,10 @@
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\CMAKEFILES\4D2BDB9C5975E72301ADC622830662F9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Jay/Documents/Github/HarvestEye/openMVG/src "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/openMVG.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/xsimd_ep"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/fe51f44a2c5538ca62654960d6322a05/xsimd_ep.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/572d7a5f89f379195db88b2396361afe/xsimd_ep-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-build.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-download.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-install.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/1c7e3c421fb3362ad9be134fd67b1156/xsimd_ep-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"xsimd_ep"
+		],
+		"name" : "xsimd_ep"
+	}
+}

@@ -1,0 +1,13 @@
+# Target labels
+ mimalloc_ep
+# Source files and their labels
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/mimalloc_ep
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/fe51f44a2c5538ca62654960d6322a05/mimalloc_ep.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/572d7a5f89f379195db88b2396361afe/mimalloc_ep-complete.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-build.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-configure.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-download.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-install.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-mkdir.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-patch.rule
+C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/641f3882348da7379d324d9ab7cdefb6/mimalloc_ep-update.rule

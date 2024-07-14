@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_base.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_binary.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_decimal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_dict.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_nested.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\array_primitive.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_adaptive.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_base.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_binary.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_decimal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_dict.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_nested.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_primitive.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\builder_union.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\concatenate.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\data.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\diff.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\array\validate.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\chunked_array.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\chunk_resolver.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\compare.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\config.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\datum.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\device.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\extension_type.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\memory_pool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\pretty_print.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\record_batch.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\result.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\scalar.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\sparse_tensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\status.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\table.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\table_builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor\coo_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor\csf_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\tensor\csx_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\type.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\visitor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\c\bridge.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\buffered.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\caching.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\compressed.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\file.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\hdfs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\hdfs_internal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\interfaces.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\memory.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\slow.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\stdio.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\io\transform.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\async_util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\basic_decimal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bit_block_counter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bit_run_reader.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bit_util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bitmap.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bitmap_builders.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bitmap_ops.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bpacking.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\byte_size.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\cancel.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\compression.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\counting_semaphore.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\cpu_info.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\debug.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\decimal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\delimiting.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\formatting.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\future.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\int_util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\io_util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\logging.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\key_value_metadata.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\memory.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\mutex.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\string.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\string_builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\task_group.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\tdigest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\thread_pool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\time.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\tracing.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\trie.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\unreachable.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\uri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\utf8.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\value_parsing.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\datetime\tz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\bignum.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\double-conversion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\bignum-dtoa.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\fast-dtoa.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\cached-powers.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\fixed-dtoa.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\diy-fp.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\double-conversion\strtod.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bpacking_avx2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\util\bpacking_avx512.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\musl\strptime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriCommon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriCompare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriEscape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriIp4Base.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriIp4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriMemory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriNormalizeBase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriNormalize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriParseBase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriParse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriQuery.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriRecompose.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriResolve.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\vendored\uriparser\UriShorten.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jay\Documents\Github\HarvestEye\openMVG Built\arrow\src\arrow_cpp\cpp\src\arrow\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{038D9A35-34E1-3B62-95F4-11038F60FDB2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

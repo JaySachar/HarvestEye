@@ -1,0 +1,20 @@
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP-BUILD\CMAKEFILES\F089E0360B8A2327F98F0AEC3D1AF4BE\ARROW_BUNDLED_DEPENDENCIES_MERGE.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64\lib.exe" /NOLOGO "/OUT:C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/release/arrow_bundled_dependencies.lib" "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/mimalloc_ep/src/mimalloc_ep/lib/mimalloc-2.0/mimalloc-static.lib"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JAY\DOCUMENTS\GITHUB\HARVESTEYE\OPENMVG BUILT\ARROW\SRC\ARROW_CPP\CPP\SRC\ARROW\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp/cpp" "-BC:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build" --check-stamp-file "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/src/arrow/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

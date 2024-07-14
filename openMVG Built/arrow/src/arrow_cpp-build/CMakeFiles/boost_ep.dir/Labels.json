@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/boost_ep"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/fe51f44a2c5538ca62654960d6322a05/boost_ep.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/572d7a5f89f379195db88b2396361afe/boost_ep-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-build.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-download.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-install.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Jay/Documents/Github/HarvestEye/openMVG Built/arrow/src/arrow_cpp-build/CMakeFiles/0aa3ae44983cf8440cdf45e916ce1c7c/boost_ep-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"boost_ep"
+		],
+		"name" : "boost_ep"
+	}
+}
