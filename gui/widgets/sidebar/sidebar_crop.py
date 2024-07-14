@@ -9,7 +9,9 @@ class SidebarCrop(tk.Frame):
         self.controller = controller
 
         self.color_of_the_gradient = '#8C953C'
-        self.configure(bg=self.color_of_the_gradient)
+        self.configure(bg=self.color_of_the_gradient, width=250, height = self.controller.winfo_height())
+        self.pack_propagate(False)
+        #self.minsize(246, 50)
 
         self.renderSidebarContent()
 
@@ -37,30 +39,33 @@ class SidebarCrop(tk.Frame):
 
         # Passing a name of the crop as part of the path where assets have same name
         image_path = "./assets/crops/" + self.controller.crop + "/"
-        #print(f"self.controller.crop (again) = {self.controller.crop}")
-        #print(f"Once again, image_path: {image_path}")
+
+        # Contains Crop text and image (both images)
+        crop_frame = tk.Frame(self)
+        crop_frame.configure(bg=self.color_of_the_gradient)
+        crop_frame.pack(side="top", fill="x", pady=100)
 
         # Load CHILI TEXT for the side sidebar 
         photo = ImageTk.PhotoImage(Image.open(image_path+"txt_crop_sm.png"))
-        txt_chilititle = tk.Label(self, image=photo )
+        txt_chilititle = tk.Label(crop_frame, image=photo )
         txt_chilititle.image = photo
-        txt_chilititle.pack(side="top", fill="x", expand=True, pady=50)
+        txt_chilititle.pack(side="top")
         txt_chilititle.configure(bg=self.color_of_the_gradient)
         #image_path = "./assets/datatype-select/"
 
         # Load CHILI image for the side sidebar
         photo = ImageTk.PhotoImage(Image.open(image_path+"img_crop_sm.png"))
-        img_chili = tk.Label(self, image=photo )
+        img_chili = tk.Label(crop_frame, image=photo )
         img_chili.image = photo
-        img_chili.pack(side="top", fill="both", expand=True, pady=50)
+        img_chili.pack(side="top", pady=25)
         img_chili.configure(bg=self.color_of_the_gradient)
 
-        # Load CHILI TXT INFO for the side sidebar
-        photo = ImageTk.PhotoImage(Image.open(image_path+"txt_info_sm.png"))
-        txt_chiliinfo = tk.Label(self, image=photo )
-        txt_chiliinfo.image = photo
-        txt_chiliinfo.pack(side="bottom", fill="y",  expand=True, pady=30, padx=10)
-        txt_chiliinfo.configure(bg=self.color_of_the_gradient)
+        ## Load CHILI TXT INFO for the side sidebar
+        #photo = ImageTk.PhotoImage(Image.open(image_path+"txt_info_sm.png"))
+        #txt_chiliinfo = tk.Label(self, image=photo )
+        #txt_chiliinfo.image = photo
+        #txt_chiliinfo.pack(side="bottom", fill="y",  expand=True, pady=30, padx=10)
+        #txt_chiliinfo.configure(bg=self.color_of_the_gradient)
 
 
 
