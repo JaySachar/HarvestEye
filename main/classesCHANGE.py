@@ -12,7 +12,8 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
 from scipy.spatial import KDTree
-
+from scipy.spatial import ConvexHull, distance_matrix
+import csv
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
 class ImageProcessor:
@@ -363,7 +364,25 @@ class PointCloudFiltering(ImageProcessor):
 class CropAnalyzer:
     def __init__(self):
         pass
+    
+    def create_convex_hull(self, cluster_points, plot=False):
+        points_xy = cluster_points[:, :2]  # Extract XY coordinates
+        hull = ConvexHull(points_xy)
+        
+        if plot == True:
+            # Plotting the convex hull
+            plt.figure()
+            plt.plot(points_xy[:, 0], points_xy[:, 1], 'o')  # Plot points
+            for simplex in hull.simplices:
+                plt.plot(points_xy[simplex, 0], points_xy[simplex, 1], 'k-')  # Plot edges of the convex hull
 
+            plt.title('Convex Hull')
+            plt.xlabel('X')
+            plt.ylabel('Y')
+            plt.grid(True)
+            plt.show()
+
+        return hull    
     def calculate_highest_point(self, cluster_points):
         """
         Calculate the highest point in a cluster.
@@ -442,12 +461,15 @@ class CropAnalyzer:
 
         for label, cluster_points in filtered_labels_dict.items():
             # Calculate the highest point in the cluster
+            print(cluster_points)
             highest_point = self.calculate_highest_point(cluster_points)
             
             # Find the closest ground point
+            print(highest_point)
             closest_ground_point = self.find_closest_ground_point(highest_point, filtered_ground_points)
             
             # Calculate height difference
+            print(closest_ground_point)
             height_difference = self.calculate_height_difference(highest_point, closest_ground_point)
             
             heights_dict[label] = height_difference
@@ -608,17 +630,11 @@ class CropAnalyzer:
 
         return (*furthest_points_major, furthest_points_minor[1], furthest_points_minor[0])
 
-    def calculate_volumes_for_clusters(self, dbscan_filtered_pcd, dbscan_filtered_labels, filtered_ground_pcd):
+    def calculate_volumes_for_clusters(self, new_cluster_labels, filtered_ground_pcd):
         volumes_dict = {}
         filtered_ground_points = np.asarray(filtered_ground_pcd.points)
         
-        for label in np.unique(dbscan_filtered_labels):
-            if label == -1:  # Skip noise points
-                continue
-            
-            # Get points belonging to the current cluster
-            cluster_indices = np.where(dbscan_filtered_labels == label)[0]
-            cluster_points = np.asarray(dbscan_filtered_pcd.points)[cluster_indices]
+        for label, cluster_points in new_cluster_labels.items():
 
             # Calculate volume for the current cluster
             volume = self.calculate_oval_volume(cluster_points, filtered_ground_points)
@@ -627,6 +643,26 @@ class CropAnalyzer:
             volumes_dict[label] = volume
         
         return volumes_dict
+    
+    def write_metrics_to_csv(self, csv_file, cluster_centers, cluster_data, metric):
+        """
+        Write cluster data to a CSV file.
+
+        Parameters:
+        - csv_file: Path to the output CSV file.
+        - cluster_centers: Dictionary mapping cluster labels to their centers.
+        - cluster_data: Dictionary mapping cluster labels to their data (height or volume).
+        """
+        unit = "m"
+        if metric == "Volume":
+            unit = "m^3"
+
+        with open(csv_file, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Crop Number', f'X-Coordinate [m]', 'Y-Coordinate [m]', 'Crop {metric} [{unit}]'])
+            for label, center in cluster_centers.items():
+                data = cluster_data.get(label, 'N/A')
+                writer.writerow([label, center[0], center[1], data])
 class GUI:
     def __init__(self):
         pass
