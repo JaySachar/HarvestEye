@@ -11,6 +11,8 @@ from matplotlib.colors import Normalize
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
+from scipy.spatial import KDTree
+
 # ImageProcessor is responsible for housing general image processing functions
 # This includes downsampling images, and any other edits we'd have to make to them 
 class ImageProcessor:
@@ -44,33 +46,35 @@ class ImageProcessor:
                 
         return image_files, image_ext # Return all the image files in the directory and the extensions of them                
    
-    def read_ply(self, ply_data_or_file_path):
-        vertices = []
-        colors = []
+    def read_ply(file_path):
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
 
-        # Check if the input is a file path or string data
-        if os.path.isfile(ply_data_or_file_path):
-            with open(ply_data_or_file_path, 'r') as f:
-                lines = f.readlines()
-        else:
-            # Split the string data by newline characters
-            lines = ply_data_or_file_path.strip().split('\n')
+        header = []
+        data_start_index = 0
+        for i, line in enumerate(lines):
+            header.append(line)
+            if line.strip() == "end_header":
+                data_start_index = i + 1
+                break
 
-        # Skip the first line which contains the number of vertices
-        for line in lines[1:]:
-            data = line.strip().split()
-            vertex = [float(data[0]), float(data[1]), float(data[2])]
-            vertices.append(vertex)
+        data = []
+        for line in lines[data_start_index:]:
+            parts = line.strip().split()
+            x, y, z = map(float, parts[:3])
+            color = list(map(int, parts[3:6]))
+            data.append((x, y, z, color))
 
-            if len(data) > 3:  # Check if RGB values are present
-                rgb = [int(data[3]), int(data[4]), int(data[5])]
-                colors.append(rgb)
+        points = np.array([(x, y, z) for x, y, z, color in data])
+        colors = np.array([color for x, y, z, color in data])
 
-        vertices_np = np.array(vertices)
-        colors_np = np.array(colors) if colors else None
-
-        return vertices_np, colors_np
-    
+        return header, points, colors
+    def write_ply(file_path, header, points, colors):
+        with open(file_path, 'w') as file:
+            for line in header:
+                file.write(line)
+            for point, color in zip(points, colors):
+                file.write(f"{point[0]} {point[1]} {-point[2]} {color[0]} {color[1]} {color[2]}\n")  # Flipping Z axis
 # Create PointCloudGenerator as a child to ImageProcessor so we can encapsulate
 # All image preprocessing functions
 class PointCloudGenerator(ImageProcessor):
@@ -153,8 +157,48 @@ class PointCloudGenerator(ImageProcessor):
         xyzrgb_normalized = scaler.fit_transform(xyzrgb)
         return xyzrgb_normalized
     
-    def densify_point_cloud(self, pcd):
-        pass 
+    def densify_point_cloud(self, pcd, factor):
+        points = np.asarray(pcd.points)
+        colors = np.asarray(pcd.colors)
+        tree = KDTree(points)
+        new_points = []
+        new_colors = []
+
+        for point, color in zip(points, colors):
+            # Find nearest neighbors
+            distances, indices = tree.query(point, k=factor + 1)
+            neighbors = points[indices[1:]]
+            neighbor_colors = colors[indices[1:]]
+            for neighbor, neighbor_color in zip(neighbors, neighbor_colors):
+                # Interpolate points between the point and each neighbor
+                interp_point = (point + neighbor) / 2
+                interp_color = (color + neighbor_color) / 2
+                new_points.append(interp_point)
+                new_colors.append(interp_color)
+
+        new_points = np.array(new_points)
+        new_colors = np.array(new_colors)
+        return new_points, new_colors 
+
+    def fit_plane_and_get_rotation_matrix(self, points):
+        centroid = np.mean(points, axis=0)
+        centered_points = points - centroid
+        U, S, Vt = np.linalg.svd(centered_points)
+        normal = Vt[2, :]
+
+        z_axis = np.array([0, 0, 1])
+        v = np.cross(normal, z_axis)
+        s = np.linalg.norm(v)
+        c = np.dot(normal, z_axis)
+        vx = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [-v[1], v[0], 0]])
+        rotation_matrix = np.eye(3) + vx + np.dot(vx, vx) * ((1 - c) / (s ** 2))
+
+        return rotation_matrix, centroid
+
+    def apply_transformation(self, points, rotation_matrix, centroid):
+        centered_points = points - centroid
+        transformed_points = np.dot(centered_points, rotation_matrix.T) + centroid
+        return transformed_points
 # The UnsupervisedSegmentationAlgorithm is responsible for housing unsupervised segmentation algorithms, namely KMeans clustering and DBSCAN
 # To separate the ground and the plant. 
 class UnsupervisedSegmentationAlgorithm:
@@ -360,7 +404,7 @@ class CropAnalyzer:
         """
         return highest_point[2] - closest_ground_point[2]  # Calculate difference in Z-coordinates
 
-    def calculate_cluster_centers(self, labels, points):
+    def calculate_cluster_centers(self, labels_dict):
         """
         Calculate the centers of clusters.
 
@@ -371,17 +415,15 @@ class CropAnalyzer:
         Returns:
         - A dictionary mapping cluster labels to their centers.
         """
-        unique_labels = np.unique(labels)
         cluster_centers = {}
-        for label in unique_labels:
+        for label, cluster_points in labels_dict.items():
             if label == -1:
                 continue
-            cluster_points = points[labels == label]
             center = np.mean(cluster_points, axis=0)
             cluster_centers[label] = center
         return cluster_centers
     
-    def calculate_heights_and_labels(self, filtered_labels, clustered_points, filtered_ground_pcd):
+    def calculate_heights_and_labels(self, filtered_labels_dict, filtered_ground_pcd):
         """
         Calculate height and labels for filtered DBSCAN clusters.
 
@@ -397,14 +439,8 @@ class CropAnalyzer:
         filtered_ground_points = np.asarray(filtered_ground_pcd.points)
         heights_dict = {}
         labels = []
-        for label in np.unique(filtered_labels):
-            if label == -1:  # Skip noise points
-                continue
-            
-            # Get points belonging to the current cluster
-            cluster_indices = np.where(filtered_labels == label)[0]
-            cluster_points = np.asarray(clustered_points.points)[cluster_indices]
 
+        for label, cluster_points in filtered_labels_dict.items():
             # Calculate the highest point in the cluster
             highest_point = self.calculate_highest_point(cluster_points)
             
@@ -414,7 +450,7 @@ class CropAnalyzer:
             # Calculate height difference
             height_difference = self.calculate_height_difference(highest_point, closest_ground_point)
             
-            heights_dict[label] = (height_difference)
+            heights_dict[label] = height_difference
             labels.append(label)
         
         return heights_dict, labels
