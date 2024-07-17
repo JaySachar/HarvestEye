@@ -27,6 +27,7 @@ class MainApp(tk.Tk):
 
         # Default value is chili
         self.crop = 'chili'
+        self.mode = None
         self.back_history = []
 
         # Frameless/No title bar 

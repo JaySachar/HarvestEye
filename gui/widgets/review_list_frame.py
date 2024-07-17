@@ -13,7 +13,7 @@ from matplotlib.colors import Normalize
 import matplotlib.cm as cm
 from scipy.spatial import ConvexHull
 import threading
-
+from scipy.spatial import distance_matrix
 # Get the current working directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -28,7 +28,8 @@ sys.path.append(target_dir)
 
 # Now you can import the target file
 from classesCHANGE import PointCloudGenerator, UnsupervisedSegmentationAlgorithm, PointCloudFiltering, CropAnalyzer
-def height_and_analysis_script(pcd_file_path, voxel_size = 0.25):
+
+def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
         pcd = o3d.io.read_point_cloud(pcd_file_path)
         
         pcd_functions = PointCloudGenerator(os.path.dirname(__file__))
@@ -38,16 +39,27 @@ def height_and_analysis_script(pcd_file_path, voxel_size = 0.25):
 
         # Downsample the point cloud
         # Voxel size was normally 0.25 for meters
-        
+        print("downsampling")
         downsampled_pcd = pcd_functions.downsamples_pointcloud(pcd, voxel_size)
-
+        print("downsampled")
         # Normalize the point cloud
         xyzrgb_normalized = pcd_functions.pcd_array_normalized(downsampled_pcd)
+        print("norm")
 
         # Define weights and number of clusters for KMeans
-        weights = [5, 5, 500, 1, 550, 1]
+        print("check crop type")
+
+        if crop_type == "avocado":
+            weights = [4, 4, 25, 8, 17, 8]
+        # If Hazelnuts weights = [ ]
+        elif crop_type == "hazelnut":
+            weights = [8, 8, 11, 4, 8, 4]
+        else:
+            weights = [2, 2, 5, 1, 3, 1]
+
         num_clusters = 2
         kmeans_labels, kmeans = unsup_segmentation.normalized_and_weighted_kmeans(weights, xyzrgb_normalized, num_clusters)
+        print("kmeans good")
 
         # Prepare cluster colors array
         cluster_colors = np.zeros_like(xyzrgb_normalized[:, :3])  # Use only the XYZ part for colors
@@ -58,41 +70,52 @@ def height_and_analysis_script(pcd_file_path, voxel_size = 0.25):
             "brown": [0.647, 0.165, 0.165]  # Brown color
         }
 
-        # Identify the larger cluster
-        larger_cluster_label = np.argmax(np.bincount(kmeans_labels))
+       # Determine the ground cluster based on the lower average z value
+        print("finding grouind cluster")
+
+        average_z = []
+        for i in range(num_clusters):
+            cluster_points = np.asarray(downsampled_pcd.points)[kmeans_labels == i]
+            avg_z = cluster_points[:, 2].mean()
+            average_z.append(avg_z)
+        ground_cluster_label = np.argmin(average_z)
+        print("ground cluster found good")
 
         # Assign colors based on cluster sizes
         for i in range(num_clusters):
-            color = colors["brown"] if i == larger_cluster_label else colors["green"]
+            color = colors["brown"] if i == ground_cluster_label else colors["green"]
             cluster_colors[kmeans_labels == i] = color
 
         seg_pcd = downsampled_pcd
         seg_pcd.colors = o3d.utility.Vector3dVector(cluster_colors)
-        ground_points = np.asarray(seg_pcd.points)[kmeans_labels == larger_cluster_label]
-        crop_points = np.asarray(seg_pcd.points)[kmeans_labels != larger_cluster_label]
-        x_min, x_max = np.min(ground_points[:, 0]), np.max(ground_points[:, 0])
-        x_range = x_max - x_min
-        grid_resolution = x_range / 2
+        
+        ground_points = np.asarray(seg_pcd.points)[kmeans_labels == ground_cluster_label]
+        crop_points = np.asarray(seg_pcd.points)[kmeans_labels != ground_cluster_label]
 
         # Filter the Ground Points list
         #filtered_ground_points = pcd_filtering.filter_ground_points(ground_points, 3, grid_resolution, 0.15)
-        filtered_ground_points = pcd_filtering.filter_ground_points(ground_points, 1, 7, 0.001)
+        filtered_ground_points = pcd_filtering.filter_ground_points(ground_points, 1, 3, 0.8)
         filtered_ground_pcd = o3d.geometry.PointCloud()
         filtered_ground_pcd.points = o3d.utility.Vector3dVector(filtered_ground_points)
-        filtered_crop_points = pcd_filtering.filter_points_by_grid(crop_points, 0.75, 0.5, 5)
+        filtered_crop_points = crop_points#pcd_filtering.filter_points_by_grid(crop_points, 0.75, 0.5, 5)
         filtered_crop_pcd = o3d.geometry.PointCloud()
         filtered_crop_pcd.points = o3d.utility.Vector3dVector(filtered_crop_points)
         # Filter points based on DBSCAN clustering
-        eps = 0.28  # epsilon value for DBSCAN
+        # Decide on the eps value based on the crop type
+        if crop_type == "avocado":
+            eps = 0.26
+        elif crop_type == "hazelnut":
+            eps = 0.18
+        else: eps = 0.3
+        
         dbscan_labels, clustered_points_xyz = unsup_segmentation.crop_clustering_dbscan(eps, filtered_crop_points)
-
-
+        print("DBSCAN DONE")
         import random
         #Convert clustered_tree_points to an Open3D point cloud
         dbscan_clusters_pcd = o3d.geometry.PointCloud()
         dbscan_clusters_pcd.points = o3d.utility.Vector3dVector(clustered_points_xyz)
 
-        dbscan_clusters_filtered_points, filtered_labels = pcd_filtering.dbscan_cluster_filtering(dbscan_clusters_pcd, 20, 10000, dbscan_labels)
+        dbscan_clusters_filtered_points, filtered_labels = pcd_filtering.dbscan_cluster_filtering(dbscan_clusters_pcd, 15, 10000, dbscan_labels)
         # Ensure dbscan_clusters_filtered_points is a PointCloud object
         if isinstance(dbscan_clusters_filtered_points, o3d.geometry.PointCloud):
             # Assign random colors to each cluster
@@ -113,22 +136,104 @@ def height_and_analysis_script(pcd_file_path, voxel_size = 0.25):
 
             # Set colors for the clustered tree points
             dbscan_clusters_filtered_points.colors = o3d.utility.Vector3dVector(point_colors)
-            heights, labels = analyzer.calculate_heights_and_labels(filtered_labels, dbscan_clusters_filtered_points, filtered_ground_pcd)
+        # Do DBSCAN Post Processing, Separating Wrongly Adjoined Trees
+        # Convert clustered points to an Open3D point cloud
+        dbscan_clusters_pcd = o3d.geometry.PointCloud()
+        dbscan_clusters_pcd.points = o3d.utility.Vector3dVector(clustered_points_xyz)
 
+        # Assuming dbscan_clusters_filtered_points and filtered_labels are already defined
+
+        cluster_labels = np.unique(filtered_labels)
+        new_cluster_labels = {}
+        current_label = 0
+        print("DBSCAN pt 2 start")
+        for label in cluster_labels:
+            if label == -1:  # Skip noise points
+                continue
+            print("Label 1")
+            cluster_points = np.asarray(dbscan_clusters_filtered_points.points)[filtered_labels == label]
+            hull = analyzer.create_convex_hull(cluster_points)
+            hull_points = cluster_points[hull.vertices]
+
+            # Calculate longest distance within the hull
+            dist_matrix = distance_matrix(hull_points, hull_points)
+            length = np.max(dist_matrix)
+
+            longest_pair_indices = np.unravel_index(np.argmax(dist_matrix, axis=None), dist_matrix.shape)
+            longest_vector = hull_points[longest_pair_indices[0]] - hull_points[longest_pair_indices[1]]
+            
+            # Calculate the unit vector of the longest distance
+            longest_unit_vector = longest_vector / np.linalg.norm(longest_vector)
+            perpendicular_vector = np.array([-longest_unit_vector[1], longest_unit_vector[0], 0])  # 90 degrees rotation in 2D
+            
+            # Project hull points onto the perpendicular vector
+            perpendicular_projections = np.dot(hull_points, perpendicular_vector)
+            width = np.max(perpendicular_projections) - np.min(perpendicular_projections)
+
+            ratio = np.round(length/width) if width != 0 else 0
+            if width < 0.95:
+                ratio = 1
+            if ratio >= 1.7:
+                ratio = round(ratio)
+            else:
+                ratio = 1
+
+            projections = np.dot(cluster_points, longest_vector)
+            increments = np.linspace(np.min(projections), np.max(projections), int(ratio) + 1)
+
+            #print(f"Length: {length}\nWidth: {width}\nRatio: {ratio}\n")
+            # Split points into new clusters based on increments
+            for i in range(len(increments) - 1):
+                lower_bound = increments[i]
+                upper_bound = increments[i + 1]
+                
+                # Select points within the current increment range
+                new_cluster_points = cluster_points[(projections >= lower_bound) & (projections < upper_bound)]
+
+                # Store new clusters with unique labels
+                new_cluster_labels[current_label] = new_cluster_points
+                current_label += 1
+
+        # Convert new clusters to Open3D point clouds and visualize
+        final_pcd = o3d.geometry.PointCloud()
+        for label, points in new_cluster_labels.items():
+            # Ensure points are in the correct shape
+            if points.shape[1] != 3:
+                print(f"Error: Points for label {label} must be 2D array with shape (N, 3), got shape {points.shape}")
+                continue  # Skip this cluster if the shape is incorrect
+
+            cluster_pcd = o3d.geometry.PointCloud()
+            cluster_pcd.points = o3d.utility.Vector3dVector(points)
+
+            # Generate a random color
+            color = np.random.rand(3)  # Random color in RGB
+            cluster_pcd.paint_uniform_color(color)  # Assign the same color to all points in the cluster
+            
+            final_pcd += cluster_pcd
+
+        print("final cluster made")
         # Calculate cluster centers
-        cluster_centers = analyzer.calculate_cluster_centers(filtered_labels, np.asarray(dbscan_clusters_filtered_points.points))
+        # new_cluster_labels = {key: value for key, value in new_cluster_labels.items() if not np.all(value == 0)}
+        # new_cluster_labels = {key: value[~np.isnan(value)] for key, value in new_cluster_labels.items()}
 
         # Visualize the heights and point cloud data
-        analyzer.visualize_the_metrics_and_pcd(heights, dbscan_clusters_filtered_points, cluster_centers, metric = "Height", units = "m")
-        analyzer.visualize_height_gradient(dbscan_clusters_filtered_points, filtered_ground_pcd)
-        volume_dicts = analyzer.calculate_volumes_for_clusters(dbscan_clusters_filtered_points, filtered_labels, filtered_ground_pcd)
-        analyzer.visualize_the_metrics_and_pcd(volume_dicts, dbscan_clusters_filtered_points, cluster_centers, metric = "Volume", units = "m^3")
+        if mode == "height":
+            heights, labels = analyzer.calculate_heights_and_labels(new_cluster_labels, filtered_ground_pcd)
+
+            # Calculate cluster centers
+            cluster_centers = analyzer.calculate_cluster_centers(new_cluster_labels)
+
+            # Visualize the heights and point cloud data
+            analyzer.visualize_the_metrics_and_pcd(heights, final_pcd, cluster_centers, "Height", "m")
+
+        elif mode == "volume":
+            volume_dicts = analyzer.calculate_volumes_for_clusters(dbscan_clusters_filtered_points, filtered_labels, filtered_ground_pcd)
+            analyzer.visualize_the_metrics_and_pcd(volume_dicts, dbscan_clusters_filtered_points, cluster_centers, metric = "Volume", units = "m^3")
 
 class ReviewListFrame(tk.Frame):
-    def __init__(self, parent, controller):
+    def __init__(self, parent, controller):#, mode):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-
         folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
         self.folder_path = folder_path
 
@@ -248,11 +353,14 @@ class ReviewListFrame(tk.Frame):
                             print(f"File {file_path} not found.")
 
     def run_analysis_script(self, ply_file_path):
+        crop_type = self.controller.crop
+        mode = self.controller.mode
+        voxel_size = 0.2
         try:
-            height_and_analysis_script(ply_file_path, voxel_size=0.25)
+            height_and_analysis_script(ply_file_path, voxel_size, crop_type, mode)
         except Exception as e:
             print(f"Error running analysis script: {e}")
-
+    
 
 
 #self.controller.show_frame("FinalReviewScreen")
