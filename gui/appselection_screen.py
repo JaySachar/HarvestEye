@@ -122,7 +122,7 @@ class AppSelectionScreen(tk.Frame):
         btn_dronenavguide.pack(side="bottom", expand=True, anchor='center')
         #btn_dronenavguide.grid(row=2,column=1, columnspan=2, padx=70, pady=40, sticky="n")
         btn_dronenavguide.configure(bg='white')
-        btn_dronenavguide.bind('<Button-1>', self.chiliButton)
+        btn_dronenavguide.bind('<Button-1>', self.navGuideButton)
         ###################################################################
 
     def onShowFrame(self, event):
@@ -142,7 +142,14 @@ class AppSelectionScreen(tk.Frame):
         self.controller.back_history.append("AppSelectionScreen")
         self.controller.show_frame("ReviewListScreen")
         self.controller.mode = "height"
+
     def volumeAnalysisButton(self, event):
         self.controller.mode = "volume"
         self.controller.back_history.append("AppSelectionScreen")
         self.controller.show_frame("ReviewListScreen")
+
+    def navGuideButton(self, event):
+        self.controller.back_history.append("AppSelectionScreen")
+        self.controller.show_frame("DroneNavGuideScreen")
+
+
