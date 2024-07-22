@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 from tkinter import messagebox
+from datetime import datetime
 from PIL import Image, ImageTk
 import os
 import sys
@@ -83,14 +84,9 @@ class DataInformationEntryTableFrame(tk.Frame):
                              bg="white")
         folder_btn.bind('<Button-1>', self.openfile)
         folder_btn.image = photo
-       # folder_btn = tk.Button(table_frame,
-       #                          height = 2,
-       #                          text = "Select",
-       #                          bg = "white")
 
 
-#        inputtxt.pack(side="right", fill=tk.BOTH, expand=tk.TRUE, anchor="n")
-#        inputlabel.pack(side="left", expand=False,  anchor="n")
+
         lst = [[date_flight_label, self.date_flight_entry],
                [weather_label, self.weather_entry],
                [dronetype_label, self.dronetype_entry],
@@ -107,16 +103,9 @@ class DataInformationEntryTableFrame(tk.Frame):
         notes_entry_frame.grid(row= i+1, column = j-1, columnspan=3, rowspan = 2, pady=5, sticky="nsew") 
 
         notes_entry = tk.Label(notes_entry_frame, text="Notes (500 words max): ", bg="white")
-        #notes_entry.insert(0, "Notes (500 words max): ")
         notes_entry.pack(side="top", expand=True, anchor="w")
 
-        #notes_entry.grid(row= i+1, column = j-1, sticky="nsew") 
-        #notes_entry = tk.Label(notes_entry_frame, text="", bg="white")
-        #notes_entry.pack(side="right", expand=False, anchor="s")
-        #notes_entry.grid(row= i+1, column = j,  sticky="nsew") 
-
         self.notes_entry = tk.Text(notes_entry_frame, height = 10, bg="white")
-        #notes_entry.grid(row= i+2, column = j-1, columnspan=2, sticky="ew") 
         self.notes_entry.pack(side="bottom", expand=True, fill="x", anchor="w")
 
 
@@ -185,16 +174,6 @@ class DataInformationEntryTableFrame(tk.Frame):
             messagebox.showerror("Select a File", "Please select a file to proceed.")
 
         print(self.controller.back_history)
-#
-#        filename = "./review_saved_data/" + self.date_flight_entry.get("1.0", 'end-1c')
-#        with open(filename, 'w') as file:
-#            file.write(self.date_flight_entry.get("1.0", 'end-1c') + "\n")
-#            file.write(self.weather_entry.get("1.0", 'end-1c') + "\n")
-#            file.write(self.dronetype_entry.get("1.0", 'end-1c') + "\n")
-#            file.write(self.file_path + "\n")
-#            file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
-
-
 
    
     def backButton(self, event):

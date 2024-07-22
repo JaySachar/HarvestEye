@@ -81,14 +81,10 @@ class ReviewListScreen(tk.Frame):
 
     def center_frame(self):
         #folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
-        # REMEMBER TO IMPLEMENT A CHECK IF THE FOLDER EXISTS
-        ## -> CREATE A NEW ONE IF IT DOESN'T!!!
         self.review_list_frame = ReviewListFrame(self, self.controller)
         self.review_list_frame.pack(side="top", fill="both", expand=True, anchor='center')
         #review_list_frame.update_list()
 
-#    def testPrintShowFrameEvent(self, event):
-#        print("FRAME IS SHOWN!!!!")
     def onShowFrame(self, event):
         self.review_list_frame.update_list()
         self.sidebar.renderSidebarContent()
