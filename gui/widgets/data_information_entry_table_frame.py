@@ -168,6 +168,39 @@ class DataInformationEntryTableFrame(tk.Frame):
                 thread = threading.Thread(target=generated_pcd.generatePointCloud)
                 thread.start()
                 print("Point Cloud Generation complete!!!!!!!!!!!")
+                print("Begin correcting the Point Cloud")
+                files = os.listdir(self.file_path)
+                for file in files:
+                    try:
+                        with open(os.path.join(self.file_path, file), 'r') as f:
+                            # Find the .ply file in the directory specified in self.file_path
+                            ply_files = [f for f in os.listdir(self.file_path) if f.endswith('.ply')]
+                            if len(ply_files) == 1:
+                                ply_file_path = os.path.join(self.file_path, ply_files[0])
+                                ply_file_path = ply_file_path.replace("\\", "/")
+                                print("Found .ply file:", ply_file_path)
+                            else:
+                                print("Error: No .ply file found in directory.")
+                    except Exception as e:
+                        print(f"An error occurred while processing the file {file}: {e}")
+                        
+                full_header, full_points, full_colors = generated_pcd.read_ply(ply_file_path)
+
+                # Extract camera points based on their color (0, 255, 0)
+                camera_mask = (full_colors[:, 0] == 0) & (full_colors[:, 1] == 255) & (full_colors[:, 2] == 0)
+                camera_points = full_points[camera_mask]
+
+                # Fit plane and get rotation matrix
+                rotation_matrix, centroid = generated_pcd.fit_plane_and_get_rotation_matrix(camera_points)
+
+                # Apply transformation to all points
+                transformed_full_points = generated_pcd.apply_transformation(full_points, rotation_matrix, centroid)
+
+                # Write transformed points to a new file, flipping Z axis
+                output_path = ply_file_path
+                generated_pcd.write_ply(output_path, full_header, transformed_full_points, full_colors)
+
+                # Perform Linear Interpolation
 
                 # Clear current table upon submission
                 self.date_flight_entry.delete('1.0', 'end-1c')

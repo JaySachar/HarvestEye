@@ -181,7 +181,38 @@ class PointCloudGenerator(ImageProcessor):
         new_colors = np.array(new_colors)
         return new_points, new_colors 
 
-    def fit_plane_and_get_rotation_matrix(self, points):
+    def read_ply(file_path):
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+
+        header = []
+        data_start_index = 0
+        for i, line in enumerate(lines):
+            header.append(line)
+            if line.strip() == "end_header":
+                data_start_index = i + 1
+                break
+
+        data = []
+        for line in lines[data_start_index:]:
+            parts = line.strip().split()
+            x, y, z = map(float, parts[:3])
+            color = list(map(int, parts[3:6]))
+            data.append((x, y, z, color))
+
+        points = np.array([(x, y, z) for x, y, z, color in data])
+        colors = np.array([color for x, y, z, color in data])
+
+        return header, points, colors
+
+    def write_ply(file_path, header, points, colors):
+        with open(file_path, 'w') as file:
+            for line in header:
+                file.write(line)
+            for point, color in zip(points, colors):
+                file.write(f"{point[0]} {point[1]} {-point[2]} {color[0]} {color[1]} {color[2]}\n")  # Flipping Z axis
+
+    def fit_plane_and_get_rotation_matrix(points):
         centroid = np.mean(points, axis=0)
         centered_points = points - centroid
         U, S, Vt = np.linalg.svd(centered_points)
@@ -196,7 +227,7 @@ class PointCloudGenerator(ImageProcessor):
 
         return rotation_matrix, centroid
 
-    def apply_transformation(self, points, rotation_matrix, centroid):
+    def apply_transformation(points, rotation_matrix, centroid):
         centered_points = points - centroid
         transformed_points = np.dot(centered_points, rotation_matrix.T) + centroid
         return transformed_points
@@ -360,7 +391,8 @@ class PointCloudFiltering(ImageProcessor):
             dbscan_clusters_pcd_filtered.colors = o3d.utility.Vector3dVector(np.asarray(pcd.colors)[idx])
         print(labels[idx])
         return dbscan_clusters_pcd_filtered, labels[idx]
-
+    
+        
 class CropAnalyzer:
     def __init__(self):
         pass
