@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import filedialog
 from tkinter import messagebox
 from datetime import datetime
+import re
 from PIL import Image, ImageTk
 import os
 import sys
@@ -52,24 +53,24 @@ class DataInformationEntryTableFrame(tk.Frame):
                                  height = 1,
                                  text = "Date of flight (MM-DD-YYYY): ",
                                  bg = "white")
-        self.date_flight_entry= tk.Text(table_frame,
-                                 height = 1,
+        self.date_flight_entry= tk.Entry(table_frame,
+                                 #height = 1,
                                  width = width_of_table,
                                  bg="white")
         weather_label = tk.Label(table_frame,
                                  height = 1,
                                  text = "Weather during flight: ",
                                  bg = "white")
-        self.weather_entry = tk.Text(table_frame,
-                                 height = 1,
+        self.weather_entry = tk.Entry(table_frame,
+                                 #height = 1,
                                  width = width_of_table,
                                  bg="white")
         dronetype_label = tk.Label(table_frame,
                                  height = 1,
                                  text = "Drone type: ",
                                  bg = "white")
-        self.dronetype_entry = tk.Text(table_frame,
-                                 height = 1,
+        self.dronetype_entry = tk.Entry(table_frame,
+                                 #height = 1,
                                  width = width_of_table,
                                  bg="white")
         folder_label = tk.Label(table_frame,
@@ -127,30 +128,42 @@ class DataInformationEntryTableFrame(tk.Frame):
         print("Selected file: ", self.file_path)
 
     def submitButton(self, event):
-        # Need to improve the code to handle same filenames,
-        # in case there are 2 readings or more on the same day
-        self.date_flight_entry.get("1.0", 'end-1c')
-        self.weather_entry.get("1.0", 'end-1c')
-        self.dronetype_entry.get("1.0", 'end-1c')
-        # File path skipped to have a check if empty
-        self.notes_entry.get("1.0", 'end-1c')
-        
-        try:
-            filename = "./review_saved_data/" + self.controller.crop + "/"  \
-                        + self.date_flight_entry.get("1.0", 'end-1c') + ".txt"
 
-            if self.date_flight_entry.get("1.0", 'end-1c') == "":
-                messagebox.showerror("Select a Date", "Please select a Date of Flight to proceed.")
-            elif self.file_path == "":
+        def date_is_valid(date_to_validate):
+            pattern = re.compile(r'^(?:(?:(?:0[13578]|1[02])-(?:0[1-9]|[12][0-9]|3[01])|(?:0[469]|11)-(?:0[1-9]|[12][0-9]|30)|02-(?:0[1-9]|1[0-9]|2[0-8]))-\d{4}|02-29-(?:\d{2}(?:0[48]|[2468][048]|[13579][26])|(?:[02468][048]00|[13579][26]00)))$')
+            if pattern.match(date_to_validate):
+                return True
+            else:
+                return False
+
+
+        ## Validate Date Format
+        save_path = "./review_saved_data/" + self.controller.crop + "/" 
+        date_flight = self.date_flight_entry.get()
+        if date_flight == "":
+            messagebox.showerror("Select a Date", "Please select a Date of Flight to proceed.")
+            return
+        elif date_is_valid(date_flight):
+            count_number_of_files = len(os.listdir(save_path))
+            filename_and_path = save_path + str(count_number_of_files + 1)+ '.txt'
+        else:
+            messagebox.showerror("Wrong Date Format", "Please make sure to enter a correct date format: MM-DD-YYYY.")
+            return
+
+        ## Create a file
+        try:
+            if self.file_path == "":
                 messagebox.showerror("Select a File", "Please select a correct folder with drone images to proceed.")
             else:
-                with open(filename, 'w') as file:
-                    file.write(self.date_flight_entry.get("1.0", 'end-1c') + "\n")
-                    file.write(self.weather_entry.get("1.0", 'end-1c') + "\n")
-                    file.write(self.dronetype_entry.get("1.0", 'end-1c') + "\n")
+                with open(filename_and_path, 'w') as file:
+                    file.write(self.date_flight_entry.get() + "\n")
+                    file.write(self.weather_entry.get() + "\n")
+                    file.write(self.dronetype_entry.get() + "\n")
                     file.write(self.file_path + "\n")
                     file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
                 
+                # This is where LOADING SCREEN GOES!!!
+                # Run PointCloudGeneration
                 print(self.file_path)
                 generated_pcd = PointCloudGenerator(self.file_path)
                 print("Point Cloud Generation in progress!")
@@ -159,13 +172,13 @@ class DataInformationEntryTableFrame(tk.Frame):
                 print("Point Cloud Generation complete!!!!!!!!!!!")
 
                 # Clear current table upon submission
-                self.date_flight_entry.delete('1.0', 'end-1c')
-                self.weather_entry.delete('1.0', 'end-1c')
-                self.dronetype_entry.delete('1.0', 'end-1c')
+                self.date_flight_entry.delete(0, tk.END)
+                self.weather_entry.delete(0, tk.END)
+                self.dronetype_entry.delete(0, tk.END)
                 self.file_path = ""
                 self.notes_entry.delete('1.0', 'end-1c')
 
-                # Add current page into back button history and show another frame
+                ## Add current page into back button history and show another frame
                 self.controller.back_history.append("DataEntryScreen")
                 self.controller.show_frame("ReviewListScreen")
                 print("Successfuly added a file!")
@@ -173,7 +186,6 @@ class DataInformationEntryTableFrame(tk.Frame):
         except NameError:
             messagebox.showerror("Select a File", "Please select a file to proceed.")
 
-        print(self.controller.back_history)
 
    
     def backButton(self, event):

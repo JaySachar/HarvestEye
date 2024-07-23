@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 from datetime import datetime
+import os
 from PIL import Image, ImageTk
 
 class DataTypeSelectionButtonsFrame(tk.Frame):
@@ -80,20 +81,30 @@ class DataTypeSelectionButtonsFrame(tk.Frame):
         print("Upload .ply")
 
     def __create_a_file(self):
+        ## Warning for a person who implements deletion of files:
+        ## Remember that review_saved_data has files named {count_number}.txt
+        ## So, if you delete any of the files in a list, remember that 
+        ## names of certain files will be rewritten and because of
+        ## count_number being equal "{name of folder}" 
+        ## 
+        ## Change filenames to hash maybe? To be random.
         file_path = filedialog.askopenfilename(
             title="Open .ply File",
             filetypes=[("PLY files", "*.ply"), ("All files", "*.*")]
         )
         if file_path:
             print(f"Selected file: {file_path[0:file_path.rfind('/')]}")
-            filename = "./review_saved_data/" + self.controller.crop + "/"  \
-                    + datetime.today().strftime('%d-%m-%Y') + ".txt"
+            save_path = "./review_saved_data/" + self.controller.crop + "/" 
+            count_number_of_files = len(os.listdir(save_path))
+            filename_and_path = save_path + str(count_number_of_files + 1)+ '.txt'
+            #filename = "./review_saved_data/" + self.controller.crop + "/"  \
+            #        + datetime.today().strftime('%d-%m-%Y') + ".txt"
 
-            with open(filename, 'w') as file:
-                file.write(datetime.today().strftime('%d-%m-%Y')  + "\n")
+            with open(filename_and_path, 'w') as file:
+                file.write(datetime.today().strftime('%m-%d-%Y')  + "\n")
                 file.write("Unknown" + "\n")
                 file.write("Unknown" + "\n")
-                file.write(file_path + "\n")
+                file.write(file_path[0:file_path.rfind('/')] + "\n")
                 file.write("Unknown" + "\n")
         else:
             print("No file selected")
