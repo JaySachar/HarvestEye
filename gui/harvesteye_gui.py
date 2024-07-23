@@ -14,6 +14,8 @@ from datatypeselection_screen import DataTypeSelectionScreen
 from data_entry_screen import DataEntryScreen
 from review_list_screen import ReviewListScreen
 from final_review_screen import FinalReviewScreen
+from loading_screen import LoadingScreen
+from drone_navguide_screen import DroneNavGuideScreen
 
 class MainApp(tk.Tk):
     
@@ -54,7 +56,9 @@ class MainApp(tk.Tk):
                   DataTypeSelectionScreen,
                   DataEntryScreen,
                   ReviewListScreen,
-                  FinalReviewScreen):
+                  FinalReviewScreen,
+                  LoadingScreen,
+                  DroneNavGuideScreen):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame

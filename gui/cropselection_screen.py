@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
 from widgets.logo_frame import LogoFrame
+import os
 
 class CropSelectionScreen(tk.Frame):
 
@@ -196,17 +197,22 @@ class CropSelectionScreen(tk.Frame):
 
     def chiliButton(self, event):
         self.controller.crop = "chili"
+        self.__create_crop_folder_if_doesnt_exist()
+
         self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
 
     def hazelnutButton(self, event):
         self.controller.crop = "hazelnut"
-        print(f"self.controller.crop = {self.controller.crop}")
+        self.__create_crop_folder_if_doesnt_exist()
+
         self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
     
     def avocadoButton(self, event):
         self.controller.crop = "avocado"
+        self.__create_crop_folder_if_doesnt_exist()
+
         self.controller.back_history.append("CropSelectionScreen")
         self.controller.show_frame("AppSelectionScreen")
 
@@ -214,6 +220,10 @@ class CropSelectionScreen(tk.Frame):
         print("MoreButtonPressed")
         #self.controller.show_frame("AppSelectionScreen")
 
+    def __create_crop_folder_if_doesnt_exist(self) -> None:
+        if not os.path.isdir(f"./review_saved_data/{self.controller.crop}"):
+            os.makedirs(f"./review_saved_data/{self.controller.crop}")
+            print(f"Created a folder in ./review_saved_data/{self.controller.crop}")
     
     
     

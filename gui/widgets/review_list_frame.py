@@ -230,6 +230,13 @@ def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
             volume_dicts = analyzer.calculate_volumes_for_clusters(dbscan_clusters_filtered_points, filtered_labels, filtered_ground_pcd)
             analyzer.visualize_the_metrics_and_pcd(volume_dicts, dbscan_clusters_filtered_points, cluster_centers, metric = "Volume", units = "m^3")
 
+
+#############################################################
+#############################################################
+#################### GUI PART STARTS HERE ################### 
+#############################################################
+#############################################################
+
 class ReviewListFrame(tk.Frame):
     def __init__(self, parent, controller):#, mode):
         tk.Frame.__init__(self, parent)
@@ -313,11 +320,34 @@ class ReviewListFrame(tk.Frame):
         date_label = ttk.Label(frame, text=file_date)
         date_label.pack(side=tk.LEFT, padx=10)
 
-        review_button = ttk.Button(frame, text="Review", command=lambda: self.review_file(file_date))
-        review_button.pack(side=tk.RIGHT, padx=10)
+        btn_result_gradient = ttk.Button(frame, text="View Result Gradient",
+                                         command=lambda: self.view_result_gradient(file_date))
+        btn_result_gradient.pack(side=tk.RIGHT, padx=10)
+
+        btn_result_map = ttk.Button(frame, text="View Result Map",
+                                    command=lambda: self.view_result_map(file_date))
+        btn_result_map.pack(side=tk.RIGHT, padx=10)
+
+        btn_export_csv = ttk.Button(frame, text="Export to CSV",
+                                    command=lambda: self.export_to_csv(file_date))
+        btn_export_csv.pack(side=tk.RIGHT, padx=10)
+
+        #review_button = ttk.Button(frame, text="Review", command=lambda: self.review_file(file_date))
+        #review_button.pack(side=tk.RIGHT, padx=10)
 
         frame.pack(fill='x', expand=True, pady=5)
 
+    def view_result_gradient(self, file_date):
+            print(f"Viewing Result Gradient from : {file_date}")
+
+    def view_result_map(self, file_date):
+            print(f"Viewing Result Map from : {file_date}")
+
+    def export_to_csv(self, file_date):
+            print(f"Exporting to CSV: {file_date}")
+
+    # Currently has no use after Review btn removal and adding 3 buttons,
+    # but it has good code that can be recycled
     def review_file(self, file_date):
             print(f"Reviewing file from date: {file_date}")
             files = os.listdir(self.folder_path)
