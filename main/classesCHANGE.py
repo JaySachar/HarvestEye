@@ -47,6 +47,7 @@ class ImageProcessor:
                 
         return image_files, image_ext # Return all the image files in the directory and the extensions of them                
    
+    @staticmethod
     def read_ply(file_path):
         with open(file_path, 'r') as file:
             lines = file.readlines()
@@ -70,6 +71,8 @@ class ImageProcessor:
         colors = np.array([color for x, y, z, color in data])
 
         return header, points, colors
+
+    @staticmethod
     def write_ply(file_path, header, points, colors):
         with open(file_path, 'w') as file:
             for line in header:
@@ -181,6 +184,7 @@ class PointCloudGenerator(ImageProcessor):
         new_colors = np.array(new_colors)
         return new_points, new_colors 
 
+    @staticmethod
     def read_ply(file_path):
         with open(file_path, 'r') as file:
             lines = file.readlines()
@@ -205,6 +209,7 @@ class PointCloudGenerator(ImageProcessor):
 
         return header, points, colors
 
+    @staticmethod
     def write_ply(file_path, header, points, colors):
         with open(file_path, 'w') as file:
             for line in header:
@@ -212,6 +217,7 @@ class PointCloudGenerator(ImageProcessor):
             for point, color in zip(points, colors):
                 file.write(f"{point[0]} {point[1]} {-point[2]} {color[0]} {color[1]} {color[2]}\n")  # Flipping Z axis
 
+    @staticmethod
     def fit_plane_and_get_rotation_matrix(points):
         centroid = np.mean(points, axis=0)
         centered_points = points - centroid
@@ -227,6 +233,7 @@ class PointCloudGenerator(ImageProcessor):
 
         return rotation_matrix, centroid
 
+    @staticmethod
     def apply_transformation(points, rotation_matrix, centroid):
         centered_points = points - centroid
         transformed_points = np.dot(centered_points, rotation_matrix.T) + centroid
