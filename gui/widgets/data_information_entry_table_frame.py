@@ -7,6 +7,7 @@ import re
 from PIL import Image, ImageTk
 import os
 import sys
+import time
 import threading
 # Get the current working directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -161,13 +162,22 @@ class DataInformationEntryTableFrame(tk.Frame):
                     file.write(self.dronetype_entry.get() + "\n")
                     file.write(self.file_path + "\n")
                     file.write(self.notes_entry.get("1.0", 'end-1c') + "\n")
-                
+ 
+                               
                 # This is where LOADING SCREEN GOES!!!
                 # Run PointCloudGeneration
+                self.controller.show_frame("LoadingScreen")
                 print(self.file_path)
-                generated_pcd = PointCloudGenerator(self.file_path)
                 print("Point Cloud Generation in progress!")
-                thread = threading.Thread(target=generated_pcd.generatePointCloud)
+                generated_pcd = PointCloudGenerator(self.file_path)
+
+                def run_thread():
+                    #time.sleep(5)  # Simulate a long-running task
+                    generated_pcd.generatePointCloud()
+                    self.controller.after(0, lambda: self.controller.show_frame("ReviewListScreen"))
+
+
+                thread = threading.Thread(target=run_thread)
                 thread.start()
                 print("Point Cloud Generation complete!!!!!!!!!!!")
 
@@ -178,9 +188,11 @@ class DataInformationEntryTableFrame(tk.Frame):
                 self.file_path = ""
                 self.notes_entry.delete('1.0', 'end-1c')
 
+
+
                 ## Add current page into back button history and show another frame
                 self.controller.back_history.append("DataEntryScreen")
-                self.controller.show_frame("ReviewListScreen")
+                #self.controller.show_frame("ReviewListScreen")
                 print("Successfuly added a file!")
              
         except NameError:
