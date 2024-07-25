@@ -30,6 +30,14 @@ sys.path.append(target_dir)
 from classesCHANGE import PointCloudGenerator, UnsupervisedSegmentationAlgorithm, PointCloudFiltering, CropAnalyzer
 
 def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
+
+        # Function to create a convex hull in the XY plane
+        def create_convex_hull(cluster_points, plot=False):
+            points_xy = cluster_points[:, :2]  # Extract XY coordinates
+            hull = ConvexHull(points_xy)
+
+            return hull
+
         pcd = o3d.io.read_point_cloud(pcd_file_path)
         
         pcd_functions = PointCloudGenerator(os.path.dirname(__file__))
@@ -227,8 +235,12 @@ def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
             analyzer.visualize_the_metrics_and_pcd(heights, final_pcd, cluster_centers, "Height", "m")
 
         elif mode == "volume":
-            volume_dicts = analyzer.calculate_volumes_for_clusters(dbscan_clusters_filtered_points, filtered_labels, filtered_ground_pcd)
-            analyzer.visualize_the_metrics_and_pcd(volume_dicts, dbscan_clusters_filtered_points, cluster_centers, metric = "Volume", units = "m^3")
+            volume_dicts = analyzer.calculate_volumes_for_clusters(new_cluster_labels, filtered_ground_pcd)
+
+            # Calculate cluster centers
+            cluster_centers = analyzer.calculate_cluster_centers(new_cluster_labels)
+
+            analyzer.visualize_the_metrics_and_pcd(volume_dicts, final_pcd, cluster_centers, metric = "Volume", units = "m^3")
 
 
 #############################################################
@@ -332,8 +344,8 @@ class ReviewListFrame(tk.Frame):
                                     command=lambda: self.export_to_csv(file_date))
         btn_export_csv.pack(side=tk.RIGHT, padx=10)
 
-        #review_button = ttk.Button(frame, text="Review", command=lambda: self.review_file(file_date))
-        #review_button.pack(side=tk.RIGHT, padx=10)
+        review_button = ttk.Button(frame, text="Review", command=lambda: self.review_file(file_date))
+        review_button.pack(side=tk.RIGHT, padx=10)
 
         frame.pack(fill='x', expand=True, pady=5)
 
