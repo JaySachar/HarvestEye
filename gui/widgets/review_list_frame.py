@@ -30,7 +30,7 @@ sys.path.append(target_dir)
 # Now you can import the target file
 from classesCHANGE import PointCloudGenerator, UnsupervisedSegmentationAlgorithm, PointCloudFiltering, CropAnalyzer
 
-def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode, csv_path):
+def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode, csv_path, gradient):
 
         # Function to create a convex hull in the XY plane
         def create_convex_hull(cluster_points, plot=False):
@@ -228,13 +228,18 @@ def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode, csv_p
         # Visualize the heights and point cloud data
         if mode == "height":
             heights, labels = analyzer.calculate_heights_and_labels(new_cluster_labels, filtered_ground_pcd)
-
             # Calculate cluster centers
             cluster_centers = analyzer.calculate_cluster_centers(new_cluster_labels)
 
+            # If don't need to export, then show results
             if csv_path == "":
-                # Visualize the heights and point cloud data
-                analyzer.visualize_the_metrics_and_pcd(heights, final_pcd, cluster_centers, "Height", "m")
+                if gradient:
+                    print("IM HEREEEEEEEEEEEEEEEEE")
+                    analyzer.visualize_height_gradient(final_pcd, filtered_ground_pcd)
+                else:
+                    # Result Map
+                    # Visualize the heights and point cloud data
+                    analyzer.visualize_the_metrics_and_pcd(heights, final_pcd, cluster_centers, "Height", "m")
             else:
                 print('writing csv')
                 analyzer.write_metrics_to_csv(csv_path, cluster_centers, heights, mode)
@@ -367,7 +372,10 @@ class ReviewListFrame(tk.Frame):
         frame.pack(fill='x', expand=True, pady=5)
 
     def view_result_gradient(self, file_date):
-            print(f"Viewing Result Gradient from : {file_date}")
+        ply_file_path = self.find_ply(file_date)
+        gradient = True
+        threading.Thread(target=self.run_analysis_script, args=(ply_file_path, self.csv_path, gradient)).start()
+        print(f"Viewing Result Gradient from : {file_date}")
 
     def view_result_map(self, file_date):
         ply_file_path = self.find_ply(file_date)
@@ -418,49 +426,15 @@ class ReviewListFrame(tk.Frame):
                             print(f"File {file_path} not found.")
 
 
-    # Currently has no use after Review btn removal and adding 3 buttons,
-    # but it has good code that can be recycled
-#    def review_file(self, file_date):
-#            print(f"Reviewing file from date: {file_date}")
-#            files = os.listdir(self.folder_path)
-#            
-#            for file in files:
-#                file_path = os.path.join(self.folder_path, file)
-#                if os.path.isfile(file_path):
-#                    file_modification_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
-#                    
-#                    if file_modification_date == file_date:
-#                        try:
-#                            with open(file_path, 'r') as file:
-#                                lines = file.readlines()
-#                                if len(lines) >= 4:
-#                                    fourth_line = lines[3].strip()  # Assuming the fourth line index is 3 (0-based index)
-#                                    print("Fourth line:", fourth_line)
-#                                    
-#                                    # Find the .ply file in the directory specified in fourth_line
-#                                    ply_files = [f for f in os.listdir(fourth_line) if f.endswith('.ply')]
-#                                    if len(ply_files) == 1:
-#                                        ply_file_path = os.path.join(fourth_line, ply_files[0])
-#                                        ply_file_path = ply_file_path.replace("\\", "/")
-#                                        print("Found .ply file:", ply_file_path)
-#                                        
-#                                        # Run height and analysis script in a separate thread
-#                                        threading.Thread(target=self.run_analysis_script, args=(ply_file_path,)).start()
-#                                    else:
-#                                        print("Error: No .ply file found in directory.")
-#
-#                                else:
-#                                    print("File does not have at least 4 lines.")
-#                        except FileNotFoundError:
-#                            print(f"File {file_path} not found.")
 
-    def run_analysis_script(self, ply_file_path, csv_path=""):
+    def run_analysis_script(self, ply_file_path, csv_path="", gradient=False):
+        self.gradient = gradient
         crop_type = self.controller.crop
         mode = self.controller.mode
         voxel_size = 0.2
         self.csv_path = csv_path
         try:
-            height_and_analysis_script(ply_file_path, voxel_size, crop_type, mode, self.csv_path)
+            height_and_analysis_script(ply_file_path, voxel_size, crop_type, mode, self.csv_path, self.gradient)
         except Exception as e:
             print(f"Error running analysis script: {e}")
     
