@@ -76,6 +76,7 @@ class DataTypeSelectionButtonsFrame(tk.Frame):
         #self.controller.back_history.append("DataTypeSelectionScreen")
         #self.controller.show_frame("DataEntryScreen")
         self.__create_a_file()
+        self.controller.mode = "height"
         self.controller.back_history.append("DataTypeSelectionScreen")
         self.controller.show_frame("ReviewListScreen")
         print("Upload .ply")

@@ -1,6 +1,7 @@
 import os
 import tkinter as tk
 from tkinter import ttk
+from tkinter import filedialog
 from datetime import datetime
 import os
 import sys
@@ -29,7 +30,7 @@ sys.path.append(target_dir)
 # Now you can import the target file
 from classesCHANGE import PointCloudGenerator, UnsupervisedSegmentationAlgorithm, PointCloudFiltering, CropAnalyzer
 
-def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
+def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode, csv_path):
 
         # Function to create a convex hull in the XY plane
         def create_convex_hull(cluster_points, plot=False):
@@ -231,8 +232,13 @@ def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
             # Calculate cluster centers
             cluster_centers = analyzer.calculate_cluster_centers(new_cluster_labels)
 
-            # Visualize the heights and point cloud data
-            analyzer.visualize_the_metrics_and_pcd(heights, final_pcd, cluster_centers, "Height", "m")
+            if csv_path == "":
+                # Visualize the heights and point cloud data
+                analyzer.visualize_the_metrics_and_pcd(heights, final_pcd, cluster_centers, "Height", "m")
+            else:
+                print('writing csv')
+                analyzer.write_metrics_to_csv(csv_path, cluster_centers, heights, mode)
+                print('done writing csv')
 
         elif mode == "volume":
             volume_dicts = analyzer.calculate_volumes_for_clusters(new_cluster_labels, filtered_ground_pcd)
@@ -240,7 +246,15 @@ def height_and_analysis_script(pcd_file_path, voxel_size, crop_type, mode):
             # Calculate cluster centers
             cluster_centers = analyzer.calculate_cluster_centers(new_cluster_labels)
 
-            analyzer.visualize_the_metrics_and_pcd(volume_dicts, final_pcd, cluster_centers, metric = "Volume", units = "m^3")
+            if csv_path == "":
+                # Visualize the volume and point cloud data
+                analyzer.visualize_the_metrics_and_pcd(volume_dicts, final_pcd, cluster_centers, metric = "Volume", units = "m^3")
+            else:
+                print('writing csv')
+                analyzer.write_metrics_to_csv(csv_path, cluster_centers, volume_dicts, mode)
+                print('done writing csv')
+
+
 
 
 #############################################################
@@ -253,6 +267,7 @@ class ReviewListFrame(tk.Frame):
     def __init__(self, parent, controller):#, mode):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.csv_path = ""
         folder_path = "./review_saved_data/" + self.controller.crop + "/"  # Set this to the path of your folder
         self.folder_path = folder_path
 
@@ -332,9 +347,11 @@ class ReviewListFrame(tk.Frame):
         date_label = ttk.Label(frame, text=file_date)
         date_label.pack(side=tk.LEFT, padx=10)
 
-        btn_result_gradient = ttk.Button(frame, text="View Result Gradient",
-                                         command=lambda: self.view_result_gradient(file_date))
-        btn_result_gradient.pack(side=tk.RIGHT, padx=10)
+        print(f"THIS IS THE MODE BEFORE BUTTON GENERATION !!! {self.controller.mode}")
+        if self.controller.mode == "height":
+            btn_result_gradient = ttk.Button(frame, text="View Result Gradient",
+                                             command=lambda: self.view_result_gradient(file_date))
+            btn_result_gradient.pack(side=tk.RIGHT, padx=10)
 
         btn_result_map = ttk.Button(frame, text="View Result Map",
                                     command=lambda: self.view_result_map(file_date))
@@ -344,8 +361,8 @@ class ReviewListFrame(tk.Frame):
                                     command=lambda: self.export_to_csv(file_date))
         btn_export_csv.pack(side=tk.RIGHT, padx=10)
 
-        review_button = ttk.Button(frame, text="Review", command=lambda: self.review_file(file_date))
-        review_button.pack(side=tk.RIGHT, padx=10)
+        #review_button = ttk.Button(frame, text="Review", command=lambda: self.review_file(file_date))
+        #review_button.pack(side=tk.RIGHT, padx=10)
 
         frame.pack(fill='x', expand=True, pady=5)
 
@@ -353,14 +370,19 @@ class ReviewListFrame(tk.Frame):
             print(f"Viewing Result Gradient from : {file_date}")
 
     def view_result_map(self, file_date):
-            print(f"Viewing Result Map from : {file_date}")
+        ply_file_path = self.find_ply(file_date)
+        threading.Thread(target=self.run_analysis_script, args=(ply_file_path, self.csv_path)).start()
+        print(f"Viewing Result Map from : {file_date}")
 
     def export_to_csv(self, file_date):
-            print(f"Exporting to CSV: {file_date}")
+        self.csv_path = filedialog.askdirectory()
+        ply_file_path = self.find_ply(file_date)
+        threading.Thread(target=self.run_analysis_script, args=(ply_file_path, self.csv_path)).start()
+        self.csv_path = ""
+        print(f"Exporting to CSV: {file_date}")
 
-    # Currently has no use after Review btn removal and adding 3 buttons,
-    # but it has good code that can be recycled
-    def review_file(self, file_date):
+
+    def find_ply(self, file_date):
             print(f"Reviewing file from date: {file_date}")
             files = os.listdir(self.folder_path)
             
@@ -384,8 +406,9 @@ class ReviewListFrame(tk.Frame):
                                         ply_file_path = ply_file_path.replace("\\", "/")
                                         print("Found .ply file:", ply_file_path)
                                         
+                                        return ply_file_path
                                         # Run height and analysis script in a separate thread
-                                        threading.Thread(target=self.run_analysis_script, args=(ply_file_path,)).start()
+                                        #threading.Thread(target=self.run_analysis_script, args=(ply_file_path,)).start()
                                     else:
                                         print("Error: No .ply file found in directory.")
 
@@ -394,12 +417,50 @@ class ReviewListFrame(tk.Frame):
                         except FileNotFoundError:
                             print(f"File {file_path} not found.")
 
-    def run_analysis_script(self, ply_file_path):
+
+    # Currently has no use after Review btn removal and adding 3 buttons,
+    # but it has good code that can be recycled
+#    def review_file(self, file_date):
+#            print(f"Reviewing file from date: {file_date}")
+#            files = os.listdir(self.folder_path)
+#            
+#            for file in files:
+#                file_path = os.path.join(self.folder_path, file)
+#                if os.path.isfile(file_path):
+#                    file_modification_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
+#                    
+#                    if file_modification_date == file_date:
+#                        try:
+#                            with open(file_path, 'r') as file:
+#                                lines = file.readlines()
+#                                if len(lines) >= 4:
+#                                    fourth_line = lines[3].strip()  # Assuming the fourth line index is 3 (0-based index)
+#                                    print("Fourth line:", fourth_line)
+#                                    
+#                                    # Find the .ply file in the directory specified in fourth_line
+#                                    ply_files = [f for f in os.listdir(fourth_line) if f.endswith('.ply')]
+#                                    if len(ply_files) == 1:
+#                                        ply_file_path = os.path.join(fourth_line, ply_files[0])
+#                                        ply_file_path = ply_file_path.replace("\\", "/")
+#                                        print("Found .ply file:", ply_file_path)
+#                                        
+#                                        # Run height and analysis script in a separate thread
+#                                        threading.Thread(target=self.run_analysis_script, args=(ply_file_path,)).start()
+#                                    else:
+#                                        print("Error: No .ply file found in directory.")
+#
+#                                else:
+#                                    print("File does not have at least 4 lines.")
+#                        except FileNotFoundError:
+#                            print(f"File {file_path} not found.")
+
+    def run_analysis_script(self, ply_file_path, csv_path=""):
         crop_type = self.controller.crop
         mode = self.controller.mode
         voxel_size = 0.2
+        self.csv_path = csv_path
         try:
-            height_and_analysis_script(ply_file_path, voxel_size, crop_type, mode)
+            height_and_analysis_script(ply_file_path, voxel_size, crop_type, mode, self.csv_path)
         except Exception as e:
             print(f"Error running analysis script: {e}")
     
