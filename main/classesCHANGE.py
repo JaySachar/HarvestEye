@@ -696,9 +696,11 @@ class CropAnalyzer:
         if metric == "Volume":
             unit = "m^3"
 
+        csv_file += '/output.csv'
+
         with open(csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Crop Number', f'X-Coordinate [m]', 'Y-Coordinate [m]', 'Crop {metric} [{unit}]'])
+            writer.writerow(['Crop Number', f'X-Coordinate [m]', 'Y-Coordinate [m]', f'Crop {metric} [{unit}]'])
             for label, center in cluster_centers.items():
                 data = cluster_data.get(label, 'N/A')
                 writer.writerow([label, center[0], center[1], data])
